@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Nodle Docs',
+  tagline: 'All documentation you\'ll need on Nodle.',
+  url: 'https://docs.nodle.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'NodleCode', // Usually your GitHub org/user name.
+  projectName: 'docs.nodle.com', // Usually your repo name.
 
   presets: [
     [
@@ -24,15 +24,18 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/NodleCode/docs.nodle.com/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/NodleCode/docs.nodle.com/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
+          colorMode: {
+            defaultColorMode: 'dark',
+          },
           customCss: require.resolve('./src/css/custom.css'),
         },
       }),
@@ -43,9 +46,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Documentation',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Nodle',
           src: 'img/logo.svg',
         },
         items: [
@@ -55,7 +58,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',

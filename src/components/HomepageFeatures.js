@@ -4,44 +4,110 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    title: 'Learn',
+    blocks: [
+      {
+        title: 'About Nodle',
+        Svg: require('../../static/img/icons/privacy.svg').default,
+        description: (
+          <>
+            Unlike Advertising SDKs which harvest user data and show ads, Nodle does not collect Personal Information (PII Data).
+          </>
+        ),
+      },
+      {
+        title: 'Nodle Chain',
+        Svg: require('../../static/img/icons/privacy.svg').default,
+        description: (
+          <>
+            The Nodle Network uses Bluetooth Low Energy (BLE), which is extremely efficient and already running on most smartphones.
+          </>
+        ),
+      },
+      {
+        title: 'NODL token',
+        Svg: require('../../static/img/icons/privacy.svg').default,
+        description: (
+          <>
+            The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
+          </>
+        ),
+      },
+      {
+        title: 'Nodle Nodes',
+        Svg: require('../../static/img/icons/privacy.svg').default,
+        description: (
+          <>
+            Nodle is deployed today on Google Play, and already running in apps around the planet.
+          </>
+        ),
+      },
+    ]
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    title: 'Participate',
+    blocks: [
+      {
+        title: 'App partners, SDK',
+        Svg: require('../../static/img/icons/privacy.svg').default,
+        description: (
+          <>
+            The Nodle Network uses Bluetooth Low Energy (BLE), which is extremely efficient and already running on most smartphones.
+          </>
+        ),
+      },
+      {
+        title: 'Nodes & Validators',
+        Svg: require('../../static/img/icons/privacy.svg').default,
+        description: (
+          <>
+            The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
+          </>
+        ),
+      },
+      {
+        title: 'Cash app users',
+        Svg: require('../../static/img/icons/privacy.svg').default,
+        description: (
+          <>
+            Nodle is deployed today on Google Play, and already running in apps around the planet.
+          </>
+        ),
+      },
+    ]
   },
   {
-    title: 'Powered by React',
-    Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
+    title: 'Use',
+    blocks: [
+      {
+        title: 'IoT Customers',
+        Svg: require('../../static/img/icons/privacy.svg').default,
+        description: (
+          <>
+            The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
+          </>
+        ),
+      },
+      {
+        title: 'Cash app users',
+        Svg: require('../../static/img/icons/privacy.svg').default,
+        description: (
+          <>
+            Nodle is deployed today on Google Play, and already running in apps around the planet.
+          </>
+        ),
+      },
+    ]
+  }
 ];
 
 function Feature({Svg, title, description}) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={styles.customFeature}>
       <div className="text--center">
         <Svg className={styles.featureSvg} alt={title} />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className={styles.customFeatureTextSection}>
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
@@ -54,8 +120,15 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {FeatureList.map((feature, idx) => (
+            <section className={styles.featureSection}>
+              <h2>{feature.title}</h2>
+              <section className={styles.featureSectionBlocks}>
+                {feature.blocks.map((props, feature_idx) => (
+                  <Feature key={feature_idx} {...props} />
+                ))}
+              </section>
+            </section>
           ))}
         </div>
       </div>

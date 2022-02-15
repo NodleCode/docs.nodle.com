@@ -18,6 +18,9 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 html[data-theme='dark'] {
+  --ifm-footer-background-color: #0F1C2A; 
+  --ifm-background-color: #0F1C2A;
+  --ifm-navbar-background-color: #0F1C2A;
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
@@ -36,4 +39,9 @@ html[data-theme='dark'] {
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
 }
