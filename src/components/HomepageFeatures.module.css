@@ -34,7 +34,29 @@
 .featureSectionBlocks {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   gap: 8px;
+}
+
+@media screen and (min-width: 370px) {
+  .featureSectionBlocks {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  } 
+}
+
+@media screen and (min-width: 760px) {
+  .featureSectionBlocks {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .featureSectionBlocks {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
 }
 
 .customFeature {
