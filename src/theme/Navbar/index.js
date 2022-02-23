@@ -8,7 +8,7 @@ import React, {useCallback, useState, useEffect} from 'react';
 import clsx from 'clsx';
 import Translate from '@docusaurus/Translate';
 import SearchBar from '@theme/SearchBar';
-import Toggle from '@theme/Toggle';
+import { motion, AnimatePresence } from 'framer-motion'
 import {
   useThemeConfig,
   useMobileSecondaryMenuRenderer,
@@ -25,7 +25,6 @@ import Logo from '@theme/Logo';
 import IconMenu from '@theme/IconMenu';
 import IconClose from '@theme/IconClose';
 import styles from './styles.module.css'; // retrocompatible with v1
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import { withRouter } from '@docusaurus/router';
 
 const DefaultNavItemPosition = 'right';
@@ -93,15 +92,31 @@ function useColorModeToggle() {
     colorMode: {disableSwitch},
   } = useThemeConfig();
   const {isDarkTheme, setLightTheme, setDarkTheme} = useColorMode();
-  const toggle = useCallback(
-    (e) => (e.target.checked ? setDarkTheme() : setLightTheme()),
-    [setLightTheme, setDarkTheme],
-  );
+  const toggle = () => (!isDarkTheme ? setDarkTheme() : setLightTheme())
   return {
     isDarkTheme,
     toggle,
     disabled: disableSwitch,
   };
+}
+
+function TogleDarkMode ({ colorModeToggle }) {
+  return (
+    <AnimatePresence exitBeforeEnter initial={false}>
+      <motion.div
+        checked={colorModeToggle.isDarkTheme}
+        key={colorModeToggle.isDarkTheme ? 'dark' : 'light'}
+        initial={{ y: -10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: 10, opacity: 0}}
+        transition={{ duration: 0.2 }}
+        onClick={colorModeToggle.toggle}
+        style={{ width: '30px', height: '30px', cursor: 'pointer', display: 'inline-block'}}
+      >
+        <img src={colorModeToggle.isDarkTheme ? '/img/sun.png' : '/img/moon.png'} width='30px' height='30px' />
+      </motion.div>
+    </AnimatePresence>
+  )
 }
 
 function useSecondaryMenu({sidebarShown, toggleSidebar}) {
@@ -164,13 +179,7 @@ function NavbarMobileSidebar({sidebarShown, toggleSidebar}) {
           imageClassName="navbar__logo"
           titleClassName="navbar__title"
         />
-        {!colorModeToggle.disabled && (
-          <Toggle
-            className={styles.navbarSidebarToggle}
-            checked={colorModeToggle.isDarkTheme}
-            onChange={colorModeToggle.toggle}
-          />
-        )}
+        {!colorModeToggle.disabled && (<TogleDarkMode colorModeToggle={colorModeToggle} />)}
         <button
           type="button"
           className="clean-btn navbar-sidebar__close"
@@ -261,13 +270,7 @@ function Navbar(props) {
           {rightItems.map((item, i) => (
             <NavbarItem {...item} key={i} />
           ))}
-          {!colorModeToggle.disabled && (
-            <Toggle
-              className={styles.toggle}
-              checked={colorModeToggle.isDarkTheme}
-              onChange={colorModeToggle.toggle}
-            />
-          )}
+          {!colorModeToggle.disabled && (<TogleDarkMode colorModeToggle={colorModeToggle} />)}
           {!hasSearchNavbarItem && <SearchBar />}
         </div>
       </div>

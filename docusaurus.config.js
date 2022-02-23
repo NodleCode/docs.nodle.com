@@ -165,7 +165,7 @@ const config = {
           alt: 'Nodle',
           src: 'img/logo.svg',
         },
-        copyright: `Copyright © ${new Date().getFullYear()} Nodle.`,
+        // copyright: `Copyright © ${new Date().getFullYear()} Nodle.`,
       },
       prism: {
         theme: lightCodeTheme,
