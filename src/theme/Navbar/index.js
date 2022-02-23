@@ -234,6 +234,11 @@ function Navbar() {
         [styles.navbarHidden]: hideOnScroll && !isNavbarVisible,
       })}>
       <div className="navbar__inner">
+      <Logo
+          className="navbar__brand"
+          imageClassName="navbar__logo"
+          titleClassName="navbar__title"
+        />
         <div className="navbar__items">
           {(items?.length > 0 || activeDocPlugin) && (
             <button
@@ -246,13 +251,8 @@ function Navbar() {
               <IconMenu />
             </button>
           )}
-          <Logo
-            className="navbar__brand"
-            imageClassName="navbar__logo"
-            titleClassName="navbar__title"
-          />
           {leftItems.map((item, i) => (
-            <NavbarItem {...item} key={i} />
+            <NavbarItem isActive={() => window.location.pathname + window.location.hash == item.to} {...item} key={i} />
           ))}
         </div>
         <div className="navbar__items navbar__items--right">

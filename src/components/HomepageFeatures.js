@@ -121,7 +121,7 @@ export default function HomepageFeatures() {
       <div className="container">
         <div className="row">
           {FeatureList.map((feature, idx) => (
-            <section className={styles.featureSection}>
+            <section id={feature.title} className={styles.featureSection}>
               <h2>{feature.title}</h2>
               <section className={styles.featureSectionBlocks}>
                 {feature.blocks.map((props, feature_idx) => (

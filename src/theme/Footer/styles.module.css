@@ -14,3 +14,7 @@
 .footerLogoLink:hover {
   opacity: 1;
 }
+
+.footer {
+  background-color: #0F1C2A;
+}

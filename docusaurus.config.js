@@ -46,19 +46,25 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Documentation',
+        title: '',
         logo: {
           alt: 'Nodle',
           src: 'img/logo.svg',
         },
         items: [
+          { to: '/#Learn', label: 'Learn', position: 'left'},
+          { to: '/#Participate', label: 'Participate', position: 'left'},
+          { to: '/#Use', label: 'Use', position: 'left'},
+
+
           {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          { to: '/blog', label: 'Blog', position: 'left'}
+          
+          { to: '/blog', label: 'Blog', position: 'left'},
         ],
       },
       footer: {
