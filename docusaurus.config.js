@@ -71,28 +71,69 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Learn',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'About Nodle',
+                to: `#${Math.random()}`,
+              },
+              {
+                label: 'Nodle Chain',
+                to: `#${Math.random()}`,
+              },
+              {
+                label: 'Parachain',
+                to: `#${Math.random()}`,
+              },
+              {
+                label: 'Wallets',
+                to: `#${Math.random()}`,
+              },
+              {
+                label: 'Glossary',
+                to: `#${Math.random()}`,
+              },
+              {
+                label: 'Research',
+                to: `#${Math.random()}`,
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Participate',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'About Nodle',
+                to: `#${Math.random()}`,
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Nodle Chain',
+                to: `#${Math.random()}`,
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Parachain',
+                to: `#${Math.random()}`,
+              },
+              {
+                label: 'Wallets',
+                to: `#${Math.random()}`,
+              },
+              {
+                label: 'Glossary',
+                to: `#${Math.random()}`,
+              },
+              {
+                label: 'Research',
+                to: `#${Math.random()}`,
+              },
+            ],
+          },
+          {
+            title: 'Use',
+            items: [
+              {
+                label: 'IoT Dashboard',
+                to: `#${Math.random()}`,
               },
             ],
           },
@@ -100,17 +141,29 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Github',
+                to: `#${Math.random()}`,
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Support',
+                to: `#${Math.random()}`,
+              },
+              {
+                label: 'Impressum',
+                to: `#${Math.random()}`,
+              },
+              {
+                label: 'Privacy Policy',
+                to: `#${Math.random()}`,
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        logo: {
+          alt: 'Nodle',
+          src: 'img/logo.svg',
+        },
+        copyright: `Copyright © ${new Date().getFullYear()} Nodle.`,
       },
       prism: {
         theme: lightCodeTheme,

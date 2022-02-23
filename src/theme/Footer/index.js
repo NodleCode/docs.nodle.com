@@ -117,6 +117,7 @@ function isMultiColumnFooterLinks(links) {
 function Footer() {
   const {footer} = useThemeConfig();
   const {copyright, links = [], logo = {}} = footer || {};
+
   const sources = {
     light: useBaseUrl(logo.src),
     dark: useBaseUrl(logo.srcDark || logo.src),
@@ -143,21 +144,22 @@ function Footer() {
               <SimpleLinks links={links} />
             </div>
           ))}
-        {(logo || copyright) && (
-          <div className="footer__bottom text--center">
+      </div>
+      {(logo || copyright) && (
+          <div className="footer__bottom">
             {logo && (logo.src || logo.srcDark) && (
-              <div className="margin-bottom--sm">
+              <div>
                 {logo.href ? (
                   <Link href={logo.href} className={styles.footerLogoLink}>
                     <FooterLogo
                       alt={logo.alt}
                       sources={sources}
-                      width={logo.width}
-                      height={logo.height}
+                      width={logo.width || '50px'}
+                      height={logo.height || '300px'}
                     />
                   </Link>
                 ) : (
-                  <FooterLogo alt={logo.alt} sources={sources} />
+                  <FooterLogo height='50px' width='auto' alt={logo.alt} sources={sources} />
                 )}
               </div>
             )}
@@ -172,7 +174,6 @@ function Footer() {
             ) : null}
           </div>
         )}
-      </div>
     </footer>
   );
 }
