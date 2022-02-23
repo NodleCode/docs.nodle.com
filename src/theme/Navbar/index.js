@@ -25,6 +25,7 @@ import Logo from '@theme/Logo';
 import IconMenu from '@theme/IconMenu';
 import IconClose from '@theme/IconClose';
 import styles from './styles.module.css'; // retrocompatible with v1
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
 const DefaultNavItemPosition = 'right';
 
@@ -251,9 +252,11 @@ function Navbar() {
               <IconMenu />
             </button>
           )}
-          {leftItems.map((item, i) => (
-            <NavbarItem isActive={() => window.location.pathname + window.location.hash == item.to} {...item} key={i} />
-          ))}
+          <BrowserOnly>
+            {leftItems.map((item, i) => (
+              <NavbarItem isActive={() => window.location.pathname + window.location.hash == item.to} {...item} key={i} />
+            ))}
+          </BrowserOnly>
         </div>
         <div className="navbar__items navbar__items--right">
           {rightItems.map((item, i) => (
