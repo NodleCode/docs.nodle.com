@@ -26,6 +26,7 @@ import IconMenu from '@theme/IconMenu';
 import IconClose from '@theme/IconClose';
 import styles from './styles.module.css'; // retrocompatible with v1
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { withRouter } from '@docusaurus/router';
 
 const DefaultNavItemPosition = 'right';
 
@@ -213,7 +214,7 @@ function NavbarMobileSidebar({sidebarShown, toggleSidebar}) {
   );
 }
 
-function Navbar() {
+function Navbar(props) {
   const {
     navbar: {hideOnScroll, style},
   } = useThemeConfig();
@@ -252,11 +253,9 @@ function Navbar() {
               <IconMenu />
             </button>
           )}
-          <BrowserOnly>
-            {leftItems.map((item, i) => (
-              <NavbarItem isActive={() => window.location.pathname + window.location.hash == item.to} {...item} key={i} />
-            ))}
-          </BrowserOnly>
+          {leftItems.map((item, i) => (
+            <NavbarItem isActive={() => props.location.pathname + props.location.hash == item.to} {...item} key={i} />
+          ))}
         </div>
         <div className="navbar__items navbar__items--right">
           {rightItems.map((item, i) => (
@@ -289,4 +288,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default withRouter(Navbar);
