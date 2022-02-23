@@ -17,6 +17,7 @@
   --footer-link-color: #00000070;
   --footer-title-color: #0F1C2A;
   --footer-separators: #0F1C2A20;
+  --ifm-toc-border-color: var(--footer-separators);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -33,6 +34,7 @@ html[data-theme='dark'] {
   --footer-link-color: #ffffff50;
   --footer-title-color: #ffffff;
   --footer-separators: #ffffff10;
+  --ifm-toc-border-color: var(--footer-separators);
 }
 
 *, html {
@@ -111,4 +113,14 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 .footer__title {
   color: var(--footer-title-color);
+}
+
+.theme-doc-sidebar-item-link a {
+  margin: 5px 0;
+  padding: 10px;
+}
+
+.theme-doc-sidebar-item-category a {
+  margin: 5px 0;
+  padding: 10px;
 }

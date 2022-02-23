@@ -46,7 +46,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '',
+        title: 'Documentation',
         logo: {
           alt: 'Nodle',
           src: 'img/logo.svg',
