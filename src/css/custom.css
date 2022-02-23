@@ -109,9 +109,18 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 30px;
   border-top: 1px solid var(--footer-separators);
+}
+
+.footer__link--signature {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 150px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footer__title {

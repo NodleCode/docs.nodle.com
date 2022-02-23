@@ -65,6 +65,8 @@ const config = {
           },
           
           { to: '/blog', label: 'Blog', position: 'left'},
+
+          { to: '#', label: 'SDK', position: 'right'},
         ],
       },
       footer: {

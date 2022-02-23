@@ -154,12 +154,12 @@ function Footer() {
                     <FooterLogo
                       alt={logo.alt}
                       sources={sources}
-                      width={logo.width || '50px'}
-                      height={logo.height || '300px'}
+                      width={logo.width || '100px'}
+                      height={logo.height}
                     />
                   </Link>
                 ) : (
-                  <FooterLogo height='50px' width='auto' alt={logo.alt} sources={sources} />
+                  <FooterLogo height={logo.height} width={logo.width || '100px'} alt={logo.alt} sources={sources} />
                 )}
               </div>
             )}
@@ -172,6 +172,10 @@ function Footer() {
                 }}
               />
             ) : null}
+            <div className="footer__link footer__link--signature">
+              <a className='footer__link-item' href='#'>Privacy</a>
+              <a className='footer__link-item' href='#'>EULA</a>
+            </div>
           </div>
         )}
     </footer>
