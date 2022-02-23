@@ -116,11 +116,23 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 .theme-doc-sidebar-item-link a {
-  margin: 5px 0;
+  /* margin: 5px 0; */
   padding: 10px;
 }
 
+.theme-doc-sidebar-item-link {
+  border-bottom: 1px solid var(--footer-separators);
+}
+
 .theme-doc-sidebar-item-category a {
-  margin: 5px 0;
+  /* margin: 5px 0; */
   padding: 10px;
+}
+
+.theme-doc-sidebar-item-category {
+  border-bottom: 1px solid var(--footer-separators);
+}
+
+.theme-doc-sidebar-item-category .theme-doc-sidebar-item-link {
+  border-bottom: none;
 }
