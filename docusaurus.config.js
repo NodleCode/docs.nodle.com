@@ -52,9 +52,9 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          { to: '/#Learn', label: 'Learn', position: 'left'},
-          { to: '/#Participate', label: 'Participate', position: 'left'},
-          { to: '/#Use', label: 'Use', position: 'left'},
+          { to: '/#Learn', label: 'Learn', position: 'left' },
+          { to: '/#Participate', label: 'Participate', position: 'left' },
+          { to: '/#Use', label: 'Use', position: 'left' },
 
 
           {
@@ -63,10 +63,8 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          
-          { to: '/blog', label: 'Blog', position: 'left'},
 
-          { to: '#', label: 'SDK', position: 'right'},
+          { to: '#', label: 'SDK', position: 'right' },
         ],
       },
       footer: {
