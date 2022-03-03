@@ -6,9 +6,9 @@ sidebar_position: 4
 Integrating the Nodle SDK into your android app is easy and straightforward. Just follow the steps below and you should be ready to go in no time.
 
 ## Step 1: Generate Developer Key
-- Go and download [NodleCash](https://apps.apple.com/us/app/nodle-cash/id1480763553) 
-- Create an account and make sure you save your private key
-- In the NodleCash app copy the ```public_key```
+- Go and [Create a Web Wallet](nodle-cash/how-to-create-a-nodle-cash-wallet.md) 
+- Make sure you save your private key!
+- Copy your ```public_key``` from the extension
 - Proceed forward with next steps.
 
 ## Step 2: Install the SDK
