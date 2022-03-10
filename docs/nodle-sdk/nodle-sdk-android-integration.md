@@ -72,7 +72,7 @@ dependencyResolutionManagement {
 If you are using Java as your language of choice please make sure to use the default Java Library version which is JDK 11 as of Android Studio Fox update. Like that you can make sure your project works as expected between the Kotlin-Java and vice-versa compatibility. You can do that by following this path: **Project Structure -> SDK Location -> Gradle Settings -> Gradle Projects -> Gradle JDK ->** Select 11 or later.
 
 ## Step 3: Add the NodleSDK dependency
-In your app module's ```build.gradle``` simply add the Nodle SDK dependency in gradle. Please node that nodlesdk depends by default on google play service.  If your app runs on devices that doesn't have google play service, you can use a different flavour of the nodlesdk that doesn't depend on google play services:
+In your app module's ```build.gradle``` simply add the Nodle SDK dependency in gradle. Please node that nodlesdk depends by default on google play service.  If your app runs on devices that doesn't have google play service, you can use a different flavour of the nodlesdk that doesn't depend on google play services. Our previous release supports **API 30** with **AGP 7.0.2+** and **GP 7.1**:
 
 ### Default (depends on Google Play services)
   
@@ -99,9 +99,36 @@ dependencies {
 }
 ```
 
-If you are using the Google Play Services version please make sure to add the plugin. You can use the libraries we are using or the newest ones. We would try to support always the latest libraries. The **minAPI** we support is 19. We are also on the latest version of **AGP** 4.2+
+Our latest release provide full support for **Android 12** **API 31** with **AGP 7.1.2+** and **GP 7.2** you can simply add the Nodle SDK dependency in your  ```build.gradle```
 
-**The latest version of the SDK is**  ```cbe8a42b18```
+### Default (depends on Google Play services)
+  
+```kotlin
+// Top level gradle
+buildscript {
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.10'    // Google Services plugin
+    }
+}
+
+// Module Gradle
+dependencies {
+    implementation 'io.nodle:nodlesdk-rc-lp:92bd58f9e2'
+}
+```
+
+### Without Google Play Services
+
+```kotlin
+// Module Gradle
+dependencies {
+    implementation 'io.nodle:nodlesdk-rc-lg:92bd58f9e2'
+}
+```
+
+If you are using the Google Play Services version please make sure to add the plugin. You can use the libraries we are using or the newest ones. We would try to support always the latest libraries. The **minAPI:19** and **maxAPI:31**. We are also on the latest version of **AGP 7.1.2+**
+
+**The latest version of the SDK is**  ```92bd58f9e2```
 
 ## Step 4: Initialize the Nodle SDK
 First you need to declare your application class in your **ApplicationManifest.xml**. And declare the required permissions for Nodle to be able to run:
@@ -119,6 +146,11 @@ First you need to declare your application class in your **ApplicationManifest.x
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- Required permissions NodleSDK Android 12  -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     
      <!-- Put your application class name below -->
     <application
@@ -140,6 +172,11 @@ First you need to declare your application class in your **ApplicationManifest.x
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- Required permissions NodleSDK Android 12  -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     
      <!-- Put your application class name below -->
     <application
@@ -186,6 +223,9 @@ The SDK expects a certain number of permission to be set. You must make sure tha
 - ACCESS_FINE_LOCATION 
 - ACCESS_COARSE_LOCATION 
 - ACCESS_BACKGROUND_LOCATION - **API 29 and ABOVE**
+- BLUETOOTH_SCAN - **API 31 (ANDROID 12)**
+- BLUETOOTH_ADVERTISE - **API 31 (ANDROID 12)**
+- BLUETOOTH_CONNECT - **API 31 (ANDROID 12)**
 
 In order for NodleSDK to be able to work while in the background we require the **ACCESS_BACKGROUND_LOCATION** which Google Play Store has updated it's location policy and require extra steps for verification in Google Play Stores requiring the application developer to submit a video of the permissions usage. If you can't provide the requested usage description you can always strip the permission like this:
 
@@ -214,8 +254,32 @@ RealRxPermission.getInstance(this)
    });
 
 ```
+You can still use the same third-party library for Android 12 by adding the following permissions:
 
-Please follow their guide how to install and setup the request. After permissions are requested and given the NodleSDK should work as expected.
+```kotlin
+RealRxPermission.getInstance(this)
+    .requestEach(
+            Manifest.permission.INTERNET,
+            Manifest.permission.BLUETOOTH,
+            Manifest.permission.BLUETOOTH_ADMIN,
+            Manifest.permission.BLUETOOTH_SCAN,
+            Manifest.permission.BLUETOOTH_ADVERTISE,
+            Manifest.permission.BLUETOOTH_CONNECT,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.ACCESS_FINE_LOCATION)
+    .reduce(true, (c, p) -> c && (p.state() == Permission.State.GRANTED))
+    .subscribe((granted) -> {
+            if (granted) {
+               Log.d("Nodle","all the permissions was granted by user");
+               Nodle.start("ss58:public_key"); 
+            } else {
+               Log.d("Nodle","some permission was denied by user");
+            }
+   });
+
+```
+
+Please follow their guide on how to install and setup the request. After permissions are requested and given the NodleSDK should work as expected.
 
 ## Step 6: Run the Nodle SDK
 In the ```onCreate``` method of your launcher activity start Nodle by giving it the ```ss58:public_key``` generated in Step 1:
