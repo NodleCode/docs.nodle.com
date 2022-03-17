@@ -24,7 +24,7 @@ pod 'NodleSDK'
 pod 'NodleSDKWCB', :podspec => 'https://raw.githubusercontent.com/NodleCode/NodleSDK-Release/main/NodleSDKWCB.podspec'
 ```
 
-The latest version of the SDK is ```0.0.9``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
+The latest version of the SDK is ```0.0.10``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
 
 ```swift
 # Pods for NodleSDK
