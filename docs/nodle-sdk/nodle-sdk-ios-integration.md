@@ -85,6 +85,22 @@ end
 
 You could do the same manually by adding the ['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES' to your Pod project settings. If you are on older version of cocoapods before 1.9- you will not need to do anything  and you can simply proceed to next steps.
 
+### NodleSDK issues with dependencies:
+If you are experiencing issues please make sure the correct version of the dependencies are in your **Podfile.lock** as an example with our latest version of the dependencies found here:
+```
+SQLite.swift: 4fc2be46c36392e3b87afe6fe7f1801c1daa07ef
+SwiftCBOR: ac340b74d3b2cf1f8884bb748bd09875848e3873
+SwiftProtobuf: 6ef3f0e422ef90d6605ca20b21a94f6c1324d6b3
+```
+If you are having trouble with the dependencies loading for older versions of our SDK please make sure they are corrected in the **Podfile.lock** file.  Example for older versions of dependencies:
+```
+SQLite.swift: 4fc2be46c36392e3b87afe6fe7f1801c1daa07ef
+SwiftCBOR: ce5354ec8b660da2d6fc754462881119dbe1f963
+SwiftProtobuf: c3c12645230d9b09c72267e0de89468c5543bd86
+```
+
+After you have corrected them in the file to the correct versions and CHECKSUMS simply run pod install.
+
 ### NodleSDK requirements:
 We are currently using the following setup:
 
