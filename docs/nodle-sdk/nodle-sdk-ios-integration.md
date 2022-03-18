@@ -24,13 +24,13 @@ pod 'NodleSDK'
 pod 'NodleSDKWCB', :podspec => 'https://raw.githubusercontent.com/NodleCode/NodleSDK-Release/main/NodleSDKWCB.podspec'
 ```
 
-The latest version of the SDK is ```0.0.10``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
+The latest version of the SDK is ```0.0.11``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
 
 ```swift
 # Pods for NodleSDK
 pod 'SQLite.swift', '~> 0.13.2'
-pod 'SwiftCBOR', '~> 0.4.4'
-pod 'SwiftProtobuf', '~> 1.18.0'
+pod 'SwiftCBOR', '~> 0.4.5'
+pod 'SwiftProtobuf', '~> 1.19.0'
 ```
 
 Then, run ```pod install```. You may also need to run ```pod install --repo-update``` . 
@@ -41,8 +41,8 @@ You can also add the SDK to your project manually. Download the current [release
 ```swift
 # Pods for NodleSDK
 pod 'SQLite.swift', '~> 0.13.2'
-pod 'SwiftCBOR', '~> 0.4.4'
-pod 'SwiftProtobuf', '~> 1.18.0'
+pod 'SwiftCBOR', '~> 0.4.5'
+pod 'SwiftProtobuf', '~> 1.19.0'
 ```
 
 Then, run ```pod install```. You may also need to run pod repo update. If you run into trouble with pod please install [cocoapods-deintegrate](https://github.com/CocoaPods/cocoapods-deintegrate) and run pod deintegrate and also you would need to remove your cache we recommend you do the following:
@@ -77,8 +77,8 @@ target 'YourTarget' do
   # Pods for TestApp
   pod 'NodleSDK'
   pod 'SQLite.swift', '~> 0.13.2'
-  pod 'SwiftCBOR' 
-  pod 'SwiftProtobuf', '~> 1.18.0'
+  pod 'SwiftCBOR', '~> 0.4.5'
+  pod 'SwiftProtobuf', '~> 1.19.0'
 
 end
 ```
