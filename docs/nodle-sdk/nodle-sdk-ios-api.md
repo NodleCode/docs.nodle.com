@@ -222,6 +222,15 @@ The following data can be collected from the ```NodleBeaconEvent```:
 |:-------:|:------------------------------------------------------------:|:-------------:|
 | ```scanning``` | returns beacon scanning state |      Bool         |
 
+The table shows rational range for the beacon devices that are found:
+
+|   **Key**   |                          **Description**                        | **Range** |
+|:-------:|:------------------------------------------------------------:|:-------------:|
+| ```proximity``` | Int |      **unknown** = 0, **immediate** = 1, **near** = 2, **far** = 3         |
+| ```accuracy``` | Double |      **unknown** 0, 0 - 0.5 **immediate**, 0.5 - 3 **near**, 3+ **far** in **meters**         |
+| ```rssi``` | Int |      -**128**|+**127**         |
+
+
 ## config
 
 ```public func config(path: Path)```
