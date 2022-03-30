@@ -74,7 +74,7 @@ let sdkScanning = Nodle().isScanning()
 
 ## stop
 
-```public func stop()``
+```public func stop()```
 
 Immediately stops the Nodle SDK
 
@@ -87,7 +87,7 @@ Nodle().stop()
 
 ## clear
 
-```public func clear()``
+```public func clear()```
 
 Clear any configs by Nodle SDK   
 
@@ -230,6 +230,31 @@ The table shows rational range for the beacon devices that are found:
 | ```accuracy``` | Double |      **unknown** 0, 0 - 0.5 **immediate**, 0.5 - 3 **near**, 3+ **far** in **meters**         |
 | ```rssi``` | Int |      -**128**|+**127**         |
 
+## registerNodleBackgroundTask
+
+```public func registerNodleBackgroundTask()```
+
+Register the Nodle SDK background task   
+
+Example:
+
+### Swift
+```swift
+Nodle().registerNodleBackgroundTask()
+```
+
+## scheduleNodleBackgroundTask
+
+```public func scheduleNodleBackgroundTask()```
+
+Schedules the Nodle SDK background task   
+
+Example:
+
+### Swift
+```swift
+Nodle().scheduleNodleBackgroundTask()
+```
 
 ## config
 

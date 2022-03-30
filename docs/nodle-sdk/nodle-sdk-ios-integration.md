@@ -353,6 +353,82 @@ You can find more info here: [Nodle SDK - iOS API and Configuration](nodle-sdk-i
 
 **And there you have it! You’re good to go!**
 
+## Step 7: Run Nodle SDK in Background (Optional)
+If you would want your NodleSDK to perform background scanning, you must add the following task: ```io.nodle.sdk.ios.bgrefresh```  to your ```Info.plist``` file under the section: **Permitted background task scheduler identifiers** ```BGTaskSchedulerPermittedIdentifiers``` Here is a small example how it should look like when configured:
+
+![Empty Import](/img/docs/nodle-sdk/bgtask.png)
+
+Then make sure you enabled all permissions that are required. You can proceed to register the **NodleBackgroundTask** by doing the following in you **AppDelegate** application method: 
+
+### Swift
+```swift
+import UIKit
+import SwiftCBOR
+import SwiftProtobuf
+import NodleSDK
+import SQLite
+import CoreLocation
+import CoreBluetooth
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    // init nodle sdk
+    let nodle = Nodle.sharedInstance
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // register background task for nodle sdk
+        nodle.registerNodleBackgroundTask()
+        return true
+    }
+}
+```
+
+Then you can proceed to schedule your tasks once your application enters background by doing the following:
+
+### Swift
+```swift
+import UIKit
+import SwiftCBOR
+import SwiftProtobuf
+import NodleSDK
+import SQLite
+import CoreLocation
+import CoreBluetooth
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    // init nodle sdk
+    let nodle = Nodle.sharedInstance
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // register background task for nodle sdk
+        nodle.registerNodleBackgroundTask()
+        return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // schedule background task for nodle sdk
+        nodle.scheduleNodleBackgroundTask()
+    }
+}
+```
+
+If you are using SceneDelegates don't forget to add the following call to your delegate method by doing the following:
+
+### Swift
+```swift
+import UIKit
+
+class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        // call app delegate method
+        (UIApplication.shared.delegate as? AppDelegate)?.applicationDidEnterBackground((UIApplication.shared))
+    }
+}
+```
+
+You have successfully configured the NodleSDK to perform background scanning.
+
 ## Want to check your SDK rewards? 
 Currently we have our dashboard **under development** and rewards are not available. If you want see your rewards please go to our [block explorer](https://explorer.nodle.com/) please follow the steps:
 
