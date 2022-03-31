@@ -65,6 +65,7 @@ const config = {
           },
 
           { to: '#', label: 'SDK', position: 'right' },
+          { to: 'https://github.com/NodleCode/docs.nodle.com', label: 'Contribute to this WIKI', position: 'right' },
         ],
       },
       footer: {

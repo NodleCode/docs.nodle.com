@@ -8,7 +8,7 @@ const FeatureList = [
     blocks: [
       {
         title: 'About Nodle',
-        Svg: require('../../static/img/icons/privacy.svg').default,
+        Svg: require('../../static/img/icons/icon_about_nodle.svg').default,
         description: (
           <>
             Unlike Advertising SDKs which harvest user data and show ads, Nodle does not collect Personal Information (PII Data).
@@ -17,7 +17,7 @@ const FeatureList = [
       },
       {
         title: 'Nodle Chain',
-        Svg: require('../../static/img/icons/privacy.svg').default,
+        Svg: require('../../static/img/icons/icon_nodle_chain.svg').default,
         description: (
           <>
             The Nodle Network uses Bluetooth Low Energy (BLE), which is extremely efficient and already running on most smartphones.
@@ -26,7 +26,7 @@ const FeatureList = [
       },
       {
         title: 'NODL token',
-        Svg: require('../../static/img/icons/privacy.svg').default,
+        Svg: require('../../static/img/icons/icon_token.svg').default,
         description: (
           <>
             The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
@@ -35,7 +35,7 @@ const FeatureList = [
       },
       {
         title: 'Nodle Nodes',
-        Svg: require('../../static/img/icons/privacy.svg').default,
+        Svg: require('../../static/img/icons/icons_nodes.svg').default,
         description: (
           <>
             Nodle is deployed today on Google Play, and already running in apps around the planet.
@@ -49,7 +49,7 @@ const FeatureList = [
     blocks: [
       {
         title: 'App partners, SDK',
-        Svg: require('../../static/img/icons/privacy.svg').default,
+        Svg: require('../../static/img/icons/icons_partners_sdk.svg').default,
         description: (
           <>
             The Nodle Network uses Bluetooth Low Energy (BLE), which is extremely efficient and already running on most smartphones.
@@ -58,7 +58,7 @@ const FeatureList = [
       },
       {
         title: 'Nodes & Validators',
-        Svg: require('../../static/img/icons/privacy.svg').default,
+        Svg: require('../../static/img/icons/icons_nodes_validators.svg').default,
         description: (
           <>
             The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
@@ -67,7 +67,7 @@ const FeatureList = [
       },
       {
         title: 'Cash app users',
-        Svg: require('../../static/img/icons/privacy.svg').default,
+        Svg: require('../../static/img/icons/icons_cash_users.svg').default,
         description: (
           <>
             Nodle is deployed today on Google Play, and already running in apps around the planet.
@@ -81,7 +81,7 @@ const FeatureList = [
     blocks: [
       {
         title: 'IoT Customers',
-        Svg: require('../../static/img/icons/privacy.svg').default,
+        Svg: require('../../static/img/icons/icons_iot.svg').default,
         description: (
           <>
             The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
@@ -90,7 +90,7 @@ const FeatureList = [
       },
       {
         title: 'Cash app users',
-        Svg: require('../../static/img/icons/privacy.svg').default,
+        Svg: require('../../static/img/icons/icons_cash_app.svg').default,
         description: (
           <>
             Nodle is deployed today on Google Play, and already running in apps around the planet.
