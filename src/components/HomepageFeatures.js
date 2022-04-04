@@ -14,6 +14,7 @@ const FeatureList = [
             Unlike Advertising SDKs which harvest user data and show ads, Nodle does not collect Personal Information (PII Data).
           </>
         ),
+        link: '',
       },
       {
         title: 'Nodle Chain',
@@ -23,6 +24,7 @@ const FeatureList = [
             The Nodle Network uses Bluetooth Low Energy (BLE), which is extremely efficient and already running on most smartphones.
           </>
         ),
+        link: '',
       },
       {
         title: 'NODL token',
@@ -32,6 +34,7 @@ const FeatureList = [
             The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
           </>
         ),
+        link: '',
       },
       {
         title: 'Nodle Nodes',
@@ -41,6 +44,7 @@ const FeatureList = [
             Nodle is deployed today on Google Play, and already running in apps around the planet.
           </>
         ),
+        link: '',
       },
     ]
   },
@@ -55,6 +59,7 @@ const FeatureList = [
             The Nodle Network uses Bluetooth Low Energy (BLE), which is extremely efficient and already running on most smartphones.
           </>
         ),
+        link: '',
       },
       {
         title: 'Nodes & Validators',
@@ -64,6 +69,7 @@ const FeatureList = [
             The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
           </>
         ),
+        link: '',
       },
       {
         title: 'Cash app users',
@@ -73,6 +79,7 @@ const FeatureList = [
             Nodle is deployed today on Google Play, and already running in apps around the planet.
           </>
         ),
+        link: '',
       },
     ]
   },
@@ -87,6 +94,7 @@ const FeatureList = [
             The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
           </>
         ),
+        link: '',
       },
       {
         title: 'Cash app users',
@@ -96,21 +104,24 @@ const FeatureList = [
             Nodle is deployed today on Google Play, and already running in apps around the planet.
           </>
         ),
+        link: '',
       },
     ]
   }
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description, link}) {
   return (
     <div className={styles.customFeature}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
-      <div className={styles.customFeatureTextSection}>
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+      <a className={styles.customFeatureLink} href={link || '#'}>
+        <div className="text--center">
+          <Svg className={styles.featureSvg} alt={title} />
+        </div>
+        <div className={styles.customFeatureTextSection}>
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+      </a>
     </div>
   );
 }
