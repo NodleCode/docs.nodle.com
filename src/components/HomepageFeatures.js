@@ -7,11 +7,11 @@ const FeatureList = [
     title: 'Learn',
     blocks: [
       {
-        title: 'About Nodle',
+        title: 'Nodle Network',
         Svg: require('../../static/img/icons/icon_about_nodle.svg').default,
         description: (
           <>
-            Unlike Advertising SDKs which harvest user data and show ads, Nodle does not collect Personal Information (PII Data).
+            The Nodle Network is a decentralized wireless network that provides low-range wireless access to IoT devices.
           </>
         ),
         link: '',
@@ -21,7 +21,7 @@ const FeatureList = [
         Svg: require('../../static/img/icons/icon_nodle_chain.svg').default,
         description: (
           <>
-            The Nodle Network uses Bluetooth Low Energy (BLE), which is extremely efficient and already running on most smartphones.
+            The Nodle Chain is the parachain that powers the Nodle Network.
           </>
         ),
         link: '',
@@ -31,38 +31,39 @@ const FeatureList = [
         Svg: require('../../static/img/icons/icon_token.svg').default,
         description: (
           <>
-            The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
+            The Nodle token, also known as Nodle Cash, is the native crypo-asset of the Nodle Network.
           </>
         ),
         link: '',
       },
-      {
-        title: 'Nodle Nodes',
-        Svg: require('../../static/img/icons/icons_nodes.svg').default,
-        description: (
-          <>
-            Nodle is deployed today on Google Play, and already running in apps around the planet.
-          </>
-        ),
-        link: '',
-      },
+
+//      {
+//        title: 'Nodle Nodes',
+//        Svg: require('../../static/img/icons/icons_nodes.svg').default,
+//        description: (
+//          <>
+//            The Nodle Edge Nodes .
+//          </>
+//        ),
+//      },
+
     ]
   },
   {
     title: 'Participate',
     blocks: [
       {
-        title: 'App partners, SDK',
+        title: 'As a mobile app partner (SDK)',
         Svg: require('../../static/img/icons/icons_partners_sdk.svg').default,
         description: (
           <>
-            The Nodle Network uses Bluetooth Low Energy (BLE), which is extremely efficient and already running on most smartphones.
+            As a mobile app developper, you can embed the Nodle SDK, and earn NODL
           </>
         ),
         link: '',
       },
       {
-        title: 'Nodes & Validators',
+        title: 'As a Collator',
         Svg: require('../../static/img/icons/icons_nodes_validators.svg').default,
         description: (
           <>
@@ -72,11 +73,11 @@ const FeatureList = [
         link: '',
       },
       {
-        title: 'Cash app users',
+        title: 'As a Cash app user',
         Svg: require('../../static/img/icons/icons_cash_users.svg').default,
         description: (
           <>
-            Nodle is deployed today on Google Play, and already running in apps around the planet.
+            Participate to the Nodle network, by downloading the Nodle Cash app.
           </>
         ),
         link: '',
@@ -87,21 +88,21 @@ const FeatureList = [
     title: 'Use',
     blocks: [
       {
-        title: 'IoT Customers',
+        title: 'As an IoT customer',
         Svg: require('../../static/img/icons/icons_iot.svg').default,
         description: (
           <>
-            The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
+            You can use the Nodle Network today, to track IoT assets, and more
           </>
         ),
         link: '',
       },
       {
-        title: 'Cash app users',
+        title: 'As a Cash app user',
         Svg: require('../../static/img/icons/icons_cash_app.svg').default,
         description: (
           <>
-            Nodle is deployed today on Google Play, and already running in apps around the planet.
+            You can use the Nodle Network to transfer NODL as a Nodle Cash app user
           </>
         ),
         link: '',
