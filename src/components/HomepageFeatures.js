@@ -14,6 +14,7 @@ const FeatureList = [
             The Nodle Network is a decentralized wireless network that provides low-range wireless access to IoT devices.
           </>
         ),
+        link: '',
       },
       {
         title: 'Nodle Chain',
@@ -23,6 +24,7 @@ const FeatureList = [
             The Nodle Chain is the parachain that powers the Nodle Network.
           </>
         ),
+        link: '',
       },
       {
         title: 'NODL token',
@@ -32,6 +34,7 @@ const FeatureList = [
             The Nodle token, also known as Nodle Cash, is the native crypo-asset of the Nodle Network.
           </>
         ),
+        link: '',
       },
 
 //      {
@@ -57,6 +60,7 @@ const FeatureList = [
             As a mobile app developper, you can embed the Nodle SDK, and earn NODL
           </>
         ),
+        link: '',
       },
       {
         title: 'As a Collator',
@@ -66,6 +70,7 @@ const FeatureList = [
             The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
           </>
         ),
+        link: '',
       },
       {
         title: 'As a Cash app user',
@@ -75,6 +80,7 @@ const FeatureList = [
             Participate to the Nodle network, by downloading the Nodle Cash app.
           </>
         ),
+        link: '',
       },
     ]
   },
@@ -89,6 +95,7 @@ const FeatureList = [
             You can use the Nodle Network today, to track IoT assets, and more
           </>
         ),
+        link: '',
       },
       {
         title: 'As a Cash app user',
@@ -98,21 +105,24 @@ const FeatureList = [
             You can use the Nodle Network to transfer NODL as a Nodle Cash app user
           </>
         ),
+        link: '',
       },
     ]
   }
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, title, description, link}) {
   return (
     <div className={styles.customFeature}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
-      </div>
-      <div className={styles.customFeatureTextSection}>
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
+      <a className={styles.customFeatureLink} href={link || '#'}>
+        <div className="text--center">
+          <Svg className={styles.featureSvg} alt={title} />
+        </div>
+        <div className={styles.customFeatureTextSection}>
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+      </a>
     </div>
   );
 }
