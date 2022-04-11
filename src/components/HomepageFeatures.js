@@ -60,7 +60,7 @@ const FeatureList = [
             As a mobile app developper, you can embed the Nodle SDK, and earn NODL
           </>
         ),
-        link: './docs/nodle-sdk/nodle-sdk-android-integration',
+        link: './docs/nodle-sdk/introduction',
       },
       {
         title: 'As a Collator',
@@ -105,7 +105,7 @@ const FeatureList = [
             You can use the Nodle Network to transfer NODL as a Nodle Cash app user
           </>
         ),
-        link: './docs/nodle-cashapp/intro'
+        link: './docs/nodle-wallets/nodle-cash/intro'
       },
     ]
   }

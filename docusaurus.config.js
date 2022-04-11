@@ -64,7 +64,7 @@ const config = {
             label: 'Docs',
           },
 
-          { to: '#', label: 'SDK', position: 'right' },
+          { to: 'docs/nodle-sdk/introduction', label: 'SDK', position: 'right' },
           { to: 'https://github.com/NodleCode/docs.nodle.com', label: 'Contribute to this WIKI', position: 'right' },
         ],
       },
@@ -75,28 +75,16 @@ const config = {
             title: 'Learn',
             items: [
               {
-                label: 'About Nodle',
-                to: `#${Math.random()}`,
-              },
-              {
                 label: 'Nodle Chain',
-                to: `#${Math.random()}`,
-              },
-              {
-                label: 'Parachain',
-                to: `#${Math.random()}`,
+                to: `docs/nodle-chain/introduction`,
               },
               {
                 label: 'Wallets',
-                to: `#${Math.random()}`,
+                to: `docs/wallets/polkadot-js/how-to-create-a-nodle-cash-wallet`,
               },
               {
                 label: 'Glossary',
-                to: `#${Math.random()}`,
-              },
-              {
-                label: 'Research',
-                to: `#${Math.random()}`,
+                to: `docs/nodle-network/glossary`,
               },
             ],
           },
@@ -104,27 +92,15 @@ const config = {
             title: 'Participate',
             items: [
               {
-                label: 'About Nodle',
-                to: `#${Math.random()}`,
+                label: 'Nodle SDK',
+                to: `docs/nodle-sdk/introduction`,
               },
               {
-                label: 'Nodle Chain',
-                to: `#${Math.random()}`,
+                label: 'Collator',
+                to: `docs/nodle-chain/become-a-collator`,
               },
               {
-                label: 'Parachain',
-                to: `#${Math.random()}`,
-              },
-              {
-                label: 'Wallets',
-                to: `#${Math.random()}`,
-              },
-              {
-                label: 'Glossary',
-                to: `#${Math.random()}`,
-              },
-              {
-                label: 'Research',
+                label: 'Cash app',
                 to: `#${Math.random()}`,
               },
             ],
@@ -134,28 +110,11 @@ const config = {
             items: [
               {
                 label: 'IoT Dashboard',
-                to: `#${Math.random()}`,
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Github',
-                to: `#${Math.random()}`,
+                to: `docs/nodle-network/iot`,
               },
               {
-                label: 'Support',
-                to: `#${Math.random()}`,
-              },
-              {
-                label: 'Impressum',
-                to: `#${Math.random()}`,
-              },
-              {
-                label: 'Privacy Policy',
-                to: `#${Math.random()}`,
+                label: 'Cash app',
+                to: `docs/nodle-network/iot`,
               },
             ],
           },
