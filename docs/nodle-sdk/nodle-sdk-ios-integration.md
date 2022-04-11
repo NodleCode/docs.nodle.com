@@ -6,7 +6,7 @@ sidebar_position: 4
 Integrating the Nodle SDK into your android app is easy and straightforward. Just follow the steps below and you should be ready to go in no time.
 
 ## Step 1: Generate Developer Key
-- Go and [Create a Web Wallet](wallets/polkadot-js/how-to-create-a-nodle-cash-wallet.md) 
+- Go and [Create a Web Wallet](nodle-wallets/polkadot-js/how-to-create-a-nodle-cash-wallet.md)
 - Make sure you save your private key!
 - Copy your ```public_key``` from the extension
 - Proceed forward with next steps.
@@ -33,7 +33,7 @@ pod 'SwiftCBOR', '~> 0.4.5'
 pod 'SwiftProtobuf', '~> 1.19.0'
 ```
 
-Then, run ```pod install```. You may also need to run ```pod install --repo-update``` . 
+Then, run ```pod install```. You may also need to run ```pod install --repo-update``` .
 
 ### Add the SDK manually:
 You can also add the SDK to your project manually. Download the current [release](https://github.com/NodleCode/NodleSDK-Release/tags), unzip the package, and drag the version of the SDK that you want use for example the version with CoreBluetooth NodleSDK.xcframework into your Xcode project. It will automatically appear in the Frameworks, Libraries, and Embedded Content section of your target settings. Switch Do Not Embed to Embed & Sign. We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
@@ -48,7 +48,7 @@ pod 'SwiftProtobuf', '~> 1.19.0'
 Then, run ```pod install```. You may also need to run pod repo update. If you run into trouble with pod please install [cocoapods-deintegrate](https://github.com/CocoaPods/cocoapods-deintegrate) and run pod deintegrate and also you would need to remove your cache we recommend you do the following:
 
 ```swift
-rm -rf ~/Library/Caches/CocoaPods; rm -rf Pods; rm -rf ~/Library/Developer/Xcode/DerivedData/*; pod deintegrate; 
+rm -rf ~/Library/Caches/CocoaPods; rm -rf Pods; rm -rf ~/Library/Developer/Xcode/DerivedData/*; pod deintegrate;
 ```
 
 Then make sure you are using one of the latest cocoapods versions 1.11+ due to issues with cocoapods not picking dependency properly you need to set the following script on top of your Podfile. You can find example Podfile below:
@@ -61,10 +61,10 @@ post_install do |installer|
           end
         end
     end
-    
+
 # If any errors for example dyld: Symbol not found please use pod deintegrate and pod install again. You should remove your
 # Podfile.lock and workspace and let cocoapods generate it for you if you are having
-# trouble. Make sure you close and open the workspace when you are doing all above before 
+# trouble. Make sure you close and open the workspace when you are doing all above before
 # pod install again.
 platform :ios, '13.0'
 
@@ -72,7 +72,7 @@ platform :ios, '13.0'
 
 target 'YourTarget' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks! 
+  use_frameworks!
 
   # Pods for TestApp
   pod 'NodleSDK'
@@ -181,7 +181,7 @@ Here is a small example how it should look like when configured:
 
 The NodleSDK require Bluetooth and Location permissions to be added before it is started. The **NodleSDKWCB doesn't require Bluetooth**. Then you can proceed to next step and request permissions for Location and Bluetooth via one of the two approaches listed below depending on your choice:
 
-### Request permissions manually for NodleSDK without any third party: 
+### Request permissions manually for NodleSDK without any third party:
 
 ```swift
 import UIKit
@@ -196,14 +196,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, CBCentralMana
     private let locationManager = CLLocationManager()
     var centralManager: CBCentralManager?
     let nodle = Nodle.sharedInstance
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+
         // set manager for permissions
         locationManager.delegate = self
-        
+
         // check status for location permission
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse, .authorizedAlways:
@@ -217,17 +217,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate, CBCentralMana
             break;
         }
     }
-    
+
     func startNodle() {
         // start the sdk
         nodle.start(devKey: "ss58:5FUfDdHhtn5Bzgte69zr1NyNRS7zFqy7CnjVcRUUpWpXz3Cv", tags: "","")
     }
-    
+
     func stopNodle() {
         // stop the sdk
         nodle.stop()
     }
-    
+
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .poweredOn:
@@ -235,14 +235,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, CBCentralMana
             startNodle()
             break
         case .poweredOff:
-            // stop nodle 
+            // stop nodle
             stopNodle()
             break
         default:
             break
         }
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         // handle success
         if status == .authorizedWhenInUse || status == .authorizedAlways {
@@ -254,7 +254,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, CBCentralMana
 }
 ```
 
-### Request permissions manually for NodleSDKWCB without any third party: 
+### Request permissions manually for NodleSDKWCB without any third party:
 
 ```swift
 import UIKit
@@ -267,14 +267,14 @@ import CoreLocation
 class ViewController: UIViewController, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     let nodle = Nodle.sharedInstance
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+
         // set manager for permissions
         locationManager.delegate = self
-        
+
         // check status for location permission
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse, .authorizedAlways:
@@ -287,17 +287,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             break;
         }
     }
-    
+
     func startNodle() {
         // start the sdk
         nodle.start(devKey: "ss58:5FUfDdHhtn5Bzgte69zr1NyNRS7zFqy7CnjVcRUUpWpXz3Cv", tags: "","")
     }
-    
+
     func stopNodle() {
         // stop the sdk
         nodle.stop()
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         // handle success
         if status == .authorizedWhenInUse || status == .authorizedAlways {
@@ -339,7 +339,7 @@ controller.present(on: self)
 let authorized = SPPermissions.Permission.calendar.authorized
 ```
 
-Please follow their guide how to install and setup the request. After permissions are requested and given the NodleSDK should work as expected. 
+Please follow their guide how to install and setup the request. After permissions are requested and given the NodleSDK should work as expected.
 
 ## Step 6: Run the Nodle SDK
 In the ```AppDelegate``` or ```ViewController``` you can start Nodle by giving it your public key in the following format ```ss58:public_key``` generated in Step 1:
@@ -349,7 +349,7 @@ In the ```AppDelegate``` or ```ViewController``` you can start Nodle by giving i
 Nodle().start("ss58:public_key")
 ```
 
-You can find more info here: [Nodle SDK - iOS API and Configuration](nodle-sdk-ios-api.md) 
+You can find more info here: [Nodle SDK - iOS API and Configuration](nodle-sdk-ios-api.md)
 
 **And there you have it! You’re good to go!**
 
@@ -358,7 +358,7 @@ If you would want your NodleSDK to perform background scanning, you must add the
 
 ![Empty Import](/img/docs/nodle-sdk/bgtask.png)
 
-Then make sure you enabled all permissions that are required. You can proceed to register the **NodleBackgroundTask** by doing the following in you **AppDelegate** application method: 
+Then make sure you enabled all permissions that are required. You can proceed to register the **NodleBackgroundTask** by doing the following in you **AppDelegate** application method:
 
 ### Swift
 ```swift
@@ -405,7 +405,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nodle.registerNodleBackgroundTask()
         return true
     }
-    
+
     func applicationDidEnterBackground(_ application: UIApplication) {
         // schedule background task for nodle sdk
         nodle.scheduleNodleBackgroundTask()
@@ -429,7 +429,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 You have successfully configured the NodleSDK to perform background scanning.
 
-## Want to check your SDK rewards? 
+## Want to check your SDK rewards?
 Currently we have our dashboard **under development** and rewards are not available. If you want see your rewards please go to our [block explorer](https://explorer.nodle.com/) please follow the steps:
 
 - copy your ```public_key``` and paste it in the search bar

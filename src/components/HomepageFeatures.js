@@ -14,7 +14,7 @@ const FeatureList = [
             The Nodle Network is a decentralized wireless network that provides low-range wireless access to IoT devices.
           </>
         ),
-        link: '',
+        link: './docs/nodle-network/introduction',
       },
       {
         title: 'Nodle Chain',
@@ -24,7 +24,7 @@ const FeatureList = [
             The Nodle Chain is the parachain that powers the Nodle Network.
           </>
         ),
-        link: '',
+        link: './docs/nodle-chain/run-a-node',
       },
       {
         title: 'NODL token',
@@ -34,7 +34,7 @@ const FeatureList = [
             The Nodle token, also known as Nodle Cash, is the native crypo-asset of the Nodle Network.
           </>
         ),
-        link: '',
+        link: './docs/nodle-chain/nodl',
       },
 
 //      {
@@ -60,7 +60,7 @@ const FeatureList = [
             As a mobile app developper, you can embed the Nodle SDK, and earn NODL
           </>
         ),
-        link: '',
+        link: './docs/nodle-sdk/introduction',
       },
       {
         title: 'As a Collator',
@@ -70,7 +70,7 @@ const FeatureList = [
             The Nodle SDK can use less background data than most advertising SDK which push videos and image ads.
           </>
         ),
-        link: '',
+        link: './docs/nodle-chain/become-a-collator',
       },
       {
         title: 'As a Cash app user',
@@ -80,7 +80,7 @@ const FeatureList = [
             Participate to the Nodle network, by downloading the Nodle Cash app.
           </>
         ),
-        link: '',
+        link: './docs/nodle-cashapp/intro'
       },
     ]
   },
@@ -95,7 +95,7 @@ const FeatureList = [
             You can use the Nodle Network today, to track IoT assets, and more
           </>
         ),
-        link: '',
+        link: './docs/nodle-network/iot',
       },
       {
         title: 'As a Cash app user',
@@ -105,7 +105,7 @@ const FeatureList = [
             You can use the Nodle Network to transfer NODL as a Nodle Cash app user
           </>
         ),
-        link: '',
+        link: './docs/nodle-wallets/nodle-cash/intro'
       },
     ]
   }
