@@ -24,7 +24,7 @@ const FeatureList = [
             The Nodle Chain is the parachain that powers the Nodle Network.
           </>
         ),
-        link: './docs/nodle-chain/run-a-node',
+        link: './docs/nodle-chain/introduction',
       },
       {
         title: 'NODL token',
@@ -37,15 +37,15 @@ const FeatureList = [
         link: './docs/nodle-chain/nodl',
       },
 
-//      {
-//        title: 'Nodle Nodes',
-//        Svg: require('../../static/img/icons/icons_nodes.svg').default,
-//        description: (
-//          <>
-//            The Nodle Edge Nodes .
-//          </>
-//        ),
-//      },
+      //      {
+      //        title: 'Nodle Nodes',
+      //        Svg: require('../../static/img/icons/icons_nodes.svg').default,
+      //        description: (
+      //          <>
+      //            The Nodle Edge Nodes .
+      //          </>
+      //        ),
+      //      },
 
     ]
   },
@@ -111,7 +111,7 @@ const FeatureList = [
   }
 ];
 
-function Feature({Svg, title, description, link}) {
+function Feature({ Svg, title, description, link }) {
   return (
     <div className={styles.customFeature}>
       <a className={styles.customFeatureLink} href={link || '#'}>
