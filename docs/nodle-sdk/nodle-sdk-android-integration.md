@@ -7,7 +7,7 @@ sidebar_position: 1
 Integrating the Nodle SDK into your android app is easy and straightforward. Just follow the steps below and you should be ready to go in no time.
 
 ## Step 1: Generate Developer Key
-- Go and [Create a Web Wallet](wallets/polkadot-js/how-to-create-a-nodle-cash-wallet.md) 
+- Go and [Create a Web Wallet](nodle-wallets/polkadot-js/how-to-create-a-nodle-cash-wallet.md)
 - Make sure you save your private key!
 - Copy your ```public_key``` from the extension
 - Proceed forward with next steps.
@@ -75,7 +75,7 @@ If you are using Java as your language of choice please make sure to use the def
 In your app module's ```build.gradle``` simply add the Nodle SDK dependency in gradle. Please node that nodlesdk depends by default on google play service.  If your app runs on devices that doesn't have google play service, you can use a different flavour of the nodlesdk that doesn't depend on google play services. Our previous release supports **API 30** with **AGP 7.0.2+** and **GP 7.1**:
 
 ### Default (depends on Google Play services)
-  
+
 ```kotlin
 // Top level gradle
 buildscript {
@@ -102,7 +102,7 @@ dependencies {
 Our latest release provide full support for **Android 12** **API 31** with **AGP 7.1.2+** and **GP 7.2** you can simply add the Nodle SDK dependency in your  ```build.gradle```
 
 ### Default (depends on Google Play services)
-  
+
 ```kotlin
 // Top level gradle
 buildscript {
@@ -138,7 +138,7 @@ First you need to declare your application class in your **ApplicationManifest.x
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nodle.dummy">
-    
+
     <!-- Required permissions NodleSDK -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.BLUETOOTH"/>
@@ -151,7 +151,7 @@ First you need to declare your application class in your **ApplicationManifest.x
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-    
+
      <!-- Put your application class name below -->
     <application
         android:name="App">
@@ -164,7 +164,7 @@ First you need to declare your application class in your **ApplicationManifest.x
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nodle.dummy">
-    
+
     <!-- Required permissions NodleSDK -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.BLUETOOTH"/>
@@ -177,7 +177,7 @@ First you need to declare your application class in your **ApplicationManifest.x
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-    
+
      <!-- Put your application class name below -->
     <application
         android:name="App">
@@ -212,16 +212,16 @@ class App : Application() {
 }
 ```
 
-After you have verified that you have the required permissions in the manifest and you are initializing Nodle then you can proceed to next steps. When passing (this) to Nodle you will pass your application Context. Like this Nodle will be able to stay alive in your global application state. 
+After you have verified that you have the required permissions in the manifest and you are initializing Nodle then you can proceed to next steps. When passing (this) to Nodle you will pass your application Context. Like this Nodle will be able to stay alive in your global application state.
 
 ## Step 5 - Check Permission
-The SDK expects a certain number of permission to be set. You must make sure that to request the following permissions from the user: 
+The SDK expects a certain number of permission to be set. You must make sure that to request the following permissions from the user:
 
 - INTERNET
 - BLUETOOTH
 - BLUETOOTH_ADMIN
-- ACCESS_FINE_LOCATION 
-- ACCESS_COARSE_LOCATION 
+- ACCESS_FINE_LOCATION
+- ACCESS_COARSE_LOCATION
 - ACCESS_BACKGROUND_LOCATION - **API 29 and ABOVE**
 - BLUETOOTH_SCAN - **API 31 (ANDROID 12)**
 - BLUETOOTH_ADVERTISE - **API 31 (ANDROID 12)**
@@ -247,7 +247,7 @@ RealRxPermission.getInstance(this)
     .subscribe((granted) -> {
             if (granted) {
                Log.d("Nodle","all the permissions was granted by user");
-               Nodle.start("ss58:public_key"); 
+               Nodle.start("ss58:public_key");
             } else {
                Log.d("Nodle","some permission was denied by user");
             }
@@ -271,7 +271,7 @@ RealRxPermission.getInstance(this)
     .subscribe((granted) -> {
             if (granted) {
                Log.d("Nodle","all the permissions was granted by user");
-               Nodle.start("ss58:public_key"); 
+               Nodle.start("ss58:public_key");
             } else {
                Log.d("Nodle","some permission was denied by user");
             }
@@ -298,7 +298,7 @@ You can find more info here: [Nodle SDK - Android API and Configuration](nodle-s
 
 **And there you have it! You’re good to go!**
 
-## Want to check your SDK rewards? 
+## Want to check your SDK rewards?
 Currently we have our dashboard **under development** and rewards are not available. If you want see your rewards please go to our [block explorer](https://explorer.nodle.com/) please follow the steps:
 
 - copy your ```public_key``` and paste it in the search bar
@@ -308,6 +308,3 @@ Currently we have our dashboard **under development** and rewards are not availa
 ![Empty Import](/img/docs/nodle-sdk/rewards.png)
 
 That's it you should see your rewards. Make sure to add all permissions to the SDK in order to see your rewards. We have a lot of traffic so please bear with us since rewards might take a bit of time. But if you allow all the rules in SDK you should see the packets coming to the dashboard. Then rewards should be visible.
-
-
-

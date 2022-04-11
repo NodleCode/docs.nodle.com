@@ -79,8 +79,8 @@ const config = {
                 to: `docs/nodle-chain/introduction`,
               },
               {
-                label: 'Wallets',
-                to: `docs/wallets/polkadot-js/how-to-create-a-nodle-cash-wallet`,
+                label: 'Nodle Network',
+                to: `docs/nodle-network/introduction`,
               },
               {
                 label: 'Glossary',
