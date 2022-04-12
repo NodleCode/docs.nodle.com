@@ -287,6 +287,17 @@ the following are the table of all the keys available and their description:
 |   ble.scan.interval-msec   | wait time between two ble pass in milliseconds. Longer period reduce battery consumption but gives less reward |     50000     |
 | ble.scan.interval-x-factor |                                   multiplier for the ble scan interval above.                                  |       1       |
 |      dtn.use-cellular      |           if true, the cellular connexion will be used. if false, only wifi connection will be used.           |      true     |
+|      cron.ios-bg-mode      |           If specified, the SDK will run in the specific background mode that it is selected.           |      2     |
+|      cron.ios-bg-mode-distance-meters      |           If specified, the SDK will trigger background scans for Normal mode depending on the meters that are specified with this option.           |      20     |   
+
+there is another table that will allow you to configure our SDK background modes. There are 4 available modes: **NONE**, **ECO**, **NORMAL**, **AGGRESSIVE** for the NodleSDK please check them in the table below:
+
+|             Key            |                                                   Description                                                  | Default Value |
+|:--------------------------:|:--------------------------------------------------------------------------------------------------------------:|:-------------:|
+|   NONE   | The SDK will run in foreground mode only. You don't need to give allowAlways permissions. WhileInUse is enough for this mode. You may wish to only use Background Tasks for this mode.  |      0     |
+|   AGGRESSIVE   | The SDK will run in aggressive mode that require all permissions we requested to allowAlways. Then you have to enable Background Modes as well. There is no need to register Background Tasks for this mode. This mode will work even when the phone is with locked screen. This mode will keep the SDK awake without suspending it. Once terminated it won't be able to restore it. |     1     |
+| NORMAL |                                   The SDK will run in normal mode that require all permissions we requested to allowAlways since it still runs in the background. Then you have to enable Background Modes as well. This mode will be a bit less aggressive than the previous mode. It will trigger when there are location changes. You can change the distance with the config option. You may wish to combine Background Tasks for this mode. This mode will work even when the phone is with locked screen. This mode will be able to awake the SDK after it's fully suspended. Once terminated it won't be able to restore it.                                  |       2       |
+|      ECO      |           The SDK will run in eco mode that require all permissions we requested to allowAlways since it still runs in the background. Then you have to enable Background Modes as well. This mode will provide a very limited background work. It will trigger really rarely in the background. And when there are location changes. You may wish to combine Background Tasks for this mode. This mode will work even when the phone is with locked screen. This mode will be able to awake the SDK after it's fully suspended and even terminated.            |      3     |
 
 Example:
 
@@ -308,4 +319,7 @@ let path = bundle!.path(forResource: "config", ofType: "json")
 
 // or you can manually set the entries, for instance
 Nodle().config("dtn.use-cellular", false);
+
+// background mode selected - foreground only
+Nodle().config("cron.ios-bg-mode", 0);
 ```
