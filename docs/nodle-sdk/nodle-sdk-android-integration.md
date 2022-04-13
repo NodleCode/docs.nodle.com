@@ -113,7 +113,7 @@ buildscript {
 
 // Module Gradle
 dependencies {
-    implementation 'io.nodle:nodlesdk-rc-lp:92bd58f9e2'
+    implementation 'io.nodle:nodlesdk-rc-lp:381d19b7b5'
 }
 ```
 
@@ -122,13 +122,13 @@ dependencies {
 ```kotlin
 // Module Gradle
 dependencies {
-    implementation 'io.nodle:nodlesdk-rc-lg:92bd58f9e2'
+    implementation 'io.nodle:nodlesdk-rc-lg:381d19b7b5'
 }
 ```
 
 If you are using the Google Play Services version please make sure to add the plugin. You can use the libraries we are using or the newest ones. We would try to support always the latest libraries. The **minAPI:19** and **maxAPI:31**. We are also on the latest version of **AGP 7.1.2+**
 
-**The latest version of the SDK is**  ```92bd58f9e2```
+**The latest version of the SDK is**  ```381d19b7b5```
 
 ## Step 4: Initialize the Nodle SDK
 First you need to declare your application class in your **ApplicationManifest.xml**. And declare the required permissions for Nodle to be able to run:
