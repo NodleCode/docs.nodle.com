@@ -24,7 +24,7 @@ pod 'NodleSDK'
 pod 'NodleSDKWCB', :podspec => 'https://raw.githubusercontent.com/NodleCode/NodleSDK-Release/main/NodleSDKWCB.podspec'
 ```
 
-The latest version of the SDK is ```0.0.11``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
+The latest version of the SDK is ```0.0.13``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
 
 ```swift
 # Pods for NodleSDK
@@ -167,12 +167,18 @@ Before requesting permissions, you must add location usage strings to your ```In
 // NodleSDK
 NSBluetoothAlwaysUsageDescription - Need for our bluetooth scan
 NSBluetoothPeripheralUsageDescription - Need for our bluetooth scan
-NSLocationAlwaysAndWhenInUseUsageDescription - Need for our location request
+NSLocationAlwaysUsageDescription - Need for our location request from the background
+NSLocationAlwaysAndWhenInUseUsageDescription - Need for our location request from background
 NSLocationWhenInUseUsageDescription - Need for our location request
+NSLocationUsageDescription - Need to be able to perform additional changes to 
+location while in the background.
 
 // NodleSDKWCB
-NSLocationAlwaysAndWhenInUseUsageDescription - Need for our location request
+NSLocationAlwaysUsageDescription - Need for our location request from the background
+NSLocationAlwaysAndWhenInUseUsageDescription - Need for our location request from the background
 NSLocationWhenInUseUsageDescription - Need for our location request
+NSLocationUsageDescription - Need to be able to perform additional changes to 
+location while in the background.
 ```
 
 Here is a small example how it should look like when configured:
@@ -207,11 +213,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, CBCentralMana
         // check status for location permission
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse, .authorizedAlways:
+            // request always auth if you would use it in the background otherwise requestWhileInUse
+            locationManager.requestAlwaysAuthorization()
             // ask for bluetooth permissions
             centralManager = CBCentralManager(delegate: self, queue: nil)
         case .notDetermined:
-            // ask for permissions
-            locationManager.requestWhenInUseAuthorization()
+            // request always auth if you would use it in the background otherwise requestWhileInUse
+            locationManager.requestAlwaysAuthorization()
         default:
             print("Location permission denied")
             break;
@@ -278,10 +286,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // check status for location permission
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse, .authorizedAlways:
-            // permissions granted
+            // request always auth if you would use it in the background otherwise requestWhileInUse
+            locationManager.requestAlwaysAuthorization()
         case .notDetermined:
-            // ask for permissions
-            locationManager.requestWhenInUseAuthorization()
+            // request always auth if you would use it in the background otherwise requestWhileInUse
+            locationManager.requestAlwaysAuthorization()
         default:
             print("Location permission denied")
             break;
@@ -354,7 +363,17 @@ You can find more info here: [Nodle SDK - iOS API and Configuration](nodle-sdk-i
 **And there you have it! You’re good to go!**
 
 ## Step 7: Run Nodle SDK in Background (Optional)
-If you would want your NodleSDK to perform background scanning, you must add the following task: ```io.nodle.sdk.ios.bgrefresh```  to your ```Info.plist``` file under the section: **Permitted background task scheduler identifiers** ```BGTaskSchedulerPermittedIdentifiers``` Here is a small example how it should look like when configured:
+With our latest update NodleSDK is able to perform background scanning. In order to work please make sure to **allowAlwaysAuthorization** for background permissions and **Background Modes**. Then the SDK will then be working in the background for you. You can chose one of the modes that you would want to adopt or you can disable it. Depending on the permissions that are allowed the SDK will be able to perform different actions in each of the modes. 
+
+### Enabling background modes - required
+The NodleSDK requires certain Background Modes to be enabled in order to perform background scanning. Here is example of the ones you need to enable:
+
+![Empty Import](/img/docs/nodle-sdk/bgmodes.png)
+
+You don't have to register and schedule background tasks for the SDK but you must enable the option in some of the modes that we require. Please head out to our configuration page here: [Nodle SDK - iOS API and Configuration](nodle-sdk-ios-api.md)
+
+### Improved background scanning with Background Tasks
+If you want to improve the background scanning because you have chosen a specific mode. You can allow Nodle to perform some background tasks for you when possible. You must add the following task: ```io.nodle.sdk.ios.bgrefresh```  to your ```Info.plist``` file under the section: **Permitted background task scheduler identifiers** ```BGTaskSchedulerPermittedIdentifiers``` Here is a small example how it should look like when configured:
 
 ![Empty Import](/img/docs/nodle-sdk/bgtask.png)
 
