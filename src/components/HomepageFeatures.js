@@ -80,7 +80,7 @@ const FeatureList = [
             Participate to the Nodle network, by downloading the Nodle Cash app.
           </>
         ),
-        link: './docs/nodle-cashapp/intro'
+        link: './docs/nodle-wallets/nodle-cash/intro'
       },
     ]
   },
