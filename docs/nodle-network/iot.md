@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# No need for new antennas to connect IoT devices
+# Using the Nodle network for IoT
 
-The Nodle network harnesses the power of smartphones to securely and privately interact with their smart devices, without relying on a dedicated telecom infrastructure such as 5G or LPWAN networks from telecom operators. The cryptocurrency NODL creates the economic incentive for smartphones to participate in the network, thus leveraging an existing infrastructure (smartphones with BLE activated and their internet connectivity) to deploy a unique IoT network.
+The Nodle network harnesses the power of smartphones to securely and privately interact with their smart devices, without relying on a dedicated telecom infrastructure such as 5G or LPWAN networks from telecom operators. The cryptocurrency NODL creates the economic incentive for smartphones to participate in the network, thus leveraging an existing infrastructure (smartphones with BLE activated and their internet connectivity) to deploy a unique IoT network, instead of deploying new antennas.
 
 ## No roaming, high bandwidth, high precision
 
