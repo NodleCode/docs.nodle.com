@@ -319,8 +319,8 @@ the following are the table of all the keys available and their description:
 
 |             Key            |                                                   Description                                                  | Default Value |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------:|:-------------:|
-|   ble.scan.duration-msec   | duration of a single ble pass in milliseconds. Longer scan increase battery consumption but gives more reward. |      8000     |
-|   ble.scan.interval-msec   | wait time between two ble pass in milliseconds. Longer period reduce battery consumption but gives less reward |     50000     |
+|   ble.scan.duration-msec   | duration of a single ble pass in milliseconds. Longer scan increase battery consumption but gives more reward. |      10000     |
+|   ble.scan.interval-msec   | wait time between two ble pass in milliseconds. Longer period reduce battery consumption but gives less reward |     90000     |
 | ble.scan.interval-x-factor |                                   multiplier for the ble scan interval above.                                  |       1       |
 |      dtn.use-cellular      |           if true, the cellular connexion will be used. if false, only wifi connection will be used.           |      true     |
 |      sentry.enabled      |           if true, our crash reporting will send us crash reports. If false there will be no crash reports to send.            |      true     |
