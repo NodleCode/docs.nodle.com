@@ -347,4 +347,7 @@ Nodle().config(AndroidNodleResourceId(R.raw.sdk_config))
 
 // or you can manually set the entries, for instance
 Nodle().config("dtn.use-cellular", false)
+
+// then proceed to start Nodle
+Nodle().start()
 ```   

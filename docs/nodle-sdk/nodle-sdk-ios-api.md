@@ -322,4 +322,7 @@ Nodle().config("dtn.use-cellular", false);
 
 // background mode selected - foreground only
 Nodle().config("cron.ios-bg-mode", 0);
+
+// then proceed to start Nodle
+Nodle().start()
 ```
