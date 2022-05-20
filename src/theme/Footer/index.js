@@ -173,8 +173,8 @@ function Footer() {
               />
             ) : null}
             <div className="footer__link footer__link--signature">
-              <a className='footer__link-item' href='#'>Privacy</a>
-              <a className='footer__link-item' href='#'>EULA</a>
+              <a className='footer__link-item' target='_blank' href='https://nodle.com/privacy'>Privacy</a>
+              <a className='footer__link-item' target='_blank' href='https://nodle.com/eula'>EULA</a>
             </div>
           </div>
         )}
