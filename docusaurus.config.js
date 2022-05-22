@@ -131,6 +131,15 @@ const config = {
         additionalLanguages: ['kotlin', 'swift'],
       },
     }),
+  plugins: [
+    [
+      require.resolve("@cmfcmf/docusaurus-search-local"),
+      {
+        // how far we go in indexing sub-categories and pages
+        indexDocSidebarParentCategories: 5,
+      },
+    ],
+  ],
 };
 
 module.exports = config;
