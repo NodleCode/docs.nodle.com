@@ -46,8 +46,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        apiKey: '2bd3d96937809510eb54a9a8b5e5410d',
+        apiKey: 'dee765caee2a51a367e6fef09b237b9b',
         indexName: 'nodle-docs',
+        appId: 'X327BDVWME'
       },
       navbar: {
         title: 'Documentation',
