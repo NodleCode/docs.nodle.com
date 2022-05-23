@@ -45,6 +45,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        apiKey: '2bd3d96937809510eb54a9a8b5e5410d',
+        indexName: 'nodle-docs',
+      },
       navbar: {
         title: 'Documentation',
         logo: {
@@ -132,13 +136,13 @@ const config = {
       },
     }),
   plugins: [
-    [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
-      {
-        // how far we go in indexing sub-categories and pages
-        indexDocSidebarParentCategories: 5,
-      },
-    ],
+    // [
+    //   require.resolve("@cmfcmf/docusaurus-search-local"),
+    //   {
+    //     // how far we go in indexing sub-categories and pages
+    //     indexDocSidebarParentCategories: 5,
+    //   },
+    // ],
   ],
 };
 
