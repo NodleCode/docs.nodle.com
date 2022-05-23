@@ -101,7 +101,7 @@ const config = {
               },
               {
                 label: 'Cash app',
-                to: `#${Math.random()}`,
+                to: `./docs/nodle-wallets/nodle-cash/intro`,
               },
             ],
           },
