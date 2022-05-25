@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Importing your Mobile Wallet
 
-The Nodle App might be using one of two wallet systems: Legacy or not Legacy. If you navigate to the screen to export your mnemonics, the application should indicate whether you are using a Legacy wallet or not. If it does not say anything, you are not using a Legacy wallet.
+The Nodle Cash App might be using one of two wallet systems: Legacy or not Legacy. If you navigate to the screen with your public key by clicking the "Receive" button, the application will indicate whether you are using a Legacy wallet or not. If it does not say anything, you are not using a Legacy wallet.
 
 ## Non Legacy Wallets (default)
 
