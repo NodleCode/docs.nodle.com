@@ -66,9 +66,10 @@ Detailed instructions on [how to import your account from the app to the web](./
 
 ### How can I import my wallet to other wallets, like Polkadot JS, MetaMask, etc.?
 
-We do not support Polkadot.js and other wallets at this time.
+We only support the [Talisman](./nodle-wallets/talisman/introduction) wallet now.
+You can also [re-import you Nodle wallet from the app to the web](./reimport-your-account).
 
-Please use [this](./reimport-your-account) how-to instead.
+Other wallets are not supported now.
 
 ### What is a public key? Where can I find my public key?
 
@@ -77,20 +78,59 @@ This is similar to your email address when people want to send you an email.
 
 You can find your public key in the Nodle Cash app by clicking the "Receive" button below your balance.
 
+### What is a legacy Nodle wallet?
+
+The Nodle Cash app has two wallet systems: legacy and not legacy. Legacy Nodle wallet might be a bit more complex
+to import to other wallets supporting NODL, or it might not be compatible with other wallets at all. Other than that, it
+is a valid wallet, and you can use it as before.
+
+If you have just joined the Nodle network, you have a non-legacy wallet. You can check it if you navigate to the screen 
+with your public key by clicking the "Receive" button. The app will indicate whether you are using a legacy wallet or not.
+If it does not say anything, you are using a non-legacy wallet.
+
+If you use a legacy wallet, we recommend you switch to a new one.
+
+### How can I switch to a new wallet from a legacy one?
+
+The app can automatically upgrade your wallet during the wallet import if you have 0 balance.
+In this case, you will get a new public key, which you need to share with your peers to receive transfers. Your 
+12-word recovery phrase will not change, so you don't need to back up your wallet again. Your rewards and transfer
+history will start from scratch.
+
+Otherwise, it would be best to switch to a new wallet manually. It means that you need to create a new wallet and transfer
+all your tokens there.
+Here is what you need to do:
+1. Make sure your current wallet is backed up! If not, backup your current wallet by going to Settings > Wallet Settings >
+Wallet backup
+2. Disconnect your current wallet by going to Settings > Disconnect Wallet
+4. Create a new wallet as you did it before
+5. Backup the new wallet
+6. Check your new wallet public key by clicking the "Receive" button and save it
+7. Switch to your current wallet by disconnecting the new one and importing the current using a 12-word recovery phrase
+8. Transfer your balance to the new wallet using your new public key by clicking the "Send" button
+9. Switch back to your new wallet again
+10. You are done! Continue enjoying the Nodle Cash app!
+
+### What if I received a transfer to a legacy wallet after being upgraded?
+
+No worries, your tokens are not lost! You can [re-import your legacy wallet to a web wallet](./reimport-your-account) and 
+transfer your tokens to your new wallet. For the import, you should use your current 12-word recovery phrase, but select 
+"Edwards" in the Advanced creation options selector.
+
 ### What is a private key? Where can I find my private key?
 
 A private key is a secret phrase used in cryptography, similar to a password. It is used to sign every transaction
 you make on the blockchain. Your private key is composed of 12 secret words. You can find your private key in the
-Nodle Cash app by going to Settings > Wallet Settings > Private Key backup. Make sure to write down those words on
+Nodle Cash app by going to Settings > Wallet Settings > Wallet backup. Make sure to write down those words on
 paper and keep them somewhere safe and secure.
 
 ### How can I move my wallet to another device?
 
-To move your account to another device, firstly, you need to backup your private key on your current device.
-You can do it in the Nodle Cash app by going to Settings > Wallet Settings > Private Key backup. As a result,
-you will get your secret phrase consisting of 12 words that you will use to import your account to another device.
+To move your account to another device, firstly, you need to backup your wallet on your current device.
+You can do it in the Nodle Cash app by going to Settings > Wallet Settings > Wallet backup. As a result,
+you will get your secret phrase consisting of 12 words that you will use to import your wallet to another device.
 
-Once you backup your private key, install the app on another device and use your 12-word phrase to import your account
+Once you back up your wallet, install the app on another device and use your 12-word phrase to import your wallet
 to another device.
 
 ### How can I transfer my tokens to another Nodle wallet?
@@ -106,7 +146,7 @@ you will see it in the list of “Transfers” below your balance.
 Your account can be recovered only with your private key. Your private key is not available to anybody except you. So,
 unfortunately, it is not possible to recover your account if you lose your private key.
 
-### **Is it possible to run the app on multiple devices with the same wallet?**
+### Is it possible to run the app on multiple devices with the same wallet?
 
 Yes, but rewards are calculated per account (public key), so you will not get higher rewards using the same account on
 multiple devices. If you want to mine on multiple devices, you can create a separate account for each of them. Still, we
