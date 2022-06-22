@@ -21,3 +21,5 @@ yarn-error.log*
 
 # do not use NPM
 package-lock.json
+
+.env
