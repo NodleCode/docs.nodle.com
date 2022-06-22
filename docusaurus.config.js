@@ -106,7 +106,7 @@ const config = {
               },
               {
                 label: 'Cash app',
-                to: `./docs/nodle-wallets/nodle-cash/intro`,
+                to: `docs/nodle-wallets/nodle-cash/intro`,
               },
             ],
           },
