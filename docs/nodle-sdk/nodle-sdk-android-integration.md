@@ -13,7 +13,31 @@ Integrating the Nodle SDK into your android app is easy and straightforward. Jus
 - Proceed forward with next steps.
 
 ## Step 2: Add the Maven Repository
-Add the code below in your project's ```build.gradle``` to add the Nodle repository
+Add the code below in your project's ```build.gradle``` to add the Nodle repository. We will be migrating our SDKs to a new maven repository. Please make sure to use that one from now on:
+
+```kotlin
+buildscript {
+    repositories {
+        google()
+        maven {
+            url "http://maven.nodle.io"
+            allowInsecureProtocol = true
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven { 
+            url "http://maven.nodle.io" 
+            allowInsecureProtocol = true
+        }
+    }
+}
+```
+
+Previous versions Maven repository that will still be supported for a couple versions forward:
 
 ```kotlin
 buildscript {
@@ -31,14 +55,14 @@ allprojects {
 }
 ```
 
-If you are using Android Studio Arctic Fox and newer AGP 7.0+ and GP 7.0+ please use the following. We are currently migrating the repository to HTTPS.
+If you are using Android Studio Arctic Fox and newer AGP 7.0+ and GP 7.0+ please use the following. We are currently migrating the repository to HTTPS. Please make sure to use the latest maven repository.
 
 ```kotlin
 buildscript {
     repositories {
         google()
         maven {
-            url "http://maven.nodle.io/io/home/runner/.m2/repository/"
+            url "http://maven.nodle.io"
             allowInsecureProtocol = true
         }
     }
@@ -48,7 +72,7 @@ allprojects {
     repositories {
         google()
         maven {
-            url "http://maven.nodle.io/io/home/runner/.m2/repository/"
+            url "http://maven.nodle.io"
             allowInsecureProtocol = true
         }
     }
@@ -62,7 +86,7 @@ dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         maven {
-            url "http://maven.nodle.io/io/home/runner/.m2/repository/"
+            url "http://maven.nodle.io"
             allowInsecureProtocol = true
         }
     }
@@ -113,7 +137,10 @@ buildscript {
 
 // Module Gradle
 dependencies {
-    implementation 'io.nodle:nodlesdk-rc-lp:381d19b7b5'
+    implementation 'io.nodle:nodlesdk-rc-lp:a790f76ea5'
+
+    // additional dependencies may be required when using getEvents
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
 }
 ```
 
@@ -122,13 +149,16 @@ dependencies {
 ```kotlin
 // Module Gradle
 dependencies {
-    implementation 'io.nodle:nodlesdk-rc-lg:381d19b7b5'
+    implementation 'io.nodle:nodlesdk-rc-lp:a790f76ea5'
+
+    // additional dependencies may be required when using getEvents
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
 }
 ```
 
 If you are using the Google Play Services version please make sure to add the plugin. You can use the libraries we are using or the newest ones. We would try to support always the latest libraries. The **minAPI:19** and **maxAPI:31**. We are also on the latest version of **AGP 7.1.2+**
 
-**The latest version of the SDK is**  ```381d19b7b5```
+**The latest version of the SDK is**  ```a790f76ea5```
 
 ## Step 4: Initialize the Nodle SDK
 First you need to declare your application class in your **ApplicationManifest.xml**. And declare the required permissions for Nodle to be able to run:

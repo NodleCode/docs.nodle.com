@@ -57,6 +57,8 @@ If you are still having issues make sure to try without a VPN connection since s
 In this section we will explain how you can tackle most common issues with ProGuard shrinking and obfuscation. 
 
 - First start by generating a release build with no ProGuard shrinking or obfuscation enabled then check if your application is working correctly. It is follow the next steps since your problem is related to this section. 
+- Make sure to add the following to your application: 
+- ```-keep,includecode class io.nodle.** { *; } # Nodle```
 - You can start by enabling either shrinking or obfuscation with and then without each other to narrow down the problem.
 - After you do that and you know where your problem lies exactly please follow the steps below.
 - Make sure you have the right ProGuard rules to keep all the files, classes, interfaces that your application would need. 
