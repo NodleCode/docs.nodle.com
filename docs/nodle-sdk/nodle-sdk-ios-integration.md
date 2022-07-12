@@ -24,11 +24,11 @@ pod 'NodleSDK'
 pod 'NodleSDKWCB', :podspec => 'https://raw.githubusercontent.com/NodleCode/NodleSDK-Release/main/NodleSDKWCB.podspec'
 ```
 
-The latest version of the SDK is ```0.0.13``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
+The latest version of the SDK is ```0.0.14``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
 
 ```swift
 # Pods for NodleSDK
-pod 'SQLite.swift', '~> 0.13.2'
+pod 'SQLite.swift', '~> 0.13.3'
 pod 'SwiftCBOR', '~> 0.4.5'
 pod 'SwiftProtobuf', '~> 1.19.0'
 ```
@@ -40,7 +40,7 @@ You can also add the SDK to your project manually. Download the current [release
 
 ```swift
 # Pods for NodleSDK
-pod 'SQLite.swift', '~> 0.13.2'
+pod 'SQLite.swift', '~> 0.13.3'
 pod 'SwiftCBOR', '~> 0.4.5'
 pod 'SwiftProtobuf', '~> 1.19.0'
 ```
@@ -76,7 +76,7 @@ target 'YourTarget' do
 
   # Pods for TestApp
   pod 'NodleSDK'
-  pod 'SQLite.swift', '~> 0.13.2'
+  pod 'SQLite.swift', '~> 0.13.3'
   pod 'SwiftCBOR', '~> 0.4.5'
   pod 'SwiftProtobuf', '~> 1.19.0'
 
@@ -86,13 +86,19 @@ end
 You could do the same manually by adding the ['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES' to your Pod project settings. If you are on older version of cocoapods before 1.9- you will not need to do anything  and you can simply proceed to next steps.
 
 ### NodleSDK issues with dependencies:
-If you are experiencing issues please make sure the correct version of the dependencies are in your **Podfile.lock** as an example with our latest version of the dependencies found here:
+If you are experiencing issues please make sure the correct version of the dependencies are in your **Podfile.lock** as an example with our latest version of the dependencies found here **NodleSDK 0.0.14**:
+```
+SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
+SwiftCBOR: ac340b74d3b2cf1f8884bb748bd09875848e3873
+SwiftProtobuf: 6ef3f0e422ef90d6605ca20b21a94f6c1324d6b3
+```
+Previous version have the following dependencies **NodleSDK 0.0.13**:
 ```
 SQLite.swift: 4fc2be46c36392e3b87afe6fe7f1801c1daa07ef
 SwiftCBOR: ac340b74d3b2cf1f8884bb748bd09875848e3873
 SwiftProtobuf: 6ef3f0e422ef90d6605ca20b21a94f6c1324d6b3
 ```
-If you are having trouble with the dependencies loading for older versions of our SDK please make sure they are corrected in the **Podfile.lock** file.  Example for older versions of dependencies:
+If you are having trouble with the dependencies loading for older versions of our SDK please make sure they are corrected in the **Podfile.lock** file.  Example for older versions of dependencies **NodleSDK 0.0.1+**:
 ```
 SQLite.swift: 4fc2be46c36392e3b87afe6fe7f1801c1daa07ef
 SwiftCBOR: ce5354ec8b660da2d6fc754462881119dbe1f963
