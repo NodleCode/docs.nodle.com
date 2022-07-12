@@ -54,11 +54,31 @@ In this section we will explain how you can tackle most common issues with Netwo
 If you are still having issues make sure to try without a VPN connection since some of them aren't really working as needed or have issues. If you are done with all the above proceed forward with next steps. 
 
 ## 5: ProGuard - Troubleshooting
-In this section we will explain how you can tackle most common issues with ProGuard shrinking and obfuscation. 
+In this section we will explain how you can tackle most common issues with ProGuard shrinking and obfuscation. We recommend adding the following ProGuard rules when generating a release build and using R8:
+
+```
+# Nodle
+-keep,includecode class io.nodle.** { *; } 
+
+# Jackson - Nodle dependency
+-keep class com.fasterxml.jackson.databind.ObjectMapper {
+    public <methods>;
+    protected <methods>;
+}
+
+# Jackson - Nodle dependency
+-keep class com.fasterxml.jackson.databind.ObjectWriter {
+    public ** writeValueAsString(**);
+}
+
+# Jackson - Nodle dependency
+-keepnames class com.fasterxml.jackson.** { *; }
+-dontwarn com.fasterxml.jackson.databind.**
+```
+
+After you can start tackling the issues you have on the way by following the next steps below.
 
 - First start by generating a release build with no ProGuard shrinking or obfuscation enabled then check if your application is working correctly. It is follow the next steps since your problem is related to this section. 
-- Make sure to add the following to your application: 
-- ```-keep,includecode class io.nodle.** { *; } # Nodle```
 - You can start by enabling either shrinking or obfuscation with and then without each other to narrow down the problem.
 - After you do that and you know where your problem lies exactly please follow the steps below.
 - Make sure you have the right ProGuard rules to keep all the files, classes, interfaces that your application would need. 
