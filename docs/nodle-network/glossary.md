@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Glossary
 
-**BLE**: Bluetooth Low-Energy (BLE) is a wireless personal area network designed by the Bluetooth Special Interest Group. While BLE shares its name with the original Bluetooth,  it is not compatible with Bluetooth. Thankfully, the two protocols are able to cohabit. Compared to Bluetooth, BLE consumes far less energy, and the chip are usually way cheaper. The communication range of BLE goes up to 400m, and even 1000m in outdoors. The maximum data rate is 2 Mbit/s. BLE is one of the most widely deployed low-power connectivity standard. The technology can be found in everyday connected products such as fitness trackers, and smart appliances. In the Nodle network, the Edge Nodes uses BLE to provide connectivity to BLE-enabled Things.
+**BLE**: Bluetooth Low-Energy (BLE) is a wireless personal area network designed by the Bluetooth Special Interest Group. While BLE shares its name with the original Bluetooth, it is not compatible with Bluetooth. Thankfully, the two protocols are able to cohabit. Compared to Bluetooth, BLE consumes far less energy, and the chip are usually way cheaper. The communication range of BLE goes up to 400m, and even 1000m in outdoors. The maximum data rate is 2 Mbit/s. BLE is one of the most widely deployed low-power connectivity standard. The technology can be found in everyday connected products such as fitness trackers, and smart appliances. In the Nodle network, the Edge Nodes uses BLE to provide connectivity to BLE-enabled Things.
 
 **Bounties**: bounties are rewards emitted to the actors who enable the execution of a smart mission. Typically a smart mission defines the bounty, which is a payment in NODL delivered to the edge node for performing work such as connecting a device.
 
@@ -32,11 +32,11 @@ sidebar_position: 2
 
 **Nodle Service Provider (NSP)**: a Nodle Service Provider is an entity which interacts with the Nodle chain to create services to which non-crypto applications, businesses or organizations can connect. NSPs create an abstraction on top of the chain to enable Web2 services to interact with the network. For example, consider an asset tracking service through which businesses can provision their own devices to be tracked by the network, consult the data from their devices through standard APIs, and pay for the service in USD. This service abstracts the complexity of committing NODL to finance smart missions running at the edge. The entity providing this service is a NSP.
 
-**NVM**: The Nodle Virtual Machine (NVM) is the programmatic layer of the Nodle SDK.
+**Nodle Virtual Machine (NVM)**: The Nodle Virtual Machine is the programmatic layer of the Nodle SDK.
 
 **Parachain**: A parachain is a layer-1 blockchain that delegate its blockchain security to the layer-0 blockchain that is Kusama, or Polkadot. A Parachain is usually a specialized and interconnected chain. The Nodle Chain has become a parachain since March 2022.
 
-**Polkadot**: Polkadot is a layer-0 blockchain, which main function is to enable layer-1 blockchains, called parachains, to be built on top of it. By uniting multiple blockchains, Polkadot aims to achieve a high degrees of security and scalability. The native token, DOT, is used for governance and bonding.  
+**Polkadot**: Polkadot is a layer-0 blockchain, which main function is to enable layer-1 blockchains, called parachains, to be built on top of it. By uniting multiple blockchains, Polkadot aims to achieve a high degrees of security and scalability. The native token, DOT, is used for governance and bonding.
 
 **Rewards**: rewards are NODL tokens provided by participants to the network (whether Network Service Providers, nodes or collators) to provide service or perform work on the network. Rewards can stem from the Network (see Network Rewards) or from smart missions (see Bounties).
 
