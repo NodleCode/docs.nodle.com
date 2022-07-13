@@ -11,3 +11,5 @@ The maximum supply is of 21 Billion. Tokens can only be issued by the Nodle Chai
 3. Moving towards a federation model for our oracle which would allow third parties to participate in the oracle's work.
 
 The NODL token will soon be usable to help select collators that maintain the Nodle Chain via a [staking mechanism](stake-your-nodle-cash). NODL token holders will also be eligible to participate in governance proposals and vote on them as ownerhsip of the Nodle Chain is given back to the community.
+
+Please refer to https://docs.nodle.com/docs/token for more details about the economics of the token and its ecosystem.
