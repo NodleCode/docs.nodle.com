@@ -14,7 +14,7 @@ The maximum supply of the NODL token is 21 billion, no additional tokens can be 
 In the early stages of the Nodle Chain, approximately 8 billion Nodle cash was minted and attributed to reward, incentivize the team and early investors; as well as to create a treasury aimed at financing and driving the growth of the network and its ecosystem. The first participants received tokens as part of the network rewards incentives.The rest of un-mined tokens will be minted through the issuance mechanism described in the dedicated section. 
 The following is a snapshot of the Token Allocation upon migration of Nodle Cash to its Native blockchain in 2020. 
 
-![token allocation](/static/img/docs/token/token_allocation.jpg)
+![token allocation](/img/docs/token/token_allocation.jpg)
 
 The treasury will serve a number of objectives:
 - Incentivize third party developers through grants to accelerate and drive the development of the network. Such grants will be allocated for building services on top of the network (such as asset tracking services, digital witnessing, geo-localized NFTs…), building infrastructure for the token ecosystem (gateways, interactions with smart missions, explorers, statistics, hardware wallets, corporate wallets, governance dashboards, security modules…), or to subsidize early usage of the network (in hackathons, or for subsidizing IoT startups to utilize the Nodle network, or to subsidize the use of  B2C apps using the network such as the Nodle cash app.

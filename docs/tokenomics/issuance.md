@@ -24,7 +24,7 @@ Where:
 
 The S-curve for the issuance of coins ties to a normal distribution of tokens over the course of the issuance, as here:
 
-![issuance](/static/img/docs/token/issuance.jpg)
+![issuance](/img/docs/token/issuance.jpg)
 
 Both curves draw three different phases:
 
