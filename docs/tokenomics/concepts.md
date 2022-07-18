@@ -7,7 +7,7 @@ sidebar_position: 3
 ## Max Supply
 
 The maximum supply of the NODL token is 21 billion, no additional tokens can be minted once the protocol reaches this number. Nodle was originally built on another chain in 2018[^1], where approximately 8.4 billion tokens were minted, it was then migrated to a native Nodle Chain in 2020. The rest of the tokens constituting the max supply will be minted according to the predictable mechanisms described in section “token issuance”.
-[^1] Original stellar blockchain can be tracked here: https://stellar.expert/explorer/public/asset/NODL-GB2Y3AWXVROM2BHFQKQPTWKIOI3TZEBBD3LTKTVQTKEPXGOBE742NODL
+[^1]: Original stellar blockchain can be tracked here: https://stellar.expert/explorer/public/asset/NODL-GB2Y3AWXVROM2BHFQKQPTWKIOI3TZEBBD3LTKTVQTKEPXGOBE742NODL
 
 ## Token Allocation
 
