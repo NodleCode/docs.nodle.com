@@ -24,11 +24,7 @@ At any given time, average rewards for edge nodes will depend on the size of the
 - A target scenario for which we design the issuance. In this target scenario, the network reaches maturity in about 12 years, over the duration of  the issuance.
 - A worst-case scenario, in which the network grows slowly. The risk is to issue all coins before the network has reached the minimum coverage to sustain demand.
 
-
-
-
-
-
+![growth](/static/img/docs/token/scenarios.jpg)
 
 In each scenario, the supply of NODL at each reward event remains fixed (on top of which the Nodle project has reserves to adjust rewards, and demand will also fund edge nodes). Based on the size of the network, the reward per node will vary. Whether these rewards match minimal edge nodes expectations (for example competing with monetization they expect from other mobile monetization options) will depend on the price of the token:
 
