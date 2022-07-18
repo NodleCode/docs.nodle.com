@@ -28,11 +28,7 @@ At any given time, average rewards for edge nodes will depend on the size of the
 
 In each scenario, the supply of NODL at each reward event remains fixed (on top of which the Nodle project has reserves to adjust rewards, and demand will also fund edge nodes). Based on the size of the network, the reward per node will vary. Whether these rewards match minimal edge nodes expectations (for example competing with monetization they expect from other mobile monetization options) will depend on the price of the token:
 
-
-
-
-
-
+![rewards](/static/img/docs/token/rewards.jpg)
 
 ## The rewards formula for edge nodes
 
