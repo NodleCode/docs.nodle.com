@@ -74,6 +74,9 @@ In this section we will explain how you can tackle most common issues with ProGu
 # Jackson - Nodle dependency
 -keepnames class com.fasterxml.jackson.** { *; }
 -dontwarn com.fasterxml.jackson.databind.**
+
+# Kotlin - Internal dependency
+-keep class kotlin.jvm.internal** { *; }
 ```
 
 After you can start tackling the issues you have on the way by following the next steps below.
