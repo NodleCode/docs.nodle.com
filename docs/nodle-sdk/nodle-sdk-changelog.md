@@ -6,7 +6,15 @@ sidebar_position: 7
 
 In this page you can find our latest releases and the changes that are being done in the new and old versions of the SDKs for Android and iOS
 
-# Version 0.0.11 (11.08.2022) - Android SDK - a790f76ea5
+# Version 0.0.12 (19.07.2022) - Android SDK - 5b978643ad
+## Fixed
+- Issues when generating release builds requiring additional rules
+## Updated
+- Updated internal libraries to latest versions
+- Updated kotlin and dependencies to 1.6.21
+- Updated gradle to latest versions 7.1.3+
+
+# Version 0.0.11 (11.07.2022) - Android SDK - a790f76ea5
 ## Added
 - Security updates
 ## Fixed
@@ -25,7 +33,7 @@ In this page you can find our latest releases and the changes that are being don
 ## Updated
 - Internal changes
 
-# Version 0.0.14 (11.08.2022) - iOS SDK
+# Version 0.0.14 (11.07.2022) - iOS SDK
 ## Added
 - Security updates
 ## Fixed
