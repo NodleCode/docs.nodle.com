@@ -123,7 +123,7 @@ dependencies {
 }
 ```
 
-Our latest release provide full support for **Android 12** **API 31** with **AGP 7.1.2+** and **GP 7.2** you can simply add the Nodle SDK dependency in your  ```build.gradle```
+Our latest release provide full support for **Android 12** **API 31** with **AGP 7.1.3+** and **GP 7.2** you can simply add the Nodle SDK dependency in your  ```build.gradle```
 
 ### Default (depends on Google Play services)
 
@@ -137,10 +137,10 @@ buildscript {
 
 // Module Gradle
 dependencies {
-    implementation 'io.nodle:nodlesdk-rc-lp:a790f76ea5'
+    implementation 'io.nodle:nodlesdk-rc-lp:5b978643ad'
 
     // additional dependencies may be required when using getEvents
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
 }
 ```
 
@@ -149,16 +149,16 @@ dependencies {
 ```kotlin
 // Module Gradle
 dependencies {
-    implementation 'io.nodle:nodlesdk-rc-lp:a790f76ea5'
+    implementation 'io.nodle:nodlesdk-rc-lp:5b978643ad'
 
     // additional dependencies may be required when using getEvents
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
 }
 ```
 
-If you are using the Google Play Services version please make sure to add the plugin. You can use the libraries we are using or the newest ones. We would try to support always the latest libraries. The **minAPI:19** and **maxAPI:31**. We are also on the latest version of **AGP 7.1.2+**
+If you are using the Google Play Services version please make sure to add the plugin. You can use the libraries we are using or the newest ones. We would try to support always the latest libraries. The **minAPI:19** and **maxAPI:31**. We are also on the latest version of **AGP 7.1.3+** and **Kotlin 1.6.21+**
 
-**The latest version of the SDK is**  ```a790f76ea5```
+**The latest version of the SDK is**  ```5b978643ad``` 
 
 ## Step 4: Initialize the Nodle SDK
 First you need to declare your application class in your **ApplicationManifest.xml**. And declare the required permissions for Nodle to be able to run:
