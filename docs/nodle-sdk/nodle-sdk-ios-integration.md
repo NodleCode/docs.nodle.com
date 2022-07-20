@@ -3,7 +3,7 @@ sidebar_position: 4
 ---
 
 # iOS SDK - Integration
-Integrating the Nodle SDK into your iOS app is easy and straightforward. Just follow the steps below and you should be ready to go in no time.
+Integrating the Nodle SDK into your iOS app is easy and straightforward. You can use our [NodleSDK Quickstart application](https://github.com/NodleCode/nodlesdk-quickstart-ios) or just follow the steps below and you should be ready to go in no time.
 
 ## Step 1: Generate Developer Key
 - Go and [Create a Web Wallet](nodle-wallets/polkadot-js/how-to-create-a-nodle-cash-wallet.md)
