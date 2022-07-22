@@ -102,7 +102,7 @@ const config = {
               },
               {
                 label: 'Glossary',
-                to: `docs/nodle-network/glossary`,
+                to: `docs/glossary`,
               },
             ],
           },
