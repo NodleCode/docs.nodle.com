@@ -76,7 +76,7 @@ The treasury will serve a number of objectives:
 - Create awareness around Nodle and its ecosystem in order to stimulate usage, sustain value of the coin, and to educate users, developers and businesses
 - Secure a reserve for the DAO: more about that below.
 
-At first, the Nodle team controlled this treasury. It is now controlled through the Nodle governance council of token holders. In the future, it will be transitioned under the control of a Nodle DAO responsible for driving future evolutions of the network.
+At first, the Nodle team controls this treasury. In the future, parts of it will be transitioned under the control of a Nodle DAO responsible for driving future evolutions of the network.
 
 ### Market capitalization and token supply
 
