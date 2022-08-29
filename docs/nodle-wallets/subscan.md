@@ -2,7 +2,7 @@
 sidebar_position: 100
 ---
 
-# Using Subscan 101
+# View your account on Subscan
 
 1. Go to [Subscan](https://nodle.subscan.io/).
    
