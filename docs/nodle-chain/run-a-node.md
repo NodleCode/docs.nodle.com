@@ -31,7 +31,10 @@ Assuming you are in the same folder where you created the `nodle` volume, simply
 docker run -v $(pwd)/nodle:/data -p 9944:9944 -p 30333:30333 -it ghcr.io/nodlecode/chain:master -d /data
 ```
 
-This will start a node and start syncing our test network while saving the blocks and transactions in the `nodle` folder. If you want to synchronize our main network simply add the option `--chain main`.
+This will start a node and start syncing our test network while saving the blocks and transactions in the `nodle` folder. If you want to run a full node for our parachain mainnet then use the following command:
+```shell
+docker run -v $(pwd)/nodle:/nodle-chain -p 9944:9944 -p 30333:30333 -p 9945:9945 -p 30334:30334 -it nodlecode/chain:master --chain eden --rpc-cors all --ws-port 9944 --rpc-port 30333 --database paritydb -- --rpc-cors all --ws-port 9945 --rpc-port 30334 --chain polkadot --database paritydb
+```
 
 :::tip Becoming a Validator or Collator
 At the moment, third parties cannot become a validator or collator on the Nodle Chain. However, we are planning to open this very soon. Make sure to [follow us on Twitter](https://twitter.com/NodleNetwork) to know when this happens!
@@ -48,5 +51,5 @@ On some machines, you can use the flag `--wasm-execution compiled` to synchroniz
 #### Choosing a Name for your Node
 By default, a name for your node is chosen randomly, if you'd like to personalize it you can use the `--name` flag. For instance, you could use `--name "not a teapot"`.
 :::tip Telemetry
-You can view the currently running nodes and their names on the [Polkadot Telemetry Portal](https://telemetry.polkadot.io/#list/0xa3d114c2b8d0627c1aa9b134eafcf7d05ca561fdc19fb388bb9457f81809fb23).
+You can view the currently running nodes and their names on the [Polkadot Telemetry Portal](https://telemetry.polkadot.io/#list/0x97da7ede98d7bad4e36b4d734b6055425a3be036da2a332ea5a7037656427a21).
 :::
