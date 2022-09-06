@@ -2,10 +2,10 @@
 sidebar_position: 1
 ---
 
-# Create a Web Wallet
+# Create an wallet account
 
 ## TL;DR
-Go to [https://nodlecode.github.io/polkadot-js-apps/#/accounts](https://nodlecode.github.io/polkadot-js-apps/#/accounts), select Nodle Mainnet, and install the [Polkadot chrome extension](https://polkadot.js.org/extension/) to create an account. 
+Go to [https://nodleprotocol.io/#/accounts](https://nodleprotocol.io/#/accounts), select Nodle Mainnet, and install the [Polkadot chrome extension](https://polkadot.js.org/extension/) to create an account. 
 
 <iframe src="//www.youtube.com/embed/vlwD0UCiM3E" frameBorder="0" allowFullScreen width="100%"></iframe>
 
@@ -17,10 +17,10 @@ Stellar enabled us to build a powerful MVP (Minimum Viable Product) and prove th
 Nodle is built upon Polkadot Substrate, making it compatible with most Polkadot wallets. For this tutorial, we will use the official wallet.
 Ledger support is coming soon, and we will update accordingly.
 
-### Step 1: Go to the Web Wallet
-[https://nodlecode.github.io/polkadot-js-apps/#/accounts](https://nodlecode.github.io/polkadot-js-apps/#/accounts)
+### Step 1: Go to the nodleprotocol.io (Substrate Portal)
+[https://nodleprotocol.io/#/accounts](https://nodleprotocol.io/#/accounts)
 
-![Web Wallet](/img/docs/nodle-cash/web-wallet.png)
+![nodleprotocol.io](/img/docs/nodle-cash/web-wallet.png)
 
 *Note: We recommend using a Chrome based browser like Chrome or Brave. If you are using Brave (which you should be) please turn off ‘shields’ as it can cause errors.*
 
