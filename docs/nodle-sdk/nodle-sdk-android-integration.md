@@ -329,7 +329,7 @@ You can find more info here: [Nodle SDK - Android API and Configuration](nodle-s
 **And there you have it! You’re good to go!**
 
 ## Want to check your SDK rewards?
-Currently we have our dashboard **under development** and rewards are not available. If you want see your rewards please go to our [block explorer](https://nodle.subscan.io/) please follow the steps:
+Currently we have our dashboard **under development** and rewards are not available. If you want see your rewards please go to our [Nodle Subscan](https://nodle.subscan.io/) please follow the steps:
 
 - copy your ```public_key``` and paste it in the search bar
 - slide down the page after it loads and head to allocations
