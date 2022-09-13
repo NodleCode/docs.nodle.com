@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Create an wallet account
 
+:::info
+If you check your newly created account on [Subscan](https://nodle.subscan.io), it won't show up until you deposit some Nodle Cash tokens.
+:::
+
 ## TL;DR
 Go to [https://nodleprotocol.io/#/accounts](https://nodleprotocol.io/#/accounts), select Nodle Mainnet, and install the [Polkadot chrome extension](https://polkadot.js.org/extension/) to create an account. 
 
