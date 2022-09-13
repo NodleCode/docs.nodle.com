@@ -1,8 +1,8 @@
 ---
-sidebar_position: 7
+sidebar_position: 9
 ---
 
-# Nodle SDK - Unity
+# Unity SDK - Plugin
 
 Integrating the Nodle SDK into your Unity app is easy and straightforward. You can use our [NodleSDK Quickstart application](https://github.com/NodleCode/nodlesdk-unity) or just follow the steps below and you should be ready to go in no time.
 
