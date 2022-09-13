@@ -19,7 +19,7 @@ Please make sure to follow our [Android SDK](nodle-sdk-android-integration.md) a
 You can follow the steps to create a new project or skip below to just importing the plugin depending on your platform.
 
 ### Creating a new project - Android
-Please start by creating a new project Android it is not required to use that template you can create a blank or 3D or other.
+Please start by creating a new project Android in **Unity Hub** it is not required to use that template you can create a blank or 3D or other.
 
 ![NodleSDK Unity1](/img/docs/nodle-sdk/unity-android-step1.png)
 
@@ -35,7 +35,7 @@ Next go ahead and click **Switch platform**. After switching you can go to next 
 
 
 ### Creating a new project - iOS
-Please start by creating a new project iOS it is not required to use that template you can create a blank or 3D or other.
+Please start by creating a new project iOS in **Unity Hub** it is not required to use that template you can create a blank or 3D or other.
 
 ![NodleSDK Unity4](/img/docs/nodle-sdk/unity-ios-step1.png)
 
