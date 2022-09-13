@@ -109,7 +109,7 @@ Then go to **Build Settings** If you scene didn't appear, click on the **Add Ope
 
 ![NodleSDK Unity18](/img/docs/nodle-sdk/unity-ios-step5.png)
 
-After making the build into a build folder. Copy the **Podile** to the root of that build folder. Then open the build folder location in terminal and install the NodleSDK with the following command: ``pod install`` You can go ahead and use the generated **.workspace** file from now on to run the project! Please make sure to add all permissions to your ```Info.plist``` before running the application. You can find how to do that here: [NodleSDK Permissions](nodle-sdk-ios-integration#step-5-request-permissions)
+After making the build into a build folder. Copy the **Podile** from **Plugins -> Nodle -> iOS -> NodleIOSPlugin -> XCodeFiles** to the root of that build folder. Then open the build folder location in terminal and install the NodleSDK with the following command: ``pod install`` You can go ahead and use the generated **.workspace** file from now on to run the project! Please make sure to add all permissions to your ```Info.plist``` before running the application. You can find how to do that here: [NodleSDK Permissions](nodle-sdk-ios-integration#step-5-request-permissions)
 
 ***Note: there is no need to build more folders after the first build since all changes will remain even if you build again in the same location.*** **And there you have it! You’re good to go!** 
 
