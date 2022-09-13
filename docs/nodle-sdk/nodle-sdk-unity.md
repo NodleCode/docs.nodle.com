@@ -50,9 +50,18 @@ Then proceed to switch the platform to Android go to **File->Build Settings** an
 Next go ahead and click **Switch platform**. After switching you can go to next step to import the plugin.
 
 ## Step 4: Updating Player Settings
-You have to update your player settings for **Android/iOS** before you import the plugin. Example:
+You have to update your player settings for **Android/iOS** before you import the plugin. 
 
-![Unity Plugin](/img/docs/nodle-sdk/player.png)
+### Player Settings - Android
+You have to set the player settings for you application and make sure to check the **Custom Gradle Templates** as shown in the picture. The minimum version for the SDK is Android 7. Please set that in **Android -> Other Settings -> Minimum version** when you change the player settings.
+
+![Unity Plugin](/img/docs/nodle-sdk/unity-android-player.png)
+
+Then from here you have to copy/merge the following files: **AndroidManifest.xml, baseProjectTemplate.gradle, gradleTemplate.properties, mainTemplate.gradle** from **Assets -> Plugins -> Nodle -> Android** to **Assets -> Plugins -> Android**
+
+### Player Settings - iOS
+There are no changes for iOS except your player base settings to be set and you can proceed to next steps.
+![Unity Plugin](/img/docs/nodle-sdk/unity-ios-player.png)
 
 ## Step 5: Import the Nodle Unity Plugin into your application
 You can follow the steps to import the Nodle plugin depending on your platform into your application
