@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Nodle SDK - Unity
 
-Integrating the Nodle SDK into your Unity app is easy and straightforward. You can use our [NodleSDK Quickstart application](https://github.com/NodleCode/nodlesdk-unity/tree/master/Unity_NodleSDK_v0.6) or just follow the steps below and you should be ready to go in no time.
+Integrating the Nodle SDK into your Unity app is easy and straightforward. You can use our [NodleSDK Quickstart application](https://github.com/NodleCode/nodlesdk-unity) or just follow the steps below and you should be ready to go in no time.
 
 ## Step 1: Generate Developer Key
 - Go and [Create a Web Wallet](nodle-wallets/polkadot-js/how-to-create-a-nodle-cash-wallet.md)
