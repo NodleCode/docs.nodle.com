@@ -57,7 +57,7 @@ You have to set the player settings for you application and make sure to check t
 
 ![Unity Plugin](/img/docs/nodle-sdk/unity-android-player.png)
 
-Then from here you have to copy/merge the following files: **AndroidManifest.xml, baseProjectTemplate.gradle, gradleTemplate.properties, mainTemplate.gradle** from **Assets -> Plugins -> Nodle -> Android** to **Assets -> Plugins -> Android**
+After you **import the plugin** then copy/merge the following files: **baseProjectTemplate.gradle, gradleTemplate.properties, mainTemplate.gradle** from **Assets -> Plugins -> Nodle -> Android** to **Assets -> Plugins -> Android** then copy the content of **AndroidManifest.xml** into your application manifest. Then proceed with next steps.
 
 ### Player Settings - iOS
 There are no changes for iOS except your player base settings to be set and you can proceed to next steps.
@@ -120,7 +120,9 @@ Then go to **Build Settings** If you scene didn't appear, click on the **Add Ope
 
 After making the build into a build folder. Copy the **Podile** from **Plugins -> Nodle -> iOS -> NodleIOSPlugin -> XCodeFiles** to the root of that build folder. Then open the build folder location in terminal and install the NodleSDK with the following command: ``pod install`` You can go ahead and use the generated **.workspace** file from now on to run the project! Please make sure to add all permissions to your ```Info.plist``` before running the application. You can find how to do that here: [NodleSDK Permissions](nodle-sdk-ios-integration#step-5-request-permissions)
 
-***Note: there is no need to build more folders after the first build since all changes will remain even if you build again in the same location.*** **And there you have it! You’re good to go!** 
+***Note: there is no need to build more folders after the first build since all changes will remain even if you build again in the same location.*** 
+
+**And there you have it! You’re good to go!** 
 
 ## Want to check your SDK rewards?
 Currently we have our dashboard **under development** and rewards are not available. If you want see your rewards please go to our [Nodle Subscan](https://nodle.subscan.io/) please follow the steps:
