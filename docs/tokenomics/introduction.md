@@ -49,13 +49,6 @@ In the mid-term, i.e. before the end of 2023, it is expected that the NODL token
 
 NODL token holders will be able to use their tokens to vote on significant changes to the Nodle Parachain, such as system-wide upgrades, protocol changes, or new features. The voting protocols and overall governance system are still to be defined.
 
-### A Staking Token
-
-The Nodle Parachain is secured through a delegated Proof of Stake consensus mechanism on Polkadot’s shared security model. Good actors are rewarded by this mechanism with yield, while bad actors lose some of their stake through slashing.
-
-Third parties such as token holders or businesses will be able to run a “collator node” (sometimes mistakenly called a validator node), provided they satisfy minimum staking requirements. The Nodle Parachain will then choose the top collators and allow them to produce blocks for it. Collators will share a pool of rewards sourced from protocol and transaction fees; rewards will be dispatched based on how valuable each collator has been (i.e. how many blocks they produce). If a collator misbehaves or does not satisfy its minimum service requirements (for instance, it was offline when it was supposed to be producing blocks), it will be slashed and lose some of its staked NODL.
-
-Token holders will also be able to delegate their tokens to support other collators. In such cases, rewards and slashes will be applied to the delegators on the pro-rata of their stake.
 
 ## Nodle Token Economic Concepts
 
