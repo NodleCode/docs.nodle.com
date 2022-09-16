@@ -36,10 +36,6 @@ This will start a node and start syncing our test network while saving the block
 docker run -v $(pwd)/nodle:/nodle-chain -p 9944:9944 -p 30333:30333 -p 9945:9945 -p 30334:30334 -it nodlecode/chain:master --chain eden --rpc-cors all --ws-port 9944 --rpc-port 30333 --database paritydb -- --rpc-cors all --ws-port 9945 --rpc-port 30334 --chain polkadot --database paritydb
 ```
 
-:::tip Becoming a Validator or Collator
-At the moment, third parties cannot become a validator or collator on the Nodle Chain. However, we are planning to open this very soon. Make sure to [follow us on Twitter](https://twitter.com/NodleNetwork) to know when this happens!
-:::
-
 ### Advanced Commands
 
 #### Starting the Node in Archive Mode
