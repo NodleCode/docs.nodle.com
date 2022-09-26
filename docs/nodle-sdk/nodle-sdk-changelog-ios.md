@@ -6,6 +6,14 @@ sidebar_position: 8
 
 In this page you can find our latest releases and the changes that are being done in the new and old versions of the SDKs for iOS
 
+## Version 0.0.15 (26.09.2022) - iOS SDK
+### Added
+- Swift 5.7 support
+### Fixed
+- Fixed issues with background modes capabilities not being added by the developer
+- Fixed crashes in SDK Core initialization
+- Fixed crashes in Network, Bluetooth, Config, Location layer
+
 ## Version 0.0.14 (11.07.2022) - iOS SDK
 ### Added
 - Security updates

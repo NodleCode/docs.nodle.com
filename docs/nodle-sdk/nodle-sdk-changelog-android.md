@@ -6,6 +6,13 @@ sidebar_position: 4
 
 In this page you can find our latest releases and the changes that are being done in the new and old versions of the SDKs for Android
 
+## Version 0.0.13 (26.09.2022) - Android SDK - 95a5b4f577
+### Fixed
+- Performance improvements and optimizations
+### Updated
+- Updated internal libraries
+- Updated consumer rules
+
 ## Version 0.0.12 (19.07.2022) - Android SDK - 5b978643ad
 ### Fixed
 - Issues when generating release builds requiring additional rules
