@@ -90,3 +90,13 @@ After you can start tackling the issues you have on the way by following the nex
 - After you solved the issue that you should be good to go with ProGuard. 
 
 If you are still having issues with ProGuard please follow the official documentation for assistance: https://developer.android.com/studio/build/shrink-code
+
+## 6: Gradle - Troubleshooting
+In this section we will explain how you can tackle most common issues with Gradle. We recommend that you always invalidate caches and restart the Android Studio. You can do the following **File -> Invalidate Cache-> Select both options-> Invalidate and Restart**. If you are still facing issues you can do all the additional steps below to make sure everything is as expected:
+- Run the following in your terminal: ```rm -rf ~/.gradle/caches/```
+- Clean and build the project once more: ```./gradlew clean build```
+- You can refresh the dependencies as well: ```./gradlew --refresh-dependencies```
+
+You can make sure to check our release **SHA** and validate the one that your **Gradle** has downloaded by going to the following path **./gradle/caches/modules-2/files-2.1/io.nodle/nodlesdk-lp or lg/version/** compare the release SHA and make sure it matches one of the folders in that location. If you don't want to depend on the automatic gradle manager to manage your dependencies you can build your own dependency validation.
+
+If you are still having issues with Gradle please follow the official documentation for assistance: https://developer.android.com/studio/troubleshoot
