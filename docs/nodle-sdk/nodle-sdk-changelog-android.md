@@ -10,6 +10,8 @@ In this page you can find our latest releases and the changes that are being don
 ## Version 0.0.14 (10.10.2022) - Android SDK - e61c593b4d
 ### Fixed
 - Fixed compile time issues causing issues with some client dependencies
+### SHA
+- 8d7d75b3896bfde842962d64964ca3aa00460488
 
 ## Version 0.0.13 (26.09.2022) - Android SDK - 95a5b4f577
 ### Fixed

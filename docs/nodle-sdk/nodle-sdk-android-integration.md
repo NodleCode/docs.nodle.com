@@ -158,7 +158,7 @@ dependencies {
 
 If you are using the Google Play Services version please make sure to add the plugin. You can use the libraries we are using or the newest ones. We would try to support always the latest libraries. The **minAPI:19** and **maxAPI:31**. We are also on the latest version of **AGP 7.1.3+** and **Kotlin 1.6.21+**
 
-**The latest version of the SDK is**  ```e61c593b4d``` 
+**The latest version of the SDK is**  ```e61c593b4d``` **-** ```SHA:8d7d75b3896bfde842962d64964ca3aa00460488```
 
 ## Step 4: Initialize the Nodle SDK
 First you need to declare your application class in your **ApplicationManifest.xml**. And declare the required permissions for Nodle to be able to run:
