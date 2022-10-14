@@ -72,6 +72,19 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   box-shadow: none;
 }
 
+.navbar__title {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+.navbar__logo img {
+  height: 23px;
+}
+
 .navbar__inner {
   display: flex;
   align-items: center;
