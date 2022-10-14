@@ -64,7 +64,7 @@ const config = {
         appId: 'X327BDVWME'
       },
       navbar: {
-        title: 'Documentation',
+        title: 'documentation',
         logo: {
           alt: 'Nodle',
           src: 'img/logo.svg',
