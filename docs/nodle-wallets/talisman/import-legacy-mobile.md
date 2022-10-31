@@ -16,7 +16,7 @@ Importing your wallet is as easy as grabbing your mnemonics, and clicking "Add A
 
 Legacy Wallets are a bit more complex to import. This is actually why we deprecated them.
 
-In order to do this, you have to first go through Polkadot JS. You can follow our instructions [here](../nodle-cash/reimport-your-account.md).
+In order to do this, you have to first go through Polkadot JS. You can follow our instructions [here](../nodle-cash/reimport-your-account.mdx).
 
 Once this is done, you can use Polkadot JS to re-export your account, to do this, select the three dots on the right, and click the "Create a backup file for this account" button. It will make you download a file in the form of `your_address.json`.
 ![Export](/img/docs/talisman/pjs-export.png)
