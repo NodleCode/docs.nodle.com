@@ -18,6 +18,16 @@ const config = {
   organizationName: 'NodleCode', // Usually your GitHub org/user name.
   projectName: 'docs.nodle.com', // Usually your repo name.
 
+  scripts: [
+    {
+      type: 'text/javascript',
+      async: true,
+      defer: true,
+      id: 'hs-script-loader',
+      src: '//js.hs-scripts.com/22645598.js'
+    }
+  ],
+
   presets: [
     [
       'classic',
