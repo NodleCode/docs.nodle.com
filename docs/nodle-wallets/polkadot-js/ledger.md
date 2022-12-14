@@ -9,10 +9,10 @@ Ensure you have the latest version of the Nodle (NODL) app [installed on your le
 
 > You must use Chrome or a Chromium based browser such as Brave to use Polkadot JS with a Ledger Device.
 
-## Navigate to Polkadot JS's Nodle Page
-Use one of the links below to open the Nodle page on Polkadot JS:
-- [Parity version](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fnodle-parachain.api.onfinality.io%2Fpublic-ws#/explorer)
-- [NodleProtocol mirror](https://nodleprotocol.io/?rpc=wss%3A%2F%2Fnodle-parachain.api.onfinality.io%2Fpublic-ws#/explorer)
+## Navigate to Polkadot Substrate Portal or Nodle Portal
+Use one of the links below to interact with the Nodle blockchain:
+- [Polkadot Substrate Portal](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fnodle-parachain.api.onfinality.io%2Fpublic-ws#/explorer)
+- [Nodle Portal](https://nodleprotocol.io/?rpc=wss%3A%2F%2Fnodle-parachain.api.onfinality.io%2Fpublic-ws#/explorer)
 
 ## Connect your Ledger
 Assuming that you have the application opened and your Ledger is unlocked, navigate to `Settings`, then select `manage hardware connections` and choose one of the options presented to you. Click `Save`.
