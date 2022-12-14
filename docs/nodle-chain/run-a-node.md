@@ -10,9 +10,9 @@ Nodes are key elements in the Nodle Chain architecture as they participate in se
 
 ### Hardware
 When choosing your hardware configuration we recommend at least the following requirements:
-- CPU: the nodes run best on an Intel CPU with at least two cores, if running a collator we would recommend doubling to at least 4.
-- Memory: make sure to have at least 2 Gb of RAM, when running a collator aim for 6 Gb.
-- Storage: a full node will need at least 50 Gb of storage on a fast SSD, for collators please have at least 100 Gb available.
+- CPU: the nodes run best on an Intel CPU with at least 4 cores.
+- Memory: make sure to have at least 6 Gb of RAM.
+- Storage: a full node will need at least 200 Gb of storage on a fast SSD, for collators prepare some buffer.
 
 ### System
 The nodes run best on a Linux-based system like Ubuntu and other Debian-based distributions, or Fedora. Make sure to install [docker](https://www.docker.com/) as well as this is the fastest way to get started.
