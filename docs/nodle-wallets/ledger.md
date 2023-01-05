@@ -23,4 +23,5 @@ Installing the Ledger application on your Ledger hardware wallet is pretty strai
 
 ## Wallet Support
 No ledger application is standalone. You need to use a wallet that supports it. You can find below the list of support wallets:
+- [Nodle Client](./nodle-client/connection) (recommended)
 - [Polkadot JS](./polkadot-js/ledger) (experienced users)
