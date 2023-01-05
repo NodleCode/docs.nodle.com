@@ -21,7 +21,7 @@ Stellar enabled us to build a powerful MVP (Minimum Viable Product) and prove th
 Nodle is built upon Polkadot Substrate, making it compatible with most Polkadot wallets. For this tutorial, we will use the official wallet.
 Ledger support is coming soon, and we will update accordingly.
 
-### Step 1: Go to the nodleprotocol.io (Substrate Portal)
+### Step 1: Go to the nodleprotocol.io (Nodle Portal)
 [https://nodleprotocol.io/#/accounts](https://nodleprotocol.io/#/accounts)
 
 ![nodleprotocol.io](/img/docs/nodle-cash/web-wallet.png)

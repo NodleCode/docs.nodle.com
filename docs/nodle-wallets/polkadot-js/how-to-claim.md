@@ -10,7 +10,7 @@ In some cases, you might have a grant of vested coins attached to your account. 
 We know how cumbersome it is to use Polkadot.JS to claim your coins or even view your balance. We are working on a better interface for this.
 :::
 
-## Step 1: Go to the nodleprotocol.io (Substrate Portal)
+## Step 1: Go to the nodleprotocol.io (Nodle Portal)
 :::danger You must already have a wallet
 The instructions below assume that you have either imported or created a wallet already. If not, please refer to the other pages in this wiki.
 :::
