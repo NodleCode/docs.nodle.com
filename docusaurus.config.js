@@ -138,11 +138,11 @@ const config = {
             items: [
               {
                 label: 'IoT Dashboard',
-                to: `docs/nodle-network/iot`,
+                to: `docs/nodle-network/introduction`,
               },
               {
                 label: 'Cash app',
-                to: `docs/nodle-network/iot`,
+                to: `docs/nodle-wallets/nodle-cash/intro`,
               },
             ],
           },
