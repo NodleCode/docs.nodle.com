@@ -95,7 +95,7 @@ const FeatureList = [
             You can use the Nodle Network today, to track IoT assets, and more
           </>
         ),
-        link: './docs/nodle-network/iot',
+        link: './docs/nodle-network/introduction',
       },
       {
         title: 'As a Cash app user',
