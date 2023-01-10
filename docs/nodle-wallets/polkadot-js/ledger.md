@@ -5,7 +5,7 @@ sidebar_position: 3
 # Use a Ledger with Polkadot JS
 
 ## Before you start
-Ensure you have the latest version of the Nodle (NODL) app [installed on your ledger](../ledger.md) device. Ensure that Ledger Live is closed as it may cause conflicts with Polkadot JS.
+Ensure you have the latest version of the Nodle (NODL) app [installed on your ledger](../ledger/introduction) device. Ensure that Ledger Live is closed as it may cause conflicts with Polkadot JS.
 
 > You must use Chrome or a Chromium based browser such as Brave to use Polkadot JS with a Ledger Device.
 
