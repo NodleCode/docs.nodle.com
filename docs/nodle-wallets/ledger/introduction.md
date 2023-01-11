@@ -18,9 +18,9 @@ Alternatively, you could install the application manually (instructions below). 
 
 |Ledger model|Supported|Note|
 |-|-|-|
-|Nano X|yes|Recommended device.|
-|Nano S Plus|yes|Recommended device.|
-|Nano S|yes (with limitations)|Due to restricted hardware capabilities the application's feature may be limited.|
+|Nano X|experimental|Recommended device.|
+|Nano S Plus|experimental|Recommended device.|
+|Nano S|experimental (with limitations)|Due to restricted hardware capabilities the application's feature may be limited.|
 
 ## Install the application
 Installing the Ledger application on your Ledger hardware wallet is pretty straightforward. Simply navigate to the manager tab of Ledger Live and search for "Nodle". Click "Install" and you are good to go.
