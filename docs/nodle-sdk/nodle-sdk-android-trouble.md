@@ -49,6 +49,32 @@ In this section we will explain how you can tackle most common issues with Netwo
 - Go ahead and disable your Wifi, Mobile Data and proceed to next step. 
 - After you have done the above. Please restart your phone. If you still having Internet related problems contact your manufacturers or update your software that might help.
 - After you have all the above tackled and you have internet connection you can proceed forward. 
+- You could be facing issues with out security layers in which you would need to make sure you aren't using custom certificates and trust anchors for the system or user. We would advice to try the following code for your **network_security_config.xml** depending on your needs:
+```
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
+
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
+```
+And update the following setup in your **AndroidManifest.xml**:
+```
+android:networkSecurityConfig="@xml/network_security_config"
+```
 - Another problem might be if you are using a VPN please make sure you have the correct VPN settings and you have proper connection to outside servers and you can reach our website https://www.nodle.com/
 
 If you are still having issues make sure to try without a VPN connection since some of them aren't really working as needed or have issues. If you are done with all the above proceed forward with next steps. 
