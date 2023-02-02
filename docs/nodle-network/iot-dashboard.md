@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# IoT Dashboard - Getting started
+# Using the IoT dashboard
 
 ## Getting started
 
@@ -12,13 +12,13 @@ Go to [IoT Website](https://iot.nodle.com/) and sign in using your email. Right 
 
 ![LoginEmail](/img/docs/nodle-dashboard/sdk_login_email.jpg)
 
-**Note**: Please note that the magic link's URL will always look like `https://iot.nodle.com/?token=**************`, every other link format should be considered as fishing.
+**Note**: Please note that the magic link's URL will always look like `https://iot.nodle.com/?token=******` or `https://sdk.nodle.com/?token=******`, every other link format should be considered as phishing.
 
 ### Create your organization
 
-After clicking the magic link, you will be redirected to a page where you have to select your **organization** (aka **team**). Since this list will be empty if you log in for the first time, please create one.
+After clicking the magic link, you will be redirected to a page where you have to select your **organization** (aka **team**). Unless you have been invited by a team member, this list will be empty if you log in for the first time. Please create a new team.
 
-You are able to create multiple teams in order to organize your BLE devices oversight in a way that suits you.
+You are able to create multiple teams in order to organize your BLE devices oversight in a way that suits you. (this shouldn’t be necessary unless you have separate teams managing separate fleets of devices ; otherwise you will be able to handle several fleets within the same team)
 
 ## Using dashboard
 
@@ -33,9 +33,11 @@ The whole working of this dashboard is articulated around two main objects :
 
 ## Fleets
 
-#### 1. **Types of `Fleet`**
+**Definition**: a `Fleet` is a **set of BLE devices** you want to track using the Nodle network
 
-There is currently three different kind of **fleet**:
+#### 1. **Types of `Fleets`**
+
+There is currently three different kind of **fleets**:
 
 - `iBeacon` : for beacon devices that share the same identifier.
 - `SDATA` : for devices with a specific service data advertised.
@@ -44,18 +46,18 @@ There is currently three different kind of **fleet**:
 
 ### 2.** How to create a `Fleet`**
 
-Go to [**fleets** page](https://iot.nodle.com/dashboard/fleets) and click `Add fleet` button.
+Go to the [**fleets** page](https://iot.nodle.com/dashboard/fleets) and click the `Add fleet` button.
 
 **Fields description** :
 - `Name`: Describe your fleet with a short name.
-- `Identifier`: Descibre how to find devices related to this **fleets**. Here are an example for each **fleet** type:
+- `Identifier`: Describe how to find devices related to this **fleet**. Here are an example for each **fleet** type:
     - `iBeacon` : `ibeacon:{uuid-identifier}` → `ibeacon:1e4f57de-4ac4-47ce-a785-82c57a8781c9`
     - `SDATA` : `sdata:{service-data}` → `sdata:abcd`
     - `CID` : `cid:{company-id}` -> `cid:004c`
     - `CSV` : `csv:{short-name}` → `csv:my-custom-fleet`
 - `Protocol` / `Endpoint` define an optional webhook if you want data related to this **fleet** to be directly forwarded to an endpoint of yours. _Please note that this feature requires some updates on our side so please contact us directly if you want to implement it._
 
-**Fleets** are created with `Pending` status. This means that your fleet is not currently enable and will not gather any data from our network until KYC process is completed. When everything has been validated on our side, your **fleet** should now appear as `Live`.
+**Fleets** are created with `Pending` status. This means that your fleet is not currently enabled and will not gather any data from our network until KYC process is completed. When everything has been validated on our side, your **fleet** should now appear as `Live`.
 
 ### 3. **How is this working?**
 
@@ -86,7 +88,7 @@ Go to [**devices** page](https://iot.nodle.com/dashboard/fleets) and click `Add 
 
 **Fields description** :
 - `Name`: Describe your **device** with a short name.
-- `Identifier`: Descibre how to find this **device**.
+- `Identifier`: Describe how to find this **device**.
     - `iBeacon` : `ibeacon:{uuid-identifier}#{major}#{minor}` → `ibeacon:1e4f57de-4ac4-47ce-a785-82c57a8781c9#123#456`
 - `Protocol` / `Endpoint` define an optional webhook if you want data related to this **fleet** to be directly forwarded to an endpoint of yours. _Please note that this feature requires some updates on our side so please contact us directly if you want to implement it._
 

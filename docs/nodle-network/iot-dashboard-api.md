@@ -2,7 +2,11 @@
 sidebar_position: 4
 ---
 
-# IoT Dashboard API - Getting started
+# Using the Nodle IoT API
+
+:::caution
+The IoT dashboard is currently in **private beta**. Contact the team _(partners@nodle.com)_ to get Beta access.
+:::
 
 ## Getting started
 
@@ -10,7 +14,7 @@ We consider that at this point, you are already onboarded on the **IoT dashboard
 
 ### APIs
 
-Please note that there is two different APIs :
+Please note that there are two different APIs :
 
 - **[SDK API](https://api.sdk.nodle.io/swagger/index.html)**: manage your account, your organizations, your API keys,...
     - Base URL : `https://api.sdk.nodle.io/api/v1/`
@@ -23,7 +27,7 @@ In order to use the **IoT API**, you will have to create an **API key** directly
 
 Go to [IoT dashboard](https://iot.nodle.com/) or [SDK dashboard](https://sdk.nodle.com/) and sign in using your email. Right after, you should receive an email containing a magic link that should looks like `https://iot.nodle.com/?token={token}`. Please copy this `token`, we will need it to authenticate requests later.
 
-**Note**: Please note that the magic link's URL will always look like `https://iot.nodle.com/?token=******` or `https://sdk.nodle.com/?token=******`, every other link format should be considered as fishing.
+**Note**: Please note that the magic link's URL will always look like `https://iot.nodle.com/?token=******` or `https://sdk.nodle.com/?token=******`, every other link format should be considered as phishing.
 
 ### Create your API key
 
