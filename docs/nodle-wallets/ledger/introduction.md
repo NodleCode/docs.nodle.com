@@ -25,6 +25,8 @@ Alternatively, you could install the application manually (instructions below). 
 ## Install the application
 Installing the Ledger application on your Ledger hardware wallet is pretty straightforward. Simply navigate to the manager tab of Ledger Live and search for "Nodle". Click "Install" and you are good to go.
 
+> Note: if the application does not show up, you might have to enable experimental apps in Ledger Live. Please refers to the [Ledger instructions on how to do so](https://developers.ledger.com/docs/live-app/developer-mode/#allow-experimental-apps).
+
 ![Ledger Installing](/img/docs/ledger.png)
 
 ## Installing from source
