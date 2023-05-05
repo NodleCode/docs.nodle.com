@@ -6,9 +6,9 @@ sidebar_position: 2
 
 The Nodle network harnesses the power of smartphones to securely and privately interact with their smart devices, without relying on a dedicated telecom infrastructure such as 5G or LPWAN networks from telecom operators. The cryptocurrency NODL creates the economic incentive for smartphones to participate in the network, thus leveraging an existing infrastructure (smartphones with BLE activated and their internet connectivity) to deploy a unique IoT network, instead of deploying new antennas.
 
-## No roaming, high bandwidth, high precision
+## Infrastructure free, high precision, and programmable
 
-Compared to 5G networks or dedicated Low Power Wide Area Networks (LPWAN) provided by telecom operators (which includes technologies such as LoRaWAN, NB-IoT or Sigfox), the Nodle network generates no cost of deploying new hardware infrastructure, thus creating economically viable long term opportunities. This network has worldwide coverage (no roaming), high bandwidth, high precision from the geolocation of the smartphone, and the potential of the Nodle virtual machine able to execute code at each node to interact with your devices.
+Compared to 5G networks or dedicated Low Power Wide Area Networks (LPWAN) provided by telecom operators (which includes technologies such as LoRaWAN, NB-IoT or Sigfox), the Nodle network generates no cost of deploying new hardware infrastructure, thus creating economically viable long term opportunities. This network has worldwide coverage, and high precision from the geolocation of the smartphone, alogn with the potential of the Nodle virtual machine able to execute code at each node to interact with your devices.
 
 ## Connecting the next billion things
 
