@@ -5,9 +5,10 @@ sidebar_position: 3
 # (Re-)Importing Your Account on the Web
 
 :::tip The polkadot.js extension may have deactivated in-browser storage by default.
-In this case you have to go into the settings tab in the top bar and change "in-browser account creation" to **allow** in the account settings section to be able to import your account. :::
+In this case you have to go into the settings tab in the top bar and change "in-browser account creation" to **allow** in the account settings section to be able to import your account. 
 
 ![Allow creation](/img/docs/nodle-cash/allow-inbrowser-storage.png)
+:::
 
 <iframe width="100%" src="https://www.youtube.com/embed/zDOoSizhjmQ" frameBorder="0" allowFullScreen></iframe>
 
