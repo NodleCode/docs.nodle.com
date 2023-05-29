@@ -128,7 +128,7 @@ const config = {
                 to: `docs/nodle-chain/become-a-collator`,
               },
               {
-                label: 'Cash app',
+                label: 'Nodle app',
                 to: `docs/nodle-wallets/nodle-cash/intro`,
               },
             ],
@@ -141,7 +141,7 @@ const config = {
                 to: `docs/nodle-network/introduction`,
               },
               {
-                label: 'Cash app',
+                label: 'Nodle app',
                 to: `docs/nodle-wallets/nodle-cash/intro`,
               },
             ],
