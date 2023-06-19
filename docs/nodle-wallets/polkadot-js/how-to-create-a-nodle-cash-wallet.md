@@ -54,8 +54,9 @@ If the Polkadot Add on is not showing, Simply click Extensions, and pin to your 
 
    ![Backup Your Mnemonics](/img/docs/nodle-cash/backup-your-mnemonics.png)
    :::
-2. Now that you’ve saved your seed words securely, give your account a name, and
-3. Add a strong password. We recommend using a long, randomly generated password, stored in a password manager.
+2. Now that you’ve saved your seed words securely, give your account a name. 
+3. Select an appropriate network from the drop-down list. For example, Polkadot Relay Chain. 
+4. Add a strong password. You must use a long, randomly generated password (greater than 11 characters). **Important**: Enure you use a password generator or password manager to generate a lengthy password. Manual entry of passwords may not work.
    ![Password](/img/docs/nodle-cash/password.png)
 4. Now you have an account! Finish up:
    ![Add Account](/img/docs/nodle-cash/add-account.png)
