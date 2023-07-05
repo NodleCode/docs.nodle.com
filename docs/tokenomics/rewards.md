@@ -7,7 +7,7 @@ sidebar_position: 5
 ## Distribution Between Network Stakeholders
 
 The token issuance aims to reward edge nodes, operators, and collators. At each reward event, the NODL freshly minted Ik is distributed among participants as follows:
-- 80% are allocated for edge nodes. In fact, these 80% will be channeled to the NSP (or Nodle Service Provider, the equivalent on the Nodle network to an ISP or Internet Service Provider). The NSP is responsible for deploying nodes on behalf of the network. Currently it means publishing the SDK and partnering with publishers who will integrate the SDK into their app. For example, the Nodle company is the NSP for the Nodle Cash App. NSPs are businesses: they are in competition for acquiring nodes - publishers will go to the NSP that offers the best deal to them. NSPs are also responsible for the nodes they deploy. In particular, they ensure the Nodle SDK is deployed in apps that respect privacy regulations. They also make sure they behave according to edge node operators responsible for deploying the nodes to the network. 
+- 80% are allocated for edge nodes. In fact, these 80% will be channeled to the NSP (or , the equivalent on the Nodle network to an ISP or Internet Service Provider). The NSP is responsible for deploying nodes on behalf of the network. Currently it means publishing the SDK and partnering with publishers who will integrate the SDK into their app. For example, the Nodle company is the NSP for the Nodle Cash App. NSPs are businesses: they are in competition for acquiring nodes - publishers will go to the NSP that offers the best deal to them. NSPs are also responsible for the nodes they deploy. In particular, they ensure the Nodle SDK is deployed in apps that respect privacy regulations. They also make sure they behave according to edge node operators responsible for deploying the nodes to the network. 
 - 10% are allocated to build the protocol. Until the Nodle DAO exists, these are transferred to a wallet controlled by the Nodle council. Once the Nodle DAO is created, the DAO will reward protocol builders through token grants or other means deemed appropriate by the community.
 - 10% are allocated for collators.
 
@@ -32,45 +32,68 @@ In each scenario, the supply of NODL at each reward event remains fixed (on top 
 
 ## The rewards formula for edge nodes
 
-For edge nodes, the purpose of the rewards is to incentivize the nodes to:
-- Maximize their uptime wherever they are.
-- Be geospatially available where the demand is. Demand can actually grow only when and where there is a network strong enough to offer a level of service. The rewards need to incentivize the nodes to spread across areas as large as possible, while maintaining a target density.
-- Enable as many capabilities as possible. As a beginning, the SDK requires Bluetooth and geolocation activated. Even these two simple features can rely on different libraries and authorizations on android and iOS. Activating one or the other is the choice of the SDK, but it will be rewarded for enabling the most permissions. As the SDK also enables operations at the edge, sharing its computing, storage or bandwidth resources at the edge, the SDK will have the opportunity to limit these resources. The more active the node, the higher the rewards.
+For edge nodes, the purpose of the rewards is to incentivize the nodes to be:
+- Available, meaning they are online and prepared to take on smart missions
+- Capable, signifying they possess the necessary activated sensors to carry out passive missions
+- Well-located, in other words, they are situated in a location conducive to performing smart missions and where the density is optimal to meet network requirements and ensure effective operation.
  
-We mark $H_k=80% I_k$ the pool allocated to edge nodes at each reward event. The individual reward h(n) attributed to each node n will be computed as:
-$$h(n)=\frac{H_k}{N}.f(m_n^t,m_n^g ,m_n^c)$$
+We mark $H_k=80% I_k$ the pool distributed beetween edge nodes at each reward calculation event. The individual reward h(n) attributed to each node n will be computed as:
+$$h(n)=\frac{H_k}{N}.f(m_n^t, m_n^b, m_n^g ,m_n^c)$$
 Where:
 
 - $N$ is the number of nodes on the network
 - $m_n^t$ is a time-availability factor (detailed in dedicated section)
+- $m_n^b$ is a Bluetooth-availability factor (detailed in dedicated section)
 - $m_n^g$ is a geospatial-availability factor (detailed in dedicated section)
 - $m_n^c$ is a capability factor (detailed in dedicated section)
 - $f$ is a balancing function enabling the network to arbitrate his needs to incentivize more activity, new capabilities, or a broader coverage. f must verify the constraint that $\sum_n f(n)=1$. Until further notice, $f(m_n^t,m_n^g,m_n^c) =m_n^t.m_n^g.m_n^c$. Changing the balancing function would require a consensus vetted by the community.
 
+As of July 2023, rewards are calculated every 15 minutes and allocated to edge nodes every 4 hours.
 
 ### Time-availability Factor $m_k^a$:
 
-For a given reward event, each node will be rewarded proportionally to its uptime since the previous reward event. Between two reward events (which as of may 2022 is a 4-hours window), the window is divided into a number of 90-second slots. Each slot is allocated an equal share of the total reward available Hka. For any slot, a node is considered available (or up) if it performed at least one Nodle-related activity such as a Bluetooth scan, fetching a configuration, or uploading data. An oracle will then evaluate which nodes participated in the slot and distribute the rewards equitably between active nodes during that slot.
+For a given reward calculation event, each node will be rewarded proportionally to its uptime since the previous reward calculation event. Between two reward calculation events (which as of July 2023 is a 15-minute window), the window is divided into a number of 90-second slots. Each slot is allocated an equal share of the total reward available Hka. For any slot, a node is considered available (or up) if it performed at least one Nodle-related activity such as a Bluetooth scan, fetching a configuration, or uploading data. An oracle will then evaluate which nodes participated in the slot and distribute the rewards equitably between active nodes during that slot.
 
 ### Geospatial-availability Factor $m_k^g$:
 
-Compared to traditional telecommunication networks, the Nodle network is unique in the way it incentivizes moving nodes and provides ad-hoc and best-effort connectivity. The rewards formula is then designed to incentivize physical exploration and movement, on top of deterring farms of devices located in the same area.
+Compared to traditional telecommunication networks, the Nodle network is unique in the way it incentivizes moving nodes and provides ad-hoc and best-effort connectivity. The rewards formula is then designed to incentivize reliable network coverage as well as physical exploration and movement, on top of deterring farms of devices located in the same area.
 
-For that purpose at each reward event, rewards will be equally distributed among hexagonal tiles with an average hexagon edge length of 66m, which corresponds to a resolution of level 10 in the h3 specification[^1]. The reward will be distributed among nodes performing at least one Nodle-related activity between the two reward events. This has several implications:
-[^1]:https://h3geo.org
+The Nodle network can be represented with hexagonal tiles with an average hexagon edge length of 66m, which corresponds to a resolution of level 10 in the h3 specification[^1]. At the time of writing, the geospatial-availability factor is calculated based on:
+- Area covered, which is represented by a number of visited H3 tiles. 
+- Node density in covered H3 tiles. It is estimated that 4 distinct nodes inside an H3 tile of level 10, is the optimal number and therefore it is the number that is best rewarded as a whole.
 
-- Between two reward events, nodes participate in the rewards of all the tiles they scout. There is a limit in the number of tile rewards a single node can claim. Nodle aims to create a network for connectivity leveraging existing hardware, thus removing environmental pressure generated by deploying, maintaining and supplying electricity to a new hardware infrastructure. To align incentivization mechanisms with this purpose, the issuance caps maximum tiles to be claimed by a single node to the first 400 tiles they explore. This limitation reflects the maximum possible scouting between two reward events at an average speed of 30 KMH (or 19 MPH), which is consistent with vehicles powered by human force such as bikes.
-- The higher the density of nodes on a given tile, the smaller the individual rewards: nodes are incentivized to cover the widest possible area. New publishers deploying a fleet of edge nodes receive better incentives when they provide coverage in an underserved area.
+The geospatial-availability factor per covered H3 tile is calculated as defined in the table below. If a node has covered numtiple H3 tiles between two reward calculation events, then all individual factors for each H3 tile are sum up to get the final value of the factor for the node.
 
-This naturally creates a map of warm and cold tiles, depending on network density. Nodes are incentivized to discover as many cold tiles as they can between two reward events.
+| Number of Nodes in H3 Tile | Factor per Node | Total Factor in H3 tile |
+| --- | --- | --- |
+| 1 | 1 | 1 |
+| 2 | 0.8 | 1.6 |
+| 3 | 0.6 | 1.8 |
+| 4 | 0.5 (i.e 2/4) | 2 |
+| 5 | 0.4 (i.e 2/5) | 2 |
+| 6 | 0.333 (i.e. 2/6) | 2 |
+| 7 | 0.28 (i.e 2/7) | 2 |
 
+### Bluetooth-availability Factor $m_k^b$:
 
+One of the main purposes of the Nodle network is providing connectivity for Bluetooth devices, that's why the Bluetooth-availability factor is designed to ensure that each node is rewarded fairly according to:
+- the time during which it provides Bluetooth connectivity, and
+- the range of devices it can provide connectivity to
+
+As of July 2023, there are two Nodle SDK builds for iOS, that can be integrated by a Nodle Service Provider (NSP) - one provides capabilities to scan and connect all Bluetooth devices, another - only iBeacons. It is up to the NSP which one to integrate, but the build with wider capabilities will require additional Bluetooth permission to be granted by the node.
+
+Exact values of the Bluetooth-availability factor are provided in the table below.
+
+| Bluetooth availability | Bluetooth-availability factor |
+| --- | --- |
+| Bluetooth not available | 0.05 |
+| Bluetooth available to scan iBeacons only | 0.2 |
+| Bluetooth available 1 time | 0.5 |
+| Bluetooth available 2+ times | 1 |
 
 ### Capabilities Multiplier $m_k^c$:
 
-For now, the capabilities multiplier is simply defined as 0 or 1. 1 is the baseline for nodes available to the network. 0, as of the time of writing in July 2022, is reserved for network users who can provide their own fleet of edge nodes but activate these nodes only to communicate with their own devices and do not share the connectivity with the Nodle network. This exactly nullifies the NODL rewards they are being issued, as they do not contribute to the network.
-
-In the future, capabilities multipliers might include special capabilities such as onboarding HSM for smartphones. Nodle currently runs mainly on Android and iOS smartphones. Although they are not supported currently, a Linux implementation also exists, as well as portability on Android devices that are not smartphones. Research is currently being made for special miner nodes that could deploy – and be rewarded for – new capabilities on the network, such as establishing reputation for regular nodes, or onboarding Lorawan antennas.
+The capabilities multiplier is linked to the node's ability to carry out tasks. A node with the capacity to undertake active missions, meaning one whose owner can be notified to perform specific tasks, holds more value for the network compared to a node that can only undertake passive missions. This factor underscores the importance of interactive participation and diverse functionality within the network. The value of the capabilities multiplier for a fully-capable node is 1, and it will be 0.5 for the node, which cannot execute active missions.
 
 ### Compartmentalization Per Region
 
