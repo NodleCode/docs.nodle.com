@@ -2,9 +2,6 @@
 sidebar_position: 3
 ---
 
-
-
-
 # (Re-)Importing Your Account on the Web
 
 :::tip The polkadot.js extension may have deactivated in-browser storage by default
