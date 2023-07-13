@@ -68,7 +68,7 @@ buildscript {
 
 // Module Gradle
 dependencies {
-    implementation 'io.nodle:nodlesdk-rc-lp:0c8c88e4ff'
+    implementation 'io.nodle:nodlesdk-rc-lp:57f6eec4c0'
 
     // additional dependencies may be required when using getEvents
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
@@ -80,7 +80,7 @@ dependencies {
 ```kotlin
 // Module Gradle
 dependencies {
-    implementation 'io.nodle:nodlesdk-rc-lp:0c8c88e4ff'
+    implementation 'io.nodle:nodlesdk-rc-lp:57f6eec4c0'
 
     // additional dependencies may be required when using getEvents
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
@@ -89,7 +89,7 @@ dependencies {
 
 If you are using the Google Play Services version please make sure to add the plugin. You can use the libraries we are using or the newest ones. We would try to support always the latest libraries. The **minAPI:19** and **maxAPI:31**. We are also on the latest version of **AGP 7.1.3+** and **Kotlin 1.6.21+**
 
-**The latest version of the SDK is**  ```0c8c88e4ff``` **-** ```SHA:8d7d75b3896bfde842962d64964ca3aa00460488```
+**The latest version of the SDK - GP is**  ```57f6eec4c0``` **-** ```SHA:00574bbf5ac50a0043f5aed7e0eaa8fc81d2db67```
 
 ## Step 4: Initialize the Nodle SDK
 First you need to declare your application class in your **ApplicationManifest.xml**. And declare the required permissions for Nodle to be able to run:

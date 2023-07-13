@@ -6,7 +6,7 @@ sidebar_position: 4
 
 In this page you can find our latest releases and the changes that are being done in the new and old versions of the SDKs for Android
 
-## Version 0.0.18 (17.07.2023) - Android SDK - 0c8c88e4ff
+## Version 0.0.18 (17.07.2023) - Android SDK - 57f6eec4c0
 ### Added
 - HB API which can be used by developers to retrieve the last heartbeats that have been produced by their SDK:
   - `Nodle.Nodle().config("core.heartbeat.history", 100f)`
@@ -28,6 +28,9 @@ In this page you can find our latest releases and the changes that are being don
 - Security patches and adjustments to ensure latest protection mechanisms are added
 - Security patches to ensure stability and false positives
 - Security updates to latest version
+### SHA
+- 00574bbf5ac50a0043f5aed7e0eaa8fc81d2db67 - LP
+- eae0238019c694f2d43dd23f64bd6b99497a57f1 - LG
 
 ## Version 0.0.15 (03.03.2023) - Android SDK - 6a50b7b008
 ### Updated
