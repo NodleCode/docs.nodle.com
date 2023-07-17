@@ -5,7 +5,7 @@ sidebar_position: 6
 # iOS SDK - API and Configuration
 The SDK receives configuration remotely from Nodle servers as well as statically using API calls. The static configuration always takes precedence over the remote configuration.
 
-## Nodle SDK Api
+## Nodle SDK API
 To interact with the SDK you need to call the ```Nodle.sharedInstance``` method that will give you an Instance of the **INodle** class. The following are all the public methods for the Nodle API.
 
 ### Swift
@@ -288,7 +288,8 @@ the following are the table of all the keys available and their description:
 | ble.scan.interval-x-factor |                                   multiplier for the ble scan interval above.                                  |       1       |
 |      dtn.use-cellular      |           if true, the cellular connexion will be used. if false, only wifi connection will be used.           |      true     |
 |      cron.ios-bg-mode      |           If specified, the SDK will run in the specific background mode that it is selected.           |      2     |
-|      cron.ios-bg-mode-distance-meters      |           If specified, the SDK will trigger background scans for Normal mode depending on the meters that are specified with this option.           |      20     |   
+|      cron.ios-bg-mode-distance-meters      |           If specified, the SDK will trigger background scans for Normal mode depending on the meters that are specified with this option.           |      20     |
+|      cron.ios-infinite-scan      |           if true, the WCB SDK will perform infinite Beacon scanning. If false the WCB SDK won't perform infinite Beacon scannning.            |      false     |   
 
 there is another table that will allow you to configure our SDK background modes. There are 4 available modes: **NONE**, **ECO**, **NORMAL**, **AGGRESSIVE** for the NodleSDK please check them in the table below:
 
@@ -325,4 +326,162 @@ Nodle().config("cron.ios-bg-mode", 0);
 
 // then proceed to start Nodle
 Nodle().start()
+```
+
+## Debug Logs API
+This API enable the debug logs for the SDK and allows developer to debug on their own and have better visiblity on their application. The default value will be **false** which will output **PRODUCTION** level logs going forward. Here is a sample how to **enable/disable** the API:
+
+```nodle.config(key: "core.debug-log.enable", value: false)```
+
+### PRODUCTION
+```kotlin
+- Init of the SDK
+- Dispatcher event logs from the API
+- SDKCore logs
+  - init of the core
+  - SDK ID 
+- Feature logs
+  - Bluetooth Scanner lifecycle logs 
+    - enabled/disabled
+    - success scan log
+    - failed scan log
+  - Cell Scanner lifecycle logs
+    - enabled/disabled
+    - scan started
+    - scan failed
+  - Heartbeat feature logs
+    - enabled/disabled
+```
+
+### DEBUG
+```kotlin
+- Init of the SDK
+- Dispatcher event logs from the API
+- SDKCore logs
+  - init of the core
+  - current SDK setup dump
+  - bundles in the DB
+  - SDK ID 
+- Feature logs
+  - Bluetooth Scanner lifecycle logs 
+    - enabled/disabled
+    - success scan log
+    - each scan item found
+    - transmission for bundle
+    - failed scan log
+  - Cell Scanner lifecycle logs
+    - enabled/disabled
+    - scan started
+    - scan failed
+    - transmission for bundle
+  - Network feature logs
+    - network status log
+    - resume bundles logs
+    - networking logs over CLA Http 
+    - networking bundle transmission logs
+  - Heartbeat feature logs
+    - enabled/disabled
+    - transmission log
+    - error logs
+  - Location Provider logs
+    - waiting for location log
+    - saved location fetch log 
+    - timeout on location log
+    - fresh location fetch log
+    - error logs
+```   
+
+## Heartbeat API
+
+```public func getHeartbeats() -> Array<NodleHeartbeatRecord?>?```
+
+The following data can be collected from the ```NodleHeartbeatRecord``` each parameter is optional:
+
+|            Key           |                                 Description                                |    Default Value    |
+|:------------------------:|:--------------------------------------------------------------------------:|:-------------------:|
+|          ```id```          |                      returns hb unique identifier                      |        Int64?       |
+|           ```timestamp```           |                 returns the generated timestamp when created                 |         UInt64?         |
+|           ```timezone```          |                       returns the device timezone                      |      String?      |
+|           ```locationH3```          |                       returns the device last known location in h3 format string                      |      String?      |
+|           ```geoHash```          |                       returns the device last known location in geohash format                      |      String?      |
+|           ```isBlePermissionsGranted```          |                       returns the device ble permissions granted                      |      Bool?      |
+|           ```isLocPermissionsGranted```          |                       returns the device location permissions granted                      |      Bool?      |
+|           ```isWifiEnabled```          |                       returns the device wifi module status                      |      Bool?      |
+|           ```isCellEnabled```          |                       returns the device cell module status                      |      Bool?      |
+|           ```isBluetoothEnabled```          |                       returns the device bluetooth module status                      |      Bool?      |
+|           ```sdkVersion```          |                       returns the sdk version                      |      String?      |
+|           ```configVersion```          |                       returns the sdk config version                      |      String?      |
+|           ```os```          |                       returns the device os                      |      String?      |
+|           ```phone```          |                       returns the device model                      |      String?      |
+|           ```release```          |                       returns the device release                      |      String?      |
+|           ```api```          |                       returns the device api level                      |      String?      |
+|           ```hardware```          |                       returns the device hardware name                      |      String?      |
+|           ```appName```          |                       returns the app name                      |      String?      |
+|           ```battery```          |                       returns the device battery                      |      Int?      |
+|           ```charging```          |                       returns the device charging status                      |      Bool?      |
+|           ```appInForeground```          |                       returns the app current status                      |      Bool?      |
+|           ```phoneStorageTotal```          |                       returns the device total storage                      |      String?      |
+|           ```phoneStorageAvailable```          |                       returns the device storage available                      |      String?      |
+|           ```sdkStorage```          |                       returns the device storage consumed                      |      String?      |
+|           ```httpIn```          |                       returns the sdk http input                      |      String?      |
+|           ```httpOut```          |                       returns the sdk http output                      |      String?      |
+|           ```bundleRxCount```          |                       returns the DTN RX                      |      Int?      |
+|           ```bundleTxCount```          |                       returns the DTN TX                      |      Int?      |
+|           ```bleScanSuccess```          |                       returns the BLE Scan success count                      |      Int?      |
+|           ```bleScanFailed```          |                       returns the BLE Failed count                      |      Int?      |
+|           ```blePayloadCount```          |                       returns the BLE payload found                      |      Int?      |
+|           ```buildType```          |                       returns the buildType of the SDK                      |      String?      |
+
+The HB API will provide a history of the heartbeats being generated by the SDK. It will always add the latest HB on top of the list being sorted by the timestamp. When there is a new heartbeat it will take the 0 element in the array. Here is a sample how to **increase/decrease** the storage size and be able to fetch all the heartbeats:
+
+```nodle.config(key: "core.heartbeat.history", value: 100)```
+
+### Swift
+```swift
+nodle.getHeartbeats()?.forEach { it in
+    print("Heartbeat: \(String(describing: it))")
+}
+```   
+
+## H3 API
+
+```public func getH3() -> H3?```
+
+Return the H3 instance exposing the H3 library methods to be used by the developer:
+
+| Returns |                                                              |
+|:----------:|:------------------------------------------------------------:|
+|   ```H3```  | Returns H3Core  |
+
+The H3 interface with all the methods that the developer can take advantage is defined below:
+
+|            Method           |                                 Description                                |    Return Value    |
+|:------------------------:|:--------------------------------------------------------------------------:|:-------------------:|
+|          ```h3IsValid(h3: Int64)```          |                      Returns true if the h3 index is valid                    |        Bool       |
+|          ```h3IsValid(h3Address: String)```          |                      Returns true if the h3 index is valid                    |        Bool       |
+|          ```h3GetBaseCell(h3: Int64)```          |                      Returns the base cell number for the index                    |        Int       |
+|          ```h3GetBaseCell(h3Address: String)```          |                      Returns the base cell number for the index                    |        Int       |
+|          ```h3IsPentagon(h3: Int64)```          |                      Returns true if this index is one of the twelve pentagons per resolution                    |        Bool       |
+|          ```h3IsPentagon(h3Address: String)```          |                      Returns true if this index is one of the twelve pentagons per resolution                    |        Bool       |
+|          ```geoToH3(lat: Double, lng: Double, res: Int)```          |                      Find the H3 index of the resolution res cell containing the lat/lon (in degrees) returns h3 index                    |        Int64       |
+|          ```geoToH3Address(lat: Double, lng: Double, res: Int)```          |                      Find the H3 index of the resolution res cell containing the lat/lon (in degrees) returns H3 index                    |        String       |
+|          ```h3ToGeo(h3: Int64)```          |                      Find the latitude, longitude (both in degrees) center point of the cell.                    |        ```(NodleLat, NodleLng)```       |
+|          ```h3ToGeo(h3Address: String)```          |                      Find the latitude, longitude (degrees) center point of the cell.                    |        ```(NodleLat, NodleLng)```       |
+|          ```h3ToGeoBoundary(h3: Int64)```          |                      Find the cell boundary in latitude, longitude (degrees) coordinates for the cell                    |        ```Array<(NodleLat, NodleLng)>```       |
+|          ```h3ToGeoBoundary(h3Address: String)```          |                      Find the cell boundary in latitude, longitude (degrees) coordinates for the cell                    |        ```Array<(NodleLat, NodleLng)>```       |
+|          ```kRing(h3Address: String?, k: Int)```          |                      Neighboring indexes in all directions h3Address – Origin index k – Number of rings around the origin                    |        ```Array<String?>?```       |
+|          ```kRing(h3: Int64, k: Int)```          |                      Neighboring indexes in all directions h3Address – Origin index k – Number of rings around the origin                    |        ```Array<Int64>```       |
+|          ```h3Distance(a: String?, b: String?)```          |                      Returns the distance between a and b. This is the grid distance, or distance expressed in number of H3 cells.                    |        Int       |
+|          ```h3Distance(a: Int64, b: Int64)```          |                      Returns the distance between a and b. This is the grid distance, or distance expressed in number of H3 cells.                    |        Int       |
+|          ```h3Line(startAddress: String?, endAddress: String?)```          |                      Given two H3 indexes, return the line of indexes between them (inclusive of endpoints).                    |        ```Array<String?>?```       |
+|          ```h3Line(start: Int64, end: Int64)```          |                      Given two H3 indexes, return the line of indexes between them (inclusive of endpoints).                    |        ```Array<Int64>```       |
+|          ```h3GetResolution(h3Address: String?)```          |                      Returns the resolution of the provided index                    |        Int       |
+|          ```h3GetResolution(h3: Int64)```          |                      Returns the resolution of the provided index                    |        Int       |
+|          ```h3ToString(h3: Int64)```          |                      Converts from long representation of an index to String representation.                    |        String?       |
+|          ```stringToH3(h3Address: String?)```          |                      Converts from String representation of an index to long representation.                    |        Int64       |
+|          ```numHexagons(res: Int)```          |                      Returns the number of unique H3 indexes at resolution res.                    |        Int64       |
+
+### Swift
+```swift
+nodle.getH3()?.h3ToGeo(h3Address: "8a1eebbb461ffff")
 ```
