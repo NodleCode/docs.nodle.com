@@ -23,7 +23,7 @@ In this page you can find our latest releases and the changes that are being don
 - Fixed a issue where network configuration for the developer could cause issues and prevent the SDK to send payloads because of false positives
 - Fixed a issue where some Android 8 phone GPS stack is broken when trying to retrive location - LG build only
 ### Updated
-- Google Play Services minimum version to 21 - LP build only
+- Google Play Services Location minimum version to 21 - LP build only
 - Prevent the SDK from running two instances in multiple applications on the same phone
 - Security patches and adjustments to ensure latest protection mechanisms are added
 - Security patches to ensure stability and false positives
@@ -36,7 +36,7 @@ In this page you can find our latest releases and the changes that are being don
 ### Updated
 - Updated BLE permissions checks with latest recommendations from Android Developer team
 - Updated BLE manifest changes required from the Android Developer team to handle maxSDK 30 
-- Google Play Services minimum version to 19 - LP build only
+- Google Play Services Location minimum version to 19 - LP build only
 ### SHA
 - c70f2d9babd9d616d8817e0591cce19c5e4bc9c8 - LP
 - aaa1c11a5eb5ee3ab33b1c79742352ca1b5b065a - LG
