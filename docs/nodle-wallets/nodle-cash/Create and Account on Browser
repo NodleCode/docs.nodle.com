@@ -11,11 +11,11 @@ If you’re looking for safer and longer term wallets, then we recommend creatin
 
 To create an account on the web browser, follow these steps. 
 
-### Step 1: Go to [https://nodleprotocol.io/#/accounts](https://nodleprotocol.io/#/accounts), select Nodle Mainnet. 
+## Step 1: Go to [https://nodleprotocol.io/#/accounts](https://nodleprotocol.io/#/accounts), select Nodle Mainnet. 
 
 ![nodleprotocol.io](/img/docs/nodle-cash/nodle-mainnet.png)
 
-### Step 2: Navigate to Settings. 
+## Step 2: Navigate to Settings. 
 
 ## Step 3: Under the account options section, turn on in-browser account creation and storage. <i>Note: This must be done prior to creating an account</i>. 
 
