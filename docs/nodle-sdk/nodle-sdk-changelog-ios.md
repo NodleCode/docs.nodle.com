@@ -6,7 +6,7 @@ sidebar_position: 8
 
 In this page you can find our latest releases and the changes that are being done in the new and old versions of the SDKs for iOS
 
-## Version 0.0.21 (17.07.2023) - iOS SDK - TBA
+## Version 0.0.21 (01.08.2023) - iOS SDK
 ### Added
 - Increased the overall stability of the SDK 
 - Prevented false positive checks from the security layer that caused memory leaks
