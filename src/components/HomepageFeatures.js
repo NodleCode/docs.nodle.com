@@ -73,11 +73,11 @@ const FeatureList = [
         link: './docs/nodle-chain/become-a-collator',
       },
       {
-        title: 'As a Cash app user',
+        title: 'As a Nodle app user',
         Svg: require('../../static/img/icons/icons_cash_users.svg').default,
         description: (
           <>
-            Participate to the Nodle network, by downloading the Nodle Cash app.
+            Participate to the Nodle network, by downloading the Nodle app.
           </>
         ),
         link: './docs/nodle-wallets/nodle-cash/intro'
@@ -98,11 +98,11 @@ const FeatureList = [
         link: './docs/nodle-network/introduction',
       },
       {
-        title: 'As a Cash app user',
+        title: 'As a Nodle app user',
         Svg: require('../../static/img/icons/icons_cash_app.svg').default,
         description: (
           <>
-            You can use the Nodle Network to transfer NODL as a Nodle Cash app user
+            You can use the Nodle Network to transfer NODL as a Nodle app user
           </>
         ),
         link: './docs/nodle-wallets/nodle-cash/intro'

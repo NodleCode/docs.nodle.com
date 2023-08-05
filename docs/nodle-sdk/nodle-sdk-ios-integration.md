@@ -16,7 +16,12 @@ Install the SDK via [CocoaPods](https://cocoapods.org/). If you don't have an ex
 
 ### NodleSDK
 ```swift
-pod 'NodleSDK'
+pod 'NodleSDK', :git => 'https://github.com/NodleCode/NodleSDK-Release'
+```
+
+### NodleSDK - Fetching specific version
+```swift
+pod 'NodleSDK', :git => 'https://github.com/NodleCode/NodleSDK-Release', :branch => 'main', :tag => '0.0.21'
 ```
 
 ### NodleSDK without CoreBluetooth
@@ -24,7 +29,7 @@ pod 'NodleSDK'
 pod 'NodleSDKWCB', :podspec => 'https://raw.githubusercontent.com/NodleCode/NodleSDK-Release/main/NodleSDKWCB.podspec'
 ```
 
-The latest version of the SDK is ```0.0.16``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
+The latest version of the SDK is ```0.0.21``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
 
 ```swift
 # Pods for NodleSDK
@@ -86,7 +91,7 @@ end
 You could do the same manually by adding the ['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES' to your Pod project settings. If you are on older version of cocoapods before 1.9- you will not need to do anything  and you can simply proceed to next steps.
 
 ### NodleSDK issues with dependencies:
-If you are experiencing issues please make sure the correct version of the dependencies are in your **Podfile.lock** as an example with our latest version of the dependencies found here **NodleSDK 0.0.16**:
+If you are experiencing issues please make sure the correct version of the dependencies are in your **Podfile.lock** as an example with our latest version of the dependencies found here **NodleSDK 0.0.21**:
 ```
 SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
 SwiftCBOR: ac340b74d3b2cf1f8884bb748bd09875848e3873
