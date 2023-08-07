@@ -7,7 +7,7 @@ sidebar_position: 2
 In some cases, you might have a grant of vested coins attached to your account. For instance, this would be the case if you bought some Nodle Cash or particpated to the Nodle Crowdloan.
 
 :::tip Nodle has built a more user friendly UI
-We know how cumbersome it is to use Polkadot.JS to claim your coins or even view your balance, that's why we created the ![Nodle Client](/docs/nodle-wallets/nodle-client/intro.mdx).
+We know how cumbersome it is to use Polkadot.JS to claim your coins or even view your balance, that's why we created the [Nodle Client](/docs/nodle-wallets/nodle-client/intro.mdx).
 :::
 
 ## Step 1: Go to the nodleprotocol.io (Nodle Portal)
