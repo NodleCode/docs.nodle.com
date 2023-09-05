@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Android SDK - Integration
 
-Integrating the Nodle SDK into your android app is easy and straightforward. You can use our [NodleSDK Quickstart application](https://github.com/NodleCode/nodlesdk-quickstart-android) or just follow the steps below and you should be ready to go in no time.
+Integrating the ContentSign SDK into your android app is easy and straightforward. You can use our [ContentSign Application](https://github.com/NodleCode/contentsign-android-app) or just follow the steps below and you should be ready to go in no time.
 
 ## Step 1: Generate Developer Key
 - Go and [Create a Nodle account](nodle-wallets/polkadot-js/how-to-create-a-nodle-cash-wallet.md)
