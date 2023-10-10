@@ -7,6 +7,10 @@ If you have coins on a Ledger wallet and somehow need to export them to another 
 
 This process will involve re-importing your **Ledger mnemonics** inside Polkadot JS, which we will then use to generate a file importable in other wallets like Talisman or the Polkadot JS extension.
 
+:::danger By importing your Ledger mnemonics into polkadot.js, the Ledger device with this key is no longer considered as cold storage.
+If you have other holdings on your cold wallet, move them to another wallet prior importing the seed. Once you moved your NODL token, it is advised to set up your Ledger device from scratch and move all your holdings to the new address.
+:::
+
 <iframe src="//www.youtube.com/embed/37FXes6XSxI" frameBorder="0" allowFullScreen width="100%"></iframe>
 
 1. Open [nodleprotocol.io](https://nodleprotocol.io/?rpc=wss%3A%2F%2Fnodle-parachain.api.onfinality.io%2Fpublic-ws#/explorer) and ensure the Nodle mainnet is selected.
