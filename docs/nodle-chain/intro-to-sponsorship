@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # About Transaction Sponsorship
@@ -24,7 +24,7 @@ The individual creating the fund is called the “sponsor”  as they are willin
 - Transaction control: Sponsors can specify the types of transactions they support, allowing for a tailored user experience. For example, NFTMinting, or AnySafe (which means safe transactions that are compliant with the sponsorship type, unlike the ones not controlled by the sponsorship).
 - Proxy mechanism: An internal proxy mechanism protects sponsors' wallets and ensures that the borrowed funds return to the sponsor. 
 
-##Advantages of Sponsoring Transactions
+## Advantages of Sponsoring Transactions
 This feature:
 - Significantly lower barriers to entry for enterprise and Web3 customers who want to use the Nodle Network 
 - Doesn’t require detailed understanding of crypto concepts for the end user
