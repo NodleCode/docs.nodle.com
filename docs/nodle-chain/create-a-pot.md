@@ -17,7 +17,7 @@ Select Nodle Mainnet.
 Click Extrinsics from the pull-down menu. 
    
 ## Step 3: Select the sponsorship pallet
-Select *sponsorship* from the submit the following extrinsic menu. The createpot option is displayed by default at the top.
+Select *sponsorship* from the *submit the following extrinsic* menu. The createpot option is displayed by default at the top.
 
  ![Sponsorship](/img/docs/nodle-chain/sponsor1.png)
 
