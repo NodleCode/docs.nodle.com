@@ -21,13 +21,13 @@ Click Extrinsics from the pull-down menu.
 ## Step 3: Select the *sponsorship* pallet
 Select *sponsorship* from the *submit the following extrinsic* menu. 
 
-## Step 4: Then, select *registerUsers* function 
-Select *registerUsers* function from the drop-down menu. Under the pot section, enter the pot ID for which you want to register users. By default, it is 0. 
+## Step 4: Then, select the *registerUsers* function 
+Select *registerUsers* from the drop-down menu. Under the pot section, enter the pot ID under which you want to register users. By default, it is 0. 
 
  ![Sponsorship](/img/docs/nodle-chain/registeruser1.png)
 
 ## Step 5: Click Add item
-Select a user account to register from the AccountId box by clicking on it. Alternatively, if you know the account IDs, enter those in the box. 
+And, click inside the *AccountId* box to select a user account for registration. Alternatively, if you know the account IDs, enter those in the box. 
 
 ![nodleprotocol.io](/img/docs/nodle-cash/registeruser2a.png)
 
