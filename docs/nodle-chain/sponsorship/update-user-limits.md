@@ -42,7 +42,7 @@ To update or modify the fee limit, enter the new value under *newFeeQuota.*
 ## Step 9: [Or] Update reserve quota limits
 To update or modify the reserve quota, enter the new value under *newReserveQuota.*
 
-![Sponsorship](/img/docs/nodle-cash/updateuserlimits.png)
+![Sponsorship](/img/docs/nodle-chain/updateuserlimits.png)
 
 ## Step 8: Click Submit Transaction 
 Authorize the transaction by entering your password. 
