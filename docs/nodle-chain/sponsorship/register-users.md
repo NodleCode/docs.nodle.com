@@ -29,9 +29,9 @@ Select *registerUsers* from the drop-down menu. Under the pot section, enter the
 ## Step 5: Click Add item
 And, click inside the *AccountId* box to select a user account for registration. Alternatively, if you know the account IDs, enter those in the box. 
 
-![nodleprotocol.io](/img/docs/nodle-cash/registeruser2a.png)
+![nodleprotocol.io](/img/docs/nodle-chain/registeruser2a.png)
 
-![nodleprotocol.io](/img/docs/nodle-cash/registeruser2b.png)
+![nodleprotocol.io](/img/docs/nodle-chain/registeruser2b.png)
 
 ## Step 6: Enter the common fee quota and reserve quota limits
 Enter whole numbers only. 
