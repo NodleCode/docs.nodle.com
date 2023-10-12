@@ -25,7 +25,7 @@ Select *removePot* from the drop-down menu.
 ## Step 5: Enter the pot ID  
 Under the pot section, enter the pot ID which you want to delete. By default, it is 0. 
 
-![Sponsorship](/img/docs/nodle-cash/removepot.png)
+![Sponsorship](/img/docs/nodle-chain/removepot.png)
 
 ## Step 6: Click Submit Transaction 
 Authorize the transaction by entering your password.  
