@@ -46,5 +46,5 @@ Authorize the transaction as shown below by entering your account password.
 
  ![Sponsorship](/img/docs/nodle-chain/registeruser-submit.png)
 
-## Step 10: Click Sign and Submit 
+## Step 9: Click Sign and Submit 
 Your users are now registered and ready for carrying out transactions on the chain.
