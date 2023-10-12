@@ -34,11 +34,9 @@ Set the limit for the fee quota as shown in the above image. This fee quota is f
 Again enter a whole number without fractions or decimals (11 digits or more). This amount is used for any reserves or deposits (such as the ones required by NFTs). 
 
 ## Step 8: Click Submit Transaction 
-Authorize the transaction as shown below.  
+Enter your accoount password and authorize the transaction as shown below.  
 
    ![Sponsorship](/img/docs/nodle-chain/sponsor2.png)
 
-## Step 9: Enter your account password 
-
-## Step 10: Click Sign and Submit 
+## Step 9: Click Sign and Submit 
 Once the transaction is successful, the pot is created with the defined reservation and fee limits.
