@@ -40,5 +40,5 @@ Authorize the transaction as shown below.
 
 ## Step 9: Enter your account password 
 
-## Step 10: Click Sign and Submit. 
+## Step 10: Click Sign and Submit 
 Once the transaction is successful, the pot is created with the defined reservation and fee limits.
