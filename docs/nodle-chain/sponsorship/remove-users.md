@@ -27,7 +27,7 @@ Click inside the *AccountId* box to select a user account for deletion. Alternat
 
 *Repeat this step to select multiple users for batch deletion.*  
 
-![nodleprotocol.io](/img/docs/nodle-chain/removeuser.png)
+![Sponsorship](/img/docs/nodle-chain/removeuser.png)
 
 ## Step 6: Click Submit Transaction 
 Authorize the transaction by entering your password.  
