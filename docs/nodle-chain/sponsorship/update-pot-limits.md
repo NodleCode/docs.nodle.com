@@ -39,5 +39,5 @@ Enter the new value under *newReserveQuota*. This is for modifying the reserve q
 ## Step 8: Click Submit Transaction 
 Authorize the transaction by entering your password. 
 
-## Step 10: Click Sign and Submit. 
+## Step 9: Click Sign and Submit 
 The fund limits get updated if the submission is successful.  
