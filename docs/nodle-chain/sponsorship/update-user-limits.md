@@ -36,10 +36,10 @@ Repeat steps 5-6 to select multiple user accounts of the same pot. This way, you
 ## Step 8: [Or] Select individual users
 Alternatively, to set different fee and reservation limits for each user account of the pot, submit separate transactions for each account by repeating steps 1-6. Continue setting the limits as given in steps 9-10 for each user account. 
 
-## Step 9: [Or] Update fee limits
+## Step 9: Update fee limits
 To update or modify the fee limit, enter the new value under *newFeeQuota.*
 
-## Step 9: [Or] Update reserve quota limits
+## Step 9: Update reserve quota limits
 To update or modify the reserve quota, enter the new value under *newReserveQuota.*
 
 ![Sponsorship](/img/docs/nodle-chain/updateuserlimits.png)
@@ -47,5 +47,5 @@ To update or modify the reserve quota, enter the new value under *newReserveQuot
 ## Step 8: Click Submit Transaction 
 Authorize the transaction by entering your password. 
 
-## Step 10: Click Sign and Submit. 
+## Step 10: Click Sign and Submit
 The fund limits get updated if the submission is successful.  
