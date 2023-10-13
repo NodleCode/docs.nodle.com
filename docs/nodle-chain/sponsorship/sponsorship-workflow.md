@@ -9,8 +9,12 @@ If users aren't registered, they can't create NFTs or use other applications. Ea
 Once their accounts are registered, these users can connect directly to the blockchain, ensuring security and avoiding censorship. 
 A validity check is built in to catch invalid transactions early, like actions from unregistered users or users who've used up their sponsorship quota, before any fees are incurred.
 
-**Note: Transactions are free for registered users in a pot, but sponsors cover the transaction fees.
- 
+:::info
+
+Transactions are free for registered users in a pot, but sponsors cover the transaction fees.
+
+:::
+
 ## What types of funds can be sponsored?
 A sponsor can define the following types of funds to be allocated to each user:
 - Transaction fee: Fees for all transactions done on the chain
@@ -26,6 +30,10 @@ That's why it's important to define "AnySafe" properly during runtime. That is, 
 The transaction categories that are currently supported include:
 - `AnySafe`: For any safe transaction on the Nodle Network
 - `Unique`: For creating or minting NFTs
-If required, more transaction categories can be added by creating pull requests on the Nodle chain repositories on GitHub.  
+If required, more transaction categories can be added by creating pull requests on the Nodle chain repositories on GitHub.
 
-**Note: Different categories of  transactions that the sponsor can select for their pot are not configurable at runtime. Instead, they are predefined so that the sponsors can select them during configuration. 
+:::tip
+
+Different categories of  transactions that the sponsor can select for their pot are not configurable at runtime. They are predefined so that the sponsors can select them during configuration. 
+
+:::
