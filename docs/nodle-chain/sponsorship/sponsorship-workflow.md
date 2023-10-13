@@ -24,8 +24,8 @@ For instance, if a user is allowed to make NFT and Utility calls but not Balance
 That's why it's important to define "AnySafe" properly during runtime. That is, Utility or Proxy calls must be excluded from the “AnySafe” transaction type. 
 
 The transaction categories that are currently supported include:
-- AnySafe: For any safe transaction on the Nodle Network
-- Unique: For creating or minting NFTs
+- `AnySafe`: For any safe transaction on the Nodle Network
+- `Unique`: For creating or minting NFTs
 If required, more transaction categories can be added by creating pull requests on the Nodle chain repositories on GitHub.  
 
 **Note: Different categories of  transactions that the sponsor can select for their pot are not configurable at runtime. Instead, they are predefined so that the sponsors can select them during configuration. 
