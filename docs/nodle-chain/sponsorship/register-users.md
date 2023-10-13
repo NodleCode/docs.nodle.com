@@ -36,7 +36,11 @@ And, click inside the *AccountId* box to select a user account for registration.
 ## Step 6: Enter the common fee quota and reserve quota limits
 Enter whole numbers only. 
 
-*Note: These will be applicable to all the users of the pot.*
+:::note
+
+These limits will be applicable to all the users of the selected pot.
+
+:::
 
 ## Step 7: Add other users as required
 To add multiple users for the selected pot, repeat steps 5-6.  
