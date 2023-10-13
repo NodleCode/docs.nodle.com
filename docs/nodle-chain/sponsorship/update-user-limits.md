@@ -6,7 +6,11 @@ sidebar_position: 10
 
 Sponsors can modify the reservation and fee limits for a list of users at once. User limits are those a sponsor can set for each user of the pot. This means the user cannot exceed the limit set here even though the pot limits may be higher. 
 
-*Note: If the sponsor wants to reduce their support, it's only possible if there is enough available margin in the corresponding fee or reserve balance.*
+:::note
+
+If the sponsor wants to reduce their support, it's only possible if there is enough available margin in the corresponding fee or reserve balance.
+
+:::
 
 To update the user limits, follow these steps. 
 
