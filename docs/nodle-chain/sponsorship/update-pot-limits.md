@@ -5,9 +5,13 @@ sidebar_position: 9
 # Update Pot Limits
 
 Only sponsors can change the spending limits for their funds and users, but they can't go below the amount their users have already spent (let's call it X). So if a user has used up X amount of their limit (L) for transaction fees, the sponsor can't set the limit lower than X. At that point, the user will have L - X left to spend. 
-The sponsor can reduce the limit all the way down to X, in which case the user won't have any funds left. This same rule applies to borrowed funds given to the user for the reserve.
+The sponsor can reduce the limit all the way down to X, in which case the user won't have any funds left. This same rule applies to borrowed funds given to the user for the reserve. 
 
-*Note: If the sponsor wants to reduce their support, it's only possible if there is enough available margin in the corresponding fee or reserve balance.*
+:::note
+
+If the sponsor wants to reduce their support, it's only possible if there is enough available margin in the corresponding fee or reserve balance.
+
+:::
 
 To update the pot limits, follow these steps. 
 
