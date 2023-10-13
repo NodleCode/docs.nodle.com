@@ -25,7 +25,7 @@ Select *removeUsers* from the drop-down menu. Under the pot section, enter the p
 ## Step 5: Click Add item
 Click inside the *AccountId* box to select a user account for deletion. Alternatively, if you know the account IDs, enter those in the box.  
 
-*Repeat this step to select multiple users for batch deletion.*  
+Repeat this step to select multiple users for batch deletion.  
 
 ![Sponsorship](/img/docs/nodle-chain/removeuser.png)
 
