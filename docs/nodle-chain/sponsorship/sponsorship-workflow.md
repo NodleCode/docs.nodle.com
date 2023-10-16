@@ -25,7 +25,6 @@ In both cases, the limits defined cannot be exceeded by users.
 ## What types of transactions can be sponsored?
 Sponsors can decide on the types or categories of transactions they permit. This can be broad, like `AnySafe`, or more specific, such as `NFTs`, or even narrower, like `NFTMinting`. A "safe" transaction means it doesn't go beyond the allowed sponsorship parameters.
 For instance, if a user is allowed to make NFT and Utility calls but not Balances transactions, they could potentially conceal a Balances "transfer" within a Utility call. 
-That's why it's important to define "AnySafe" properly during runtime. That is, Utility or Proxy calls must be excluded from the “AnySafe” transaction type. 
 
 The transaction categories that are currently supported include:
 - `AnySafe`: For any safe transaction on the Nodle Network
