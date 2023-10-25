@@ -40,7 +40,7 @@ The minimum symmetric networking speed is set to 500 Mbit/s (= 62.5 MB/s).
 Check the official release of the Nodle code at [https://github.com/NodleCode/chain/releases](https://github.com/NodleCode/chain/releases). Take the latest release (at the time of writing this doc it was 2.0.29). Give whatever name that you want to your collator (Here we go with my-collator-1). You can go with the same or different name for the side of your collator that is interacting with the relay chain (Here we go with my-relay-1). We’d suggest using docker with a command similar to the following for the initial setup:
 
 ```bash
-docker run -p 9944:9944 -it nodlecode/chain:2.0.29 --chain eden --collator \
+docker run -p 9944:9944 -it nodlecode/chain:2.2.3 --chain eden --collator \
   --force-authoring --rpc-cors all --ws-port=9944 \
   --name my-collator-1 \
   -- \
@@ -61,7 +61,7 @@ Syncing is when your node retrieves the previous blocks of the chain from the di
 To be able to connect to your need for the special operations that we talk about in the next section, you need to **stop your node** and bring it up again by adding the following switch to your run command temporarily  `--rpc-methods=Unsafe -unsafe-ws-external`. This means your run command would look like:
 
 ```bash
-docker run -p 9944:9944 -it nodlecode/chain:2.0.29 --chain=eden \
+docker run -p 9944:9944 -it nodlecode/chain:2.2.3 --chain=eden \
 	--collator --force-authoring \
 	--rpc-cors=all --rpc-methods=Unsafe --unsafe-ws-external --ws-port=9944 \
 	--name my-collator-1 \
