@@ -48,3 +48,18 @@ Authorize the transaction by entering your account password.
 ## Step 9: Click Sign and Submit 
 Once done, the transaction is successfully submitted.
 
+## What happens when a transaction is successful?
+
+The pallet emits the event "Sponsored {paid, repaid}" when things go well:
+
+"Paid" is the money given by the sponsor to the user's proxy account initially
+
+- "Paid" may be less if the user can use their own money in the proxy account or if there's a limit in their account
+- "Paid" is also limited by the remaining reserve quota for the account
+
+"Repaid" is the money the user pays back to the sponsor after the action is successful
+- “Repaid" can be more than "paid" when the user’s proxy account allows a bigger repayment for their current loan.
+
+Here is a screenshot of a successful transaction. 
+
+![Sponsorship](/img/docs/nodle-chain/registeruser2b.png)
