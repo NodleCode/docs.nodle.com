@@ -6,9 +6,9 @@ sidebar_position: 14
 
 When you execute the sponsorFor() function, the:
 
-Transaction is sent to the chain
-Fee is deducted from the sponsor's account 
-User's proxy account is set as the source of the transaction before the transaction actually happens 
+- Transaction is sent to the chain
+- Fee is deducted from the sponsor's account 
+- User's proxy account is set as the source of the transaction before the transaction actually happens 
 
 Ensure you are a registered user of the selected pot before using the sponsor’s funds and also make sure you are using the funds for the specified transaction type only. 
 
@@ -34,7 +34,7 @@ Enter the pot ID. By default, it is 0. This is the pot that the sponsor signed y
 
  ![Sponsorship](/img/docs/nodle-chain/registeruser1.png)
 
-## Step 6: Next, select a function from the system menu
+## Step 6: Next, select the required function 
 From the system menu, select the function you want. For example, *remark* from the system pallet.
 
 ## Step 7: Enter the remark as required
