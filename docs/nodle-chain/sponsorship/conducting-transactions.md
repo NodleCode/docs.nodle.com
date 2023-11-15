@@ -12,4 +12,9 @@ However, they can't control what you do. This is crucial for applications that n
 The sponsorship feature uses a function called “sponsorFor()”  to enable users to interact with the network. This function draws the tokens from the sponsor’s fund to run transactions. Through this, you can perform any safe transaction that the sponsor has specified for you.
 However, you cannot execute transactions that allow funds to leak from your proxy account. For example, you cannot transfer funds to other accounts even if the sponsorship type enables “balances” transactions. 
 
+:::note
 
+Remember, you must be a registered user of the fund pot, created by the sponsor.  
+
+
+:::
