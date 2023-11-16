@@ -32,7 +32,7 @@ Select users() function from the drop-down menu.
 ## Step 5: Select the pot
 Enter the pot ID. By default, it is 0. This is the pot that the sponsor signed you up for.
 
- ![Sponsorship](/img/docs/nodle-chain/registeruser1.png)
+ ![Sponsorship](/img/docs/nodle-chain/pot.png)
 
 ## Step 6: Next, select the required function 
 From the system menu, select the function you want. For example, *remark* from the system pallet.
@@ -40,7 +40,7 @@ From the system menu, select the function you want. For example, *remark* from t
 ## Step 7: Enter the remark as required
 Enter the remark you want for the transaction in the box below (highlighted in red).
 
-![Sponsorship](/img/docs/nodle-chain/registeruser2b.png)
+![Sponsorship](/img/docs/nodle-chain/remark.png)
 
 ## Step 8: Click Submit Transaction 
 Authorize the transaction by entering your account password. 
@@ -62,4 +62,4 @@ The pallet emits the event "Sponsored {paid, repaid}" when things go well:
 
 Here is a screenshot of a successful transaction. 
 
-![Sponsorship](/img/docs/nodle-chain/registeruser2b.png)
+![Sponsorship](/img/docs/nodle-chain/transaction-success.png)
