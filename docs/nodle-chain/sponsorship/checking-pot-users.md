@@ -14,39 +14,24 @@ Select Nodle Mainnet.
 ![nodleprotocol.io](/img/docs/nodle-cash/nodle-mainnet.png)
 
 ## Step 2: Navigate to the Developer tab
-Click Extrinsics from the pull-down menu. 
+Click Chain State from the pull-down menu. 
    
 ## Step 3: Select the *sponsorship* pallet
-Select *sponsorship* from the *submit the following extrinsic* menu. 
+Select *sponsorship* from the *selected state query* menu. 
 
-## Step 4: Then, select the *registerUsers* function 
-Select *registerUsers* from the drop-down menu. Under the pot section, enter the pot ID under which you want to register users. By default, it is 0. 
+## Step 4: Then, select users 
+Select the user() function from the drop-down menu.
 
- ![Sponsorship](/img/docs/nodle-chain/registeruser1.png)
+## Step 5: Enter the pot ID
+Enter the pot ID in the box below. By default, it is 0. This is the pot that the sponsor signed you up for.
 
-## Step 5: Click Add item
-And, click inside the *AccountId* box to select a user account for registration. Alternatively, if you know the account IDs, enter those in the box. 
+## Step 6: Check for the desired account
+Specify the account you wish to check and select the “Include option”.  
 
-![Sponsorship](/img/docs/nodle-chain/registeruser2a.png)
+![Sponsorship](/img/docs/nodle-chain/check-account.png)
 
-![Sponsorship](/img/docs/nodle-chain/registeruser2b.png)
 
-## Step 6: Enter the common fee quota and reserve quota limits
-Enter whole numbers only. 
+## Step 7: Click the + button
+Click the + button (on the right of your screen) to view the details of the pot. Details of the account including the fund limits are displayed in the section below.
+To check for all the registered users of the selected pot, disable the “Include option” and then click the + button.
 
-:::note
-
-These limits will be applicable to all the users of the selected pot.
-
-:::
-
-## Step 7: Add other users as required
-To add multiple users for the selected pot, repeat steps 5-6.  
-
-## Step 8: Click Submit Transaction 
-Authorize the transaction as shown below by entering your account password. 
-
- ![Sponsorship](/img/docs/nodle-chain/registeruser-submit.png)
-
-## Step 9: Click Sign and Submit 
-Your users are now registered and ready for carrying out transactions on the chain.
