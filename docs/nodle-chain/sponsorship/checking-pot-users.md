@@ -2,7 +2,7 @@
 sidebar_position: 15
 ---
 
-# Checking the Users of the Pot
+# Determining the Users of the Pot
 
 As a user of the sponsorship funds, ensure you are registered for the selected pot before you start using these funds. You can also check the transaction and reserve quota limits pertaining to your account by using this feature. 
  
