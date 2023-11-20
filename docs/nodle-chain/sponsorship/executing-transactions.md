@@ -27,7 +27,7 @@ Click Extrinsics from the pull-down menu.
 Select *sponsorship* from the *submit the following extrinsic* menu. 
 
 ## Step 4: Then, select users  
-Select sponsorFor() function from the drop-down menu. 
+Select the `sponsorFor()` function from the drop-down menu. 
 ![Sponsorship](/img/docs/nodle-chain/pot.png)
 
 ## Step 5: Select the pot
