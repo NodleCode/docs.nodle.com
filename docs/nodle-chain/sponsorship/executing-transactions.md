@@ -59,6 +59,6 @@ The pallet emits the event "Sponsored {paid, repaid}" when things go well:
 "Repaid" is the money the user pays back to the sponsor after the action is successful
 - “Repaid" can be more than "paid" when the user’s proxy account allows a bigger repayment for their current loan.
 
-Here is a screenshot of a successful transaction. 
+Here's what a successful transaction looks like.
 
 ![Sponsorship](/img/docs/nodle-chain/transaction-success.png)
