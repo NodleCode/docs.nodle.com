@@ -27,14 +27,13 @@ Click Extrinsics from the pull-down menu.
 Select *sponsorship* from the *submit the following extrinsic* menu. 
 
 ## Step 4: Then, select users  
-Select users() function from the drop-down menu. 
+Select sponsorFor() function from the drop-down menu. 
+![Sponsorship](/img/docs/nodle-chain/pot.png)
 
 ## Step 5: Select the pot
 Enter the pot ID. By default, it is 0. This is the pot that the sponsor signed you up for.
 
- ![Sponsorship](/img/docs/nodle-chain/pot.png)
-
-## Step 6: Next, select the required function 
+ ## Step 6: Next, select the required function 
 From the system menu, select the function you want. For example, *remark* from the system pallet.
 
 ## Step 7: Enter the remark as required
