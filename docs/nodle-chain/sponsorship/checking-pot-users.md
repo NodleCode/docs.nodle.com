@@ -20,14 +20,13 @@ Click Chain State from the pull-down menu.
 Select *sponsorship* from the *selected state query* menu. 
 
 ## Step 4: Then, select users 
-Select the user() function from the drop-down menu.
+Select the `user()` function from the drop-down menu.
 
 ## Step 5: Enter the pot ID
 Enter the pot ID in the box below. By default, it is 0. This is the pot that the sponsor signed you up for.
 
 ## Step 6: Check for the desired account
 Specify the account you wish to check and select the “Include option”.  
-
 
 ## Step 7: Click the + button
 Click the + button (on the right of your screen) to view the details of the pot. Details of the account including the fund limits are displayed in the section below as shown in the image.
