@@ -4,7 +4,7 @@ sidebar_position: 14
 
 # Executing Transactions on the Network
 
-When you execute the sponsorFor() function, the:
+When you execute the `sponsorFor()`function, the:
 
 - Transaction is sent to the chain
 - Fee is deducted from the sponsor's account 
@@ -27,7 +27,7 @@ Click Extrinsics from the pull-down menu.
 Select *sponsorship* from the *submit the following extrinsic* menu. 
 
 ## Step 4: Then, select users  
-Select users() function from the drop-down menu. 
+Select `sponsorFor()`function from the drop-down menu. 
 
 ## Step 5: Select the pot
 Enter the pot ID. By default, it is 0. This is the pot that the sponsor signed you up for.
