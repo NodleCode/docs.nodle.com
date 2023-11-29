@@ -5,8 +5,10 @@ sidebar_position: 6
 # Sponsoring Transactions - Workflow
 Our solution is based on a system called [Free Signed Transactions](https://hackernoon.com/zero-cost-blockchain-transactions-are-a-reality-on-polkadot). In this method, sponsors register user accounts they're willing to sponsor.
 Each user gets their unique proxy account created in a "pot," and they can have different proxy accounts in different pots. 
+
 If users aren't registered, they can't create NFTs or use other applications. Each user account has set limits on how much they can spend and the transaction fees they can incur, preventing any misuse.
 Once their accounts are registered, these users can connect directly to the blockchain, ensuring security and avoiding censorship. 
+
 A validity check is built in to catch invalid transactions early, like actions from unregistered users or users who've used up their sponsorship quota, before any fees are incurred.
 
 :::info 
