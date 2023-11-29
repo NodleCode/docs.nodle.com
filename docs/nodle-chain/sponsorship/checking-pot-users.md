@@ -33,4 +33,4 @@ Click the + button (on the right of your screen) to view the details of the pot.
 
 To check for all the registered users of the selected pot, disable the “Include option” and then click the + button.
 
-![Sponsorship](/img/docs/nodle-chain/check-account.png)
+![Sponsorship](/img/docs/nodle-chain/check-account1.png)
