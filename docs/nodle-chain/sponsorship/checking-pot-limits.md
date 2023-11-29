@@ -21,7 +21,7 @@ Click Chain State from the pull-down menu.
 Select *sponsorship* from the *selected state query* menu. 
 
 ## Step 4: Then, select the pot 
-Select the pot() function from the drop-down menu.
+Select the `pot()` function from the drop-down menu.
 
 ## Step 5: Enter the pot ID
 Enter the pot ID in the box below. By default, it is 0. This is the pot that the sponsor signed you up for.
