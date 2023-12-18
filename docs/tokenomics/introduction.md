@@ -43,7 +43,7 @@ The NODL token is then used to reward Nodle network participants, to allow consu
 
 In the first phase, participants are mainly rewarded through minting of the token. This minting or issuance phase is detailed in “The Token Issuance” section of this document. In a second phase, participants will be directly rewarded for reaping bounties attached to smart missions ordered by entities intending to leverage the network for their own use cases. The rewards collected through bounties will gradually outstrip rewards from the issuance, as demand for services built on top of the network strengthen.
 
-In the mid-term, i.e. before the end of 2023, it is expected that the NODL token will take two new roles: governance and staking.
+In the mid-term, i.e. before the end of 2023, it is expected that the NODL token will take a new role: governance.
 
 ### A Governance Token
 
