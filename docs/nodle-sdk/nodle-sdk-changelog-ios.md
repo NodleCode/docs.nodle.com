@@ -6,6 +6,19 @@ sidebar_position: 8
 
 In this page you can find our latest releases and the changes that are being done in the new and old versions of the SDKs for iOS
 
+## Version 0.0.22-night (12.01.2024) - iOS SDK - Night branch
+### Added
+- Added XCode 15 support 
+- Added Privacy manifest with all information required for the SDK
+- Added Privacy report generation for latest XCode versions
+- Added Signing the new versions of the SDK will always be signed going forward
+- Added better error handling around the SDK
+### Updated
+- Updated security layer to latest version
+- Updated documentation with latest required changes
+### Fixed
+- Fixed a URL RFC related issue from latest Apple update
+
 ## Version 0.0.21 (01.08.2023) - iOS SDK
 ### Added
 - Increased the overall stability of the SDK 

@@ -29,6 +29,16 @@ pod 'NodleSDK', :git => 'https://github.com/NodleCode/NodleSDK-Release', :branch
 pod 'NodleSDKWCB', :podspec => 'https://raw.githubusercontent.com/NodleCode/NodleSDK-Release/main/NodleSDKWCB.podspec'
 ```
 
+### NodleSDK - Fetching specific version - XCode 15
+```swift
+pod 'NodleSDK', :git => 'https://github.com/NodleCode/NodleSDK-Release', :branch => 'night', :tag => '0.0.22-night'
+```
+
+### NodleSDK without CoreBluetooth - XCode 15
+```swift
+pod 'NodleSDKWCB', :podspec => 'https://raw.githubusercontent.com/NodleCode/NodleSDK-Release/night/NodleSDKWCB.podspec'
+```
+
 The latest version of the SDK is ```0.0.21``` We recommend to add the following dependency which should be automatically pulled but if you encounter any issues you can add them to your Podfile like this:
 
 ```swift
@@ -382,6 +392,20 @@ The NodleSDK requires certain Background Modes to be enabled in order to perform
 ![Empty Import](/img/docs/nodle-sdk/bgmodes.png)
 
 Please head out to our configuration page here: [Nodle SDK - iOS API and Configuration](nodle-sdk-ios-api.md) You have successfully configured the NodleSDK to perform background scanning.
+
+## Generate Privacy Report - XCode 15 support
+With the latest version of XCode 15 and our SDK we do support and have a Privacy manifest generated automatically for you with all the required information the SDK use and need to function properly. Here is a sample version of the report:
+
+![Empty Import](/img/docs/nodle-sdk/privacy-report.png)
+
+To generate the report you will need to select Product -> Archive -> Right click on your build and then select Generate Privacy Report. You should see all the entries like above image. Our SDK doesn't use any of the items in the report for anything else than app functionality. The SDK doesn't have any tracking domains been used.
+
+## Signing requirements for third party SDK - XCode 15
+With the latest version of XCode 15 and our SDK we do support and will have all future version of the SDK signed with our identity and Apple as authority in order to validate the SDK. The status of the SDK should be as below:
+
+![Empty Import](/img/docs/nodle-sdk/sdk-signed.png)
+
+While our SDK isn't identified as privacy impacting we want to take advantage of Apple new strategy for validating SDK authors. Following forward new versions will be always signed and with the correct identity as Nodle Technology. Please make sure to report anything suspicious when integrating our SDK.
 
 ## Want to check your SDK rewards?
 Currently we have our dashboard **under development** and rewards are not available. If you want see your rewards please go to our [Nodle Subscan](https://nodle.subscan.io/) please follow the steps:
