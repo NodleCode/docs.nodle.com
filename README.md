@@ -1,3 +1,10 @@
+# Deprecated!
+
+Documentation is now maintained on a different system on our private Notion. Please see [docs.nodle.com](docs.nodle.com).
+
+
+---
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
